@@ -10,4 +10,4 @@ Want to help? Download the deflock.me app for iOS or Android and start tagging c
 
 <iframe src="https://deflock.org/map#map=9/33.809961/-84.208832" width="100%" height="600" style="border: none;"></iframe>
 
-##### Visit [deflock.org](https://deflock.org/) for more information
+##### <center>Visit [deflock.org](https://deflock.org/) for more information.</center>
