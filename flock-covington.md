@@ -4,7 +4,7 @@ title: Flock Covington
 subtitle: City and County Flock Implementation
 ---
 ## <center>City of Covington, GA</center>
-* The Covington, GA city council voted unanimously to approve a 3-year contract with Flock, for integration of security cameras, on December 15, 2025. 
+The Covington, GA city council voted unanimously to approve a 3-year contract with Flock, for integration of security cameras, on December 15, 2025. 
  * [Click here to view the council meeting minutes, Item #11.](https://cityofcovington.org/ckeditorfiles/files/2025_CityCouncil_1215_Minutes.pdf) 
 
 ## <center>Newton County, GA</center>
