@@ -56,7 +56,7 @@ async function loadMembers () {
     let page = 1, results = [];
     while (true) {
       const url = `${API_ROOT}/member?state=${state}&chamber=${chamber}` +
-                  `&pageSize=${MAX_ROWS}&page=${page}&api_key=${API_KEY}`;
+                  `&pageSize=${MAX_ROWS}&page=${page}&format=json&api_key=${API_KEY}`;
       console.log('GET', url);                    // easier to inspect in Network tab
       const res  = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -71,15 +71,19 @@ async function loadMembers () {
       page++;
     }
 
+    // Filter by state name since API uses full names
+    const stateName = STATES.find(s => s.code === state)?.name;
+    results = results.filter(m => m && typeof m === 'object' && m.state === stateName && m.name);
+
     if (results.length === 0) {
       throw new Error('No members returned – check state/chamber.');
     }
 
-    results.sort((a,b) => a.nameLast.localeCompare(b.nameLast));
+    results.sort((a,b) => a.name.localeCompare(b.name));
     memberSel.innerHTML = '<option value="">— choose —</option>' +
       results.map(m =>
         `<option value="${m.bioguideId}">
-           ${m.nameFirst} ${m.nameLast} (${m.party})
+           ${m.name} (${m.partyName})
          </option>`
       ).join('');
     memberSel.disabled = false;
