@@ -5,6 +5,7 @@ pip install zeep  (Python 3.9+ recommended)
 
 from datetime import datetime
 from typing import List, Dict, Any
+from collections import OrderedDict
 import sys
 
 from zeep import Client, helpers
@@ -46,7 +47,7 @@ class GALegisClient:
         page_size: int = 50,
         start_index: int = 0,
         **extra_constraints,
-    ) -> Dict[str, Any]:
+    ) -> Any:
         """
         Return raw search response (total hits + first page of results).
         Extra SOAP constraints (e.g., SponsorName, Committee) can be passed via **extra_constraints.
@@ -70,7 +71,7 @@ class GALegisClient:
                 PageSize=page_size,
                 StartIndex=start_index,
             )
-            return helpers.serialize_object(resp, target_cls=dict)
+            return helpers.serialize_object(resp, target_cls=OrderedDict)
         except Fault as exc:
             raise RuntimeError(
                 f"SOAP fault when searching bills: {exc.message}"
@@ -78,7 +79,7 @@ class GALegisClient:
 
     def bill_detail(
             self, doc_type: str, number: int, session_id: int | None = None
-            ) -> Dict[str, Any]:
+            ) -> Any:
         if session_id is None:
             session_id = self.current_session_id()
         try:
@@ -88,7 +89,7 @@ class GALegisClient:
                 SessionId=session_id
             )
 
-            return helpers.serialize_object(resp, target_cls=dict)
+            return helpers.serialize_object(resp, target_cls=OrderedDict)
         except Fault as exc:
             raise RuntimeError(
                 f"Could not fetch detail for {doc_type} {number}: {exc.message}"
