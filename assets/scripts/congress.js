@@ -2,6 +2,7 @@
 const API_ROOT  = 'https://api.congress.gov/v3';
 const API_KEY   = 'Oze0IkjnsuXYtNVpM3NXTqHqYRM8jgXnvbdiZVy1';
 const MAX_ROWS  = 250;// API max per page
+// Updated for JSON format and state filtering
 // -------------------------------------------------------------------
 
 const STATES = [
