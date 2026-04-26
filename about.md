@@ -12,3 +12,5 @@ My name is Inigo Montoya. I have the following qualities:
 ### My story
 
 To be honest, as each year progresses I have further and further trust issues with politicians on both sides of the aisle. Information presented here is given so voters can see the **impact** and voting behavior of candidates/elected officials. 
+
+This site is still under construction... 
