@@ -1,0 +1,57 @@
+My Representatives
+
+Find out how your representative or senator has voted... 
+
+<!-- Lookup 
+ States are hardcoded, user chooses a state and chamber, call https://api.congress.gov/v3/member?state=TX&chamber=house
+ Response is paginated, ask for 250 rows (maximum) and merge pages. 
+ Returned members are placed in 3rd dropdown. 
+ Can swap the choice submission for other logic)
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Congress Lookup (api.congress.gov)</title>
+  <style>
+    body {font-family: system-ui, sans-serif; margin:2rem; max-width:680px;}
+    label {display:block; margin-top:1.2rem;}
+    select, button {width:100%; padding:8px; box-sizing:border-box;}
+    .msg{margin-top:1rem;color:#c00;}
+    [disabled]{background:#eee;}
+  </style>
+</head>
+<script src="congress.js"></script> <!-- Call congress.js script-->
+<body>
+
+<h1>Find Your U.S. Legislator</h1>
+
+<form id="lookupForm">
+  <label>
+    State
+    <select id="stateSelect" required></select>
+  </label>
+
+  <label>
+    Chamber
+    <select id="chamberSelect" required>
+      <option value="">— choose —</option>
+      <option value="house">House</option>
+      <option value="senate">Senate</option>
+    </select>
+  </label>
+
+  <label>
+    Representative / Senator
+    <select id="memberSelect" required disabled></select>
+  </label>
+
+  <button type="submit">Select</button>
+</form>
+
+<div class="msg" id="status"></div>
+
+
+
+</body>
+</html>
