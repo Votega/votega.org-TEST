@@ -10,7 +10,9 @@ The Covington, GA city council voted unanimously to approve a 3-year contract wi
 The Newton County Sheriff's Office has implemented Flock cameras in the county (and very likely using other vendors as well). So far, we've found references to purchasing/installation of flock cameras in the following:
 April 15, 2025 - [Board of Commissioners Meeting Agenda, Item #18](https://www.newtoncountyga.gov/AgendaCenter/ViewFile/Agenda/_04152025-812)
 
-Want to help? Download the deflock.me app for iOS or Android and start tagging cameras you come across. The data you submit is used to populate a map with known camera locations. 
+
 
 ## <center>Deflock.org ALPR Community Map</center>
 <iframe src="https://deflock.org/map#map=13/33.602253/-83.864222" width="100%" height="600" style="border: none;"></iframe>
+
+##### Want to help? Download the deflock.me app for iOS or Android and start tagging cameras you come across. The data you submit is used to populate a map with known camera locations. 
