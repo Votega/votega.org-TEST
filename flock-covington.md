@@ -12,5 +12,5 @@ April 15, 2025 - [Board of Commissioners Meeting Agenda, Item #18](https://www.n
 
 Want to help? Download the deflock.me app for iOS or Android and start tagging cameras you come across. The data you submit is used to populate a map with known camera locations. 
 
-**<center>Deflock.org ALPR Community Map</center>**
+## <center>Deflock.org ALPR Community Map</center>
 <iframe src="https://deflock.org/map#map=13/33.602253/-83.864222" width="100%" height="600" style="border: none;"></iframe>
