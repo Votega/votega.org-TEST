@@ -21,12 +21,9 @@ author: Concerned Citizens of Georgia
 
 navbar-links:
   About: "about"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
   Flock Safety:
-    - About Flock: "https://megamays08.github.io/flock-safety/"
-    - Covington: "https://megamays08.github.io/flock-covington/"
+    - About Flock: "https://www.votega.org/flock-safety/"
+    - Covington: "https://www.votega.org/flock-covington/"
     - What Are ALPRS?: "https://plateprivacy.com/#how-plate-readers-work"
 
 ################
