@@ -9,20 +9,20 @@ class GALegisSessionHelper:
         self.client = Client(wsdl)
 
     # ---------- helpers ---------- #
-def _get_sessions_op(self):
-    for candidate in ("GetSessions", "GetLegislativeSessions"):
-        if candidate in self.client.service._binding._operations:
-            return getattr(self.client.service, candidate)
-    raise RuntimeError("Sessions operation not found in WSDL!")
+    def _get_sessions_op(self):
+        for candidate in ("GetSessions", "GetLegislativeSessions"):
+            if candidate in self.client.service._binding._operations:
+                return getattr(self.client.service, candidate)
+        raise RuntimeError("Sessions operation not found in WSDL!")
 
-@cached_property
-def sessions(self):
-    """Return a list of session dicts, or [] if the WSDL has no session op."""
-    try:
-        resp = self._get_sessions_op()()
-    except RuntimeError:
-        return []                      # Legislation WSDL doesn’t expose sessions
-    return helpers.serialize_object(resp, target_cls=dict)  # type: ignore[arg-type]
+    @cached_property
+    def sessions(self) -> list[dict[str, Any]]:
+        """Return a list of session dicts, or [] if the WSDL has no session op."""
+        try:
+            resp = self._get_sessions_op()()
+        except RuntimeError:
+            return []                      # Legislation WSDL doesn’t expose sessions
+        return helpers.serialize_object(resp, target_cls=dict)  # type: ignore[arg-type]
 
 # -------------- use it -------------- #
 if __name__ == "__main__":
