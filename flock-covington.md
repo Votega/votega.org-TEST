@@ -4,7 +4,7 @@ title: Flock Covington
 subtitle: City and County Flock Implementation
 ---
 
-Information on the use of Automated License Plate Readers (ALPRs) in the Covington, Newton County, and Oxford, GA area will be shared here. If you have any relevant information that you think should be included, please contact us at admin@votega.org. Items such as records obtained through GA Open Records Requests, City Council/Board meeting agendas or minutes, etc, are welcome additions. 
+Information on the use of Automated License Plate Readers (ALPRs) in the Covington, Newton County, and Oxford, GA area will be shared here. If you have any relevant information that you think should be included, please contact us at <admin@votega.org>. Items such as records obtained through GA Open Records Requests, City Council/Board meeting agendas or minutes, etc, are welcome additions. 
 
 An open records request has been submitted to both the City of Covington and Newton County Board of Commissioners, requesting details of any Flock contracts/agreements made at the City or County level. As documents are received, they will be added here.
 
