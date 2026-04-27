@@ -12,10 +12,10 @@ These cameras collect data on millions of vehicles **regardless of whether the d
 ALPRs are a **serious risk to your privacy and civil liberties**. These systems continuously record your movements without a **warrant, probable cause, or even reasonable suspicion**. Your driving history is rarely confined to the town or city where the cameras are installed. It's typically shared with thousands of other agencies nationwide. Once the data is out of your community, you have no control over how it's used or what rules apply, leading to instances of misuse.
 
 ### Resources
-- [What are ALPRs and Plate Privacy](https://plateprivacy.com/#how-plate-readers-work)
-- [Eyes on Flock](https://eyesonflock.com/)
-- [Have I Been Flocked?](https://haveibeenflocked.com/)
-- [DeFlock.org](https://deflock.org/) 
+- <a href="https://plateprivacy.com/#how-plate-readers-work" target="_blank"> What are ALPRs and License Plate Privacy</a> 
+- <a href="https://eyesonflock.com/" target="_blank"> Eyes on Flock</a>
+- <a href="https://haveibeenflocked.com/" target="_blank"> Have I Been Flocked?</a>
+- <a href="https://deflock.org/" target="_blank"> DeFlock.org</a>
 
 ## <center>Deflock.org ALPR Community Map</center>
 <iframe src="https://deflock.org/map#map=9/33.809961/-84.208832" width="100%" height="600" style="border: none;"></iframe>
