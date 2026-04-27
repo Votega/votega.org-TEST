@@ -8,4 +8,5 @@ Early voting for the upcoming May 2026 General Primary Election has started in G
 
 Visit <a href="https://mvp.sos.ga.gov" target="_blank"> the Georgia My Voter Page</a> to ensure your voting status is active and to view your polling location and hours.
 
-**<center>Primary Election Date is May 19, 2026<center>**
+{: .box-note}
+**Primary Election Date is May 19, 2026**
