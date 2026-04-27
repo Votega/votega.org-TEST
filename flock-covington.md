@@ -12,16 +12,16 @@ An open records request has been submitted to both the City of Covington and New
 
 ## <center>City of Covington, GA</center>
 The City Council in Covington, GA voted unanimously to approve a 3-year contract with Flock, for integration of security cameras, on December 15, 2025. Discussion about similar cameras and systems pre-date the contract approval. 
- - December 15, 2025 - [City Council Meeting Minutes, Item #11](https://cityofcovington.org/ckeditorfiles/files/2025_CityCouncil_1215_Minutes.pdf)
+ - <a href="https://cityofcovington.org/ckeditorfiles/files/2025_CityCouncil_1215_Minutes.pdf" target="_blank"> December 15, 2025 - City Council Meeting Minutes, Item #11</a>
 ### Open Records
-- [City of Covington Open Records Request](https://www.foiamachine.org/foi/city-of-covington-flock-contract-12983/?sharing=SPVLSTR44AWP)
-    - [City of Covington Flock Contract](assets/docs/Flock%20Safety%20-%20Covington%20PD%20-%2012_26_2025.pdf) 
+- <a href="https://www.foiamachine.org/foi/city-of-covington-flock-contract-12983/?sharing=SPVLSTR44AWP" target="_blank"> City of Covington Open Records Request</a>
+    - <a href="assets/docs/Flock%20Safety%20-%20Covington%20PD%20-%2012_26_2025.pdf" target="_blank"> City of Covington Flock Contract</a>
 
 ## <center>Newton County, GA</center>
 The Newton County Sheriff's Office has implemented Flock cameras in the county (and very likely using other vendors as well). So far, we've found references to purchasing/installation of flock cameras in the following:
- - April 15, 2025 - [Board of Commissioners Meeting Agenda, Item #18](https://www.newtoncountyga.gov/AgendaCenter/ViewFile/Agenda/_04152025-812)
+ - <a href="https://www.newtoncountyga.gov/AgendaCenter/ViewFile/Agenda/_04152025-812" target="_blank"> April 15, 2025 - Board of Commissioners Meeting Agenda, Item #18</a>
 ### Open Records
-- [Newton County Open Records Request](https://www.foiamachine.org/foi/newton-county-flock-contractaudit-logs-12995/?sharing=7BJXA4YTVL4P)
+- <a href="https://www.foiamachine.org/foi/newton-county-flock-contractaudit-logs-12995/?sharing=7BJXA4YTVL4P" target="_blank">Newton County Open Records Request</a>
 
 ## <center>Deflock.org ALPR Community Map</center>
 <iframe src="https://deflock.org/map#map=13/33.602253/-83.864222" width="100%" height="600" style="border: none;"></iframe>
