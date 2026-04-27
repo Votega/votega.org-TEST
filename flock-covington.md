@@ -24,5 +24,5 @@ The Newton County Sheriff's Office has implemented Flock cameras in the county (
 - <a href="https://www.foiamachine.org/foi/newton-county-flock-contractaudit-logs-12995/?sharing=7BJXA4YTVL4P" target="_blank">Newton County Open Records Request</a>
 
 ## <center>Deflock.org ALPR Community Map</center>
-<iframe src="https://deflock.org/map#map=13/33.602253/-83.864222" width="100%" height="600" style="border: none;"></iframe>
+<iframe src="https://maps.deflock.org/?lat=33.6091&lng=-83.8621&zoom=11.45" width="100%" height="600" style="border: none;"></iframe>
 <center>Want to help? Download the deflock.me app for iOS or Android and start tagging cameras you come across. The data you submit is used to populate a map with known camera locations.</center> 
