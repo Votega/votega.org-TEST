@@ -9,7 +9,7 @@ Flock Safety is one of the largest ALPR vendors in the United States, based in A
 
 These cameras collect data on millions of vehicles **regardless of whether the driver is suspected of a crime**. The data from these cameras is uploaded to Flock's cloud system, which allows participating agencies to search and share information across jurisdictions. Anyone with access to the Flock database can track everywhere a particular vehicle goes, **all without a warrant**. Flock claims its cameras are in more than 5,000 communities throughout the country.  
 
-ALPRs are a serious risk to your privacy and civil liberties. These systems **_continuously record your movements without a warrant, probable cause, or even reasonable suspicion_**. Your driving history is rarely confined to the town or city where the cameras are installed. It's typically shared with thousands of other agencies nationwide. Once the data is out of your community, you have no control over how it's used or what rules apply, leading to instances of misuse.
+ALPRs are a serious risk to your privacy and civil liberties. These systems **continuously record your movements without a warrant, probable cause, or even reasonable suspicion**. Your driving history is rarely confined to the town or city where the cameras are installed. It's typically shared with thousands of other agencies nationwide. Once the data is out of your community, you have no control over how it's used or what rules apply, leading to instances of misuse.
 --
 ### Resources
 * [What are ALPRs and Plate Privacy](https://plateprivacy.com/#how-plate-readers-work)
