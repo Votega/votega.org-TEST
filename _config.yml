@@ -89,7 +89,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-# rss-description: Vote GA RSS
+rss-description: Vote GA RSS
 
 ###########################
 # --- General options --- #
