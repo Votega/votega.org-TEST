@@ -62,8 +62,8 @@ permalink: /member.html
     // Get state (top-level field)
     const state = member.state || 'N/A';
 
-    // Get current term (from terms.item array)
-    const currentTerm = member.terms?.item?.[0] || {};
+    // Get current term (from terms.item array, take the last/most recent term)
+    const currentTerm = member.terms?.item?.slice(-1)[0] || {};
     const chamber = currentTerm.chamber || 'N/A';
     const district = chamber === 'Senate' ? 'U.S. Senator' : (currentTerm.district ? `District ${currentTerm.district}` : 'N/A');
 
