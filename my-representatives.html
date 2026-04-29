@@ -3,7 +3,7 @@ My Representatives
 Find out how your representative or senator has voted
 
 <!-- Lookup Form
- States are hardcoded, user chooses a state and chamber, call https://api.congress.gov/v3/member/{stateCode}?format=json&limit=250&currentMember=true. Returned members are placed in 3rd dropdown. Can swap the choice submission for other logic--> 
+ States are hardcoded, user chooses a state and chamber. Member lookup now uses prebuilt JSON at assets/data/current-members.json instead of calling the Congress.gov API directly from the browser. Returned members are placed in the 3rd dropdown. Can swap the choice submission for other logic--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>

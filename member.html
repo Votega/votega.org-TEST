@@ -24,20 +24,19 @@ permalink: /member.html
   }
 
   async function loadMemberDetails(bioguideId) {
-    const API_ROOT = 'https://api.congress.gov/v3';
-    const API_KEY = 'ZMSOUqKIq9se1BEsPO3BX0J1bGLD0skMX9Fvx0Co'; // Same as in congress.js
-
+    const DATA_URL = 'assets/data/current-members.json';
     const statusLine = document.getElementById('status');
     statusLine.textContent = 'Loading member details…';
 
     try {
-      const url = `${API_ROOT}/member/${bioguideId}?format=json&api_key=${API_KEY}`;
-      console.log('GET', url);
-      const res = await fetch(url);
+      const res = await fetch(DATA_URL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       const data = await res.json();
-      const member = data.member || {};
+      const member = (data.members || []).find(m => m.bioguideId === bioguideId) || {};
+      if (!member.bioguideId) {
+        throw new Error('Member not found in prebuilt data');
+      }
 
       displayMemberDetails(member);
       statusLine.textContent = '';
