@@ -106,6 +106,11 @@ form.addEventListener('submit',e=>{
     return;
   }
   // Redirect to the member details page
-  window.location.href = `member.html?bioguideId=${bioguideId}`;
+  // Get the base path (handles both votega.github.io/votega.org-TEST/ and votega.github.io/)
+  const pathname = window.location.pathname;
+  const basePath = pathname.includes('/votega.org-TEST/') 
+    ? '/votega.org-TEST/' 
+    : '/';
+  window.location.href = `${basePath}member.html?bioguideId=${bioguideId}`;
 });
 
