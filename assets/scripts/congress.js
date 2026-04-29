@@ -106,6 +106,6 @@ form.addEventListener('submit',e=>{
     return;
   }
   // Redirect to the member details page
-  window.location.href = `member.html?bioguideId=${bioguideId}`;
+  window.location.href = `/member.html?bioguideId=${bioguideId}`;
 });
 
