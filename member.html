@@ -52,16 +52,29 @@ title: Legislative Member Details
   function displayMemberDetails(member) {
     const detailsDiv = document.getElementById('memberDetails');
 
+    // Get name (prefer directOrderName, fallback to firstName + lastName)
+    const name = member.directOrderName || `${member.firstName} ${member.lastName}` || 'Unknown';
+
+    // Get party from partyHistory (most recent or first entry)
+    const party = member.partyHistory?.[0]?.partyName || 'N/A';
+
+    // Get current chamber and district (if available in current term)
+    const currentTerm = member.terms?.[0] || {};
+    const chamber = currentTerm.chamber || 'N/A';
+    const district = currentTerm.district ? `District ${currentTerm.district}` : (currentTerm.memberType === 'Senator' ? 'U.S. Senator' : 'N/A');
+
+    // Note: website, phone, address, and biography are not provided by Congress.gov API
+    const imageUrl = member.depiction?.imageUrl;
+    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem;">` : '';
+
     const html = `
-      <h2>${member.name || 'Unknown'}</h2>
-      <p><strong>Party:</strong> ${member.partyName || 'N/A'}</p>
+      ${imageHtml}
+      <h2>${name}</h2>
+      <p><strong>Party:</strong> ${party}</p>
       <p><strong>State:</strong> ${member.state || 'N/A'}</p>
-      <p><strong>District:</strong> ${member.district || 'N/A'}</p>
-      <p><strong>Chamber:</strong> ${member.terms?.[0]?.chamber || 'N/A'}</p>
-      <p><strong>Website:</strong> ${member.url ? `<a href="${member.url}" target="_blank">${member.url}</a>` : 'N/A'}</p>
-      <p><strong>Phone:</strong> ${member.phone || 'N/A'}</p>
-      <p><strong>Address:</strong> ${member.address || 'N/A'}</p>
-      <p><strong>Biography:</strong> ${member.biography || 'N/A'}</p>
+      <p><strong>District:</strong> ${district}</p>
+      <p><strong>Chamber:</strong> ${chamber}</p>
+      <p style="color: #666; font-size: 0.9em; margin-top: 1rem;"><em>Note: Contact information (website, phone, address) is not provided by Congress.gov API. Visit senate.gov or house.gov for current contact details.</em></p>
       <p><a href="my-representatives.html">Search for another member</a></p>
     `;
     detailsDiv.innerHTML = html;
