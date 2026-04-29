@@ -72,9 +72,17 @@ async function loadMembers () {
       page++;
     }
 
-    // Filter by state name since API uses full names
+    // Filter by state name and chamber since API returns all members regardless of chamber filter
     const stateName = STATES.find(s => s.code === state)?.name;
-    results = results.filter(m => m && typeof m === 'object' && m.state === stateName && m.name);
+    const chamberMap = { 'house': 'House of Representatives', 'senate': 'Senate' };
+    const expectedChamber = chamberMap[chamber];
+    
+    results = results.filter(m => {
+      if (!m || typeof m !== 'object' || m.state !== stateName || !m.name) return false;
+      // Check if the most recent term matches the requested chamber
+      const terms = m.terms?.item || [];
+      return terms.length > 0 && terms[0].chamber === expectedChamber;
+    });
 
     if (results.length === 0) {
       throw new Error('No members returned – check state/chamber.');
