@@ -111,7 +111,15 @@ async function loadMembers () {
       throw new Error(`No members returned for ${stateName} ${expectedChamber} – check API data.`);
     }
 
-    results.sort((a,b) => a.name.localeCompare(b.name));
+    results.sort((a,b) => {
+      if (expectedChamber === 'House of Representatives') {
+        const districtA = typeof a.district === 'number' ? a.district : Number.MAX_SAFE_INTEGER;
+        const districtB = typeof b.district === 'number' ? b.district : Number.MAX_SAFE_INTEGER;
+        if (districtA !== districtB) return districtA - districtB;
+      }
+      return a.name.localeCompare(b.name);
+    });
+
     memberSel.innerHTML = '<option value="">— choose —</option>' +
       results.map(m => {
         let label = m.name;
