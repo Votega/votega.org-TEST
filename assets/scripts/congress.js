@@ -48,9 +48,14 @@ async function loadMembers () {
   const state   = stateSel.value;
   const chamber = chamberSel.value;
 
+  console.log('loadMembers called', {state, chamber});
+  
   memberSel.disabled = true;
   memberSel.innerHTML = '';
-  if (!state || !chamber) return;
+  if (!state || !chamber) {
+    console.log('Missing state or chamber, returning');
+    return;
+  }
 
   statusLine.textContent = 'Loading legislators…';
   try {
@@ -58,20 +63,30 @@ async function loadMembers () {
     while (true) {
       const url = `${API_ROOT}/member?state=${state}&chamber=${chamber}` +
                   `&pageSize=${MAX_ROWS}&page=${page}&format=json&api_key=${API_KEY}`;
-      console.log('GET', url);                    // easier to inspect in Network tab
+      console.log('GET', url);
       const res  = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        console.error(`HTTP error: ${res.status}`);
+        throw new Error(`HTTP ${res.status}`);
+      }
 
       const data = await res.json();
       const rows = data.members  ||                // new docs
                    data.member   || [];            // legacy single-page format
+      console.log(`Page ${page}: got ${rows.length} members`);
       results.push(...rows);
 
-      const last = data.pagination?.pageCount || 1;
-      if (page >= last) break;
+      // Check if there are more pages - the API uses 'next' property instead of pageCount
+      const hasNext = !!data.pagination?.next;
+      if (!hasNext) {
+        console.log('No more pages, breaking');
+        break;
+      }
       page++;
     }
 
+    console.log(`Total API results: ${results.length}`);
+    
     // Filter by state name and chamber since API returns all members regardless of chamber filter
     const stateName = STATES.find(s => s.code === state)?.name;
     const chamberMap = { 'house': 'House of Representatives', 'senate': 'Senate' };
@@ -80,17 +95,29 @@ async function loadMembers () {
     console.log(`Filtering for state="${stateName}" chamber="${expectedChamber}". Total results: ${results.length}`);
     
     results = results.filter(m => {
-      if (!m || typeof m !== 'object') return false;
-      if (m.state !== stateName || !m.name) return false;
+      if (!m || typeof m !== 'object') {
+        console.log('Filtered out: not an object');
+        return false;
+      }
+      if (m.state !== stateName) {
+        console.log(`Filtered out "${m.name}": state="${m.state}" (want "${stateName}")`);
+        return false;
+      }
+      if (!m.name) {
+        console.log('Filtered out: no name');
+        return false;
+      }
       // Check if the member has terms and if any term matches the requested chamber
       const terms = m.terms?.item || m.terms || [];
-      if (!Array.isArray(terms)) return false;
-      // Check if any term is for the requested chamber (look at current/recent terms)
-      const hasMatchingChamber = terms.some((t, idx) => {
-        const match = t.chamber === expectedChamber;
-        if (idx === 0 && !match) console.log(`Member "${m.name}" (${m.state}): term[0].chamber="${t.chamber}" (want "${expectedChamber}")`);
-        return match;
-      });
+      if (!Array.isArray(terms)) {
+        console.log(`"${m.name}": terms is not an array:`, terms);
+        return false;
+      }
+      // Check if any term is for the requested chamber
+      const hasMatchingChamber = terms.some(t => t.chamber === expectedChamber);
+      if (!hasMatchingChamber) {
+        console.log(`Filtered out "${m.name}": chambers=${terms.map(t => t.chamber).join('/')} (want "${expectedChamber}")`);
+      }
       return hasMatchingChamber;
     });
     
