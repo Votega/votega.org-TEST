@@ -113,11 +113,15 @@ async function loadMembers () {
 
     results.sort((a,b) => a.name.localeCompare(b.name));
     memberSel.innerHTML = '<option value="">— choose —</option>' +
-      results.map(m =>
-        `<option value="${m.bioguideId}">
-           ${m.name} (${m.partyName})
-         </option>`
-      ).join('');
+      results.map(m => {
+        let label = m.name;
+        if (expectedChamber === 'House of Representatives') {
+          const currentTerm = m.terms?.item?.slice(-1)[0] || {};
+          const district = currentTerm.district ? `District ${currentTerm.district} - ` : '';
+          label = district + m.name;
+        }
+        return `<option value="${m.bioguideId}">${label} (${m.partyName})</option>`;
+      }).join('');
     memberSel.disabled = false;
     statusLine.textContent = '';
 
