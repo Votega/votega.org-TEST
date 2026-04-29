@@ -53,16 +53,19 @@ permalink: /member.html
   function displayMemberDetails(member) {
     const detailsDiv = document.getElementById('memberDetails');
 
-    // Get name (prefer directOrderName, fallback to firstName + lastName)
-    const name = member.directOrderName || `${member.firstName} ${member.lastName}` || 'Unknown';
+    // Get name (top-level field)
+    const name = member.name || 'Unknown';
 
-    // Get party from partyHistory (most recent or first entry)
-    const party = member.partyHistory?.[0]?.partyName || 'N/A';
+    // Get party (top-level field)
+    const party = member.partyName || 'N/A';
 
-    // Get current chamber and district (if available in current term)
-    const currentTerm = member.terms?.[0] || {};
+    // Get state (top-level field)
+    const state = member.state || 'N/A';
+
+    // Get current term (from terms.item array)
+    const currentTerm = member.terms?.item?.[0] || {};
     const chamber = currentTerm.chamber || 'N/A';
-    const district = currentTerm.district ? `District ${currentTerm.district}` : (currentTerm.memberType === 'Senator' ? 'U.S. Senator' : 'N/A');
+    const district = chamber === 'Senate' ? 'U.S. Senator' : (currentTerm.district ? `District ${currentTerm.district}` : 'N/A');
 
     // Note: website, phone, address, and biography are not provided by Congress.gov API
     const imageUrl = member.depiction?.imageUrl;
@@ -72,7 +75,7 @@ permalink: /member.html
       ${imageHtml}
       <h2>${name}</h2>
       <p><strong>Party:</strong> ${party}</p>
-      <p><strong>State:</strong> ${member.state || 'N/A'}</p>
+      <p><strong>State:</strong> ${state}</p>
       <p><strong>District:</strong> ${district}</p>
       <p><strong>Chamber:</strong> ${chamber}</p>
       <p style="color: #666; font-size: 0.9em; margin-top: 1rem;"><em>Note: Contact information (website, phone, address) is not provided by Congress.gov API. Visit senate.gov or house.gov for current contact details.</em></p>
