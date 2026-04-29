@@ -1,6 +1,6 @@
 // ---------- CONFIG -------------------------------------------------
 const API_ROOT  = 'https://api.congress.gov/v3';
-const API_KEY   = 'Oze0IkjnsuXYtNVpM3NXTqHqYRM8jgXnvbdiZVy1';
+const API_KEY   = 'ZMSOUqKIq9se1BEsPO3BX0J1bGLD0skMX9Fvx0Co';
 const MAX_ROWS  = 250;// API max per page
 // Updated for JSON format and state filtering
 // -------------------------------------------------------------------
@@ -59,33 +59,17 @@ async function loadMembers () {
 
   statusLine.textContent = 'Loading legislators…';
   try {
-    let page = 1, results = [];
-    while (true) {
-      const url = `${API_ROOT}/member?state=${state}&chamber=${chamber}` +
-                  `&pageSize=${MAX_ROWS}&page=${page}&format=json&api_key=${API_KEY}`;
-      console.log('GET', url);
-      const res  = await fetch(url);
-      if (!res.ok) {
-        console.error(`HTTP error: ${res.status}`);
-        throw new Error(`HTTP ${res.status}`);
-      }
-
-      const data = await res.json();
-      const rows = data.members  ||                // new docs
-                   data.member   || [];            // legacy single-page format
-      console.log(`Page ${page}: got ${rows.length} members`);
-      results.push(...rows);
-
-      // Check if there are more pages - the API uses 'next' property instead of pageCount
-      const hasNext = !!data.pagination?.next;
-      if (!hasNext) {
-        console.log('No more pages, breaking');
-        break;
-      }
-      page++;
+    const url = `${API_ROOT}/member/${state}?format=json&limit=${MAX_ROWS}&currentMember=true&api_key=${API_KEY}`;
+    console.log('GET', url);
+    const res  = await fetch(url);
+    if (!res.ok) {
+      console.error(`HTTP error: ${res.status}`);
+      throw new Error(`HTTP ${res.status}`);
     }
 
-    console.log(`Total API results: ${results.length}`);
+    const data = await res.json();
+    let results = data.members || data.member || [];
+    console.log(`Got ${results.length} members from state endpoint`);
     
     // Filter by state name and chamber since API returns all members regardless of chamber filter
     const stateName = STATES.find(s => s.code === state)?.name;
