@@ -97,13 +97,15 @@ async function loadMembers () {
       'Could not load data. Check the console.';
   }
 }
-
+// My-Representatives.html form submission. Fetches and displays details for the selected member.
 form.addEventListener('submit',e=>{
   e.preventDefault();
-  const choice={
-    state:stateSel.value,
-    chamber:chamberSel.value,
-    bioguideId:memberSel.value
-  };
-  alert(JSON.stringify(choice,null,2));
+  const bioguideId = memberSel.value;
+  if (!bioguideId) {
+    statusLine.textContent = 'Please select a member.';
+    return;
+  }
+  // Redirect to the member details page
+  window.location.href = `member.html?bioguideId=${bioguideId}`;
 });
+

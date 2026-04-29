@@ -5,9 +5,9 @@ legis_client   = Client("http://webservices.legis.ga.gov/Legislation/Service.svc
 
 # --- 1) Fetch session catalogue ---------------------------------
 sessions_raw = session_client.service.GetLegislativeSessions()
-sessions = helpers.serialize_object(sessions_raw, target_cls=dict)
+sessions = helpers.serialize_object(sessions_raw, target_cls=dict)  # type: ignore
 for s in sessions:
-    print(f"SessionId {s['Id']}  →  {s['Description']}")
+    print(f"SessionId {s['Id']}  →  {s['Description']}")  # type: ignore
 
 # Decide which Id you want; if you need the newest with data, run the probe:
 def first_live_session(cid_max=40, cid_min=20):
@@ -27,7 +27,7 @@ if LIVE_SESSION_ID:
         PageSize=5,
         StartIndex=0,
     )
-    page = helpers.serialize_object(result, target_cls=dict)["Page"]["LegislationSearchResult"]
+    page = helpers.serialize_object(result, target_cls=dict)["Page"]["LegislationSearchResult"]  # type: ignore
     print("\nSample bills:")
     for bill in page:
         print(f"• {bill['DocumentType']} {bill['Number']}  {bill['Caption']}")

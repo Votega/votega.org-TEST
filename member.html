@@ -1,0 +1,69 @@
+---
+layout: default
+title: Legislative Member Details
+---
+
+<h1>Legislative Member Details</h1>
+
+<div id="memberDetails" style="margin-top: 2rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;">
+  <p>Loading member information...</p>
+</div>
+
+<div class="msg" id="status"></div>
+
+<script>
+  // Get bioguideId from URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const bioguideId = urlParams.get('bioguideId');
+
+  if (!bioguideId) {
+    document.getElementById('memberDetails').innerHTML = '<p>No member selected. <a href="my-representatives.html">Go back</a></p>';
+  } else {
+    loadMemberDetails(bioguideId);
+  }
+
+  async function loadMemberDetails(bioguideId) {
+    const API_ROOT = 'https://api.congress.gov/v3';
+    const API_KEY = 'Oze0IkjnsuXYtNVpM3NXTqHqYRM8jgXnvbdiZVy1'; // Same as in congress.js
+
+    const statusLine = document.getElementById('status');
+    statusLine.textContent = 'Loading member details…';
+
+    try {
+      const url = `${API_ROOT}/member/${bioguideId}?format=json&api_key=${API_KEY}`;
+      console.log('GET', url);
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const data = await res.json();
+      const member = data.member || {};
+
+      displayMemberDetails(member);
+      statusLine.textContent = '';
+    } catch (err) {
+      console.error('loadMemberDetails()', err);
+      statusLine.textContent = err.message.includes('HTTP') ?
+        'API error: ' + err.message :
+        'Could not load member details. Check the console.';
+      document.getElementById('memberDetails').innerHTML = '<p>Error loading details. <a href="my-representatives.html">Go back</a></p>';
+    }
+  }
+
+  function displayMemberDetails(member) {
+    const detailsDiv = document.getElementById('memberDetails');
+
+    const html = `
+      <h2>${member.name || 'Unknown'}</h2>
+      <p><strong>Party:</strong> ${member.partyName || 'N/A'}</p>
+      <p><strong>State:</strong> ${member.state || 'N/A'}</p>
+      <p><strong>District:</strong> ${member.district || 'N/A'}</p>
+      <p><strong>Chamber:</strong> ${member.terms?.[0]?.chamber || 'N/A'}</p>
+      <p><strong>Website:</strong> ${member.url ? `<a href="${member.url}" target="_blank">${member.url}</a>` : 'N/A'}</p>
+      <p><strong>Phone:</strong> ${member.phone || 'N/A'}</p>
+      <p><strong>Address:</strong> ${member.address || 'N/A'}</p>
+      <p><strong>Biography:</strong> ${member.biography || 'N/A'}</p>
+      <p><a href="my-representatives.html">Search for another member</a></p>
+    `;
+    detailsDiv.innerHTML = html;
+  }
+</script>

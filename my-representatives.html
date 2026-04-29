@@ -1,13 +1,9 @@
 My Representatives
 
-Find out how your representative or senator has voted... 
+Find out how your representative or senator has voted
 
-<!-- Lookup 
- States are hardcoded, user chooses a state and chamber, call https://api.congress.gov/v3/member?state=TX&chamber=house
- Response is paginated, ask for 250 rows (maximum) and merge pages. 
- Returned members are placed in 3rd dropdown. 
- Can swap the choice submission for other logic)
---> 
+<!-- Lookup Form
+ States are hardcoded, user chooses a state and chamber, call https://api.congress.gov/v3/members?state=XX&chamber=X&format. Response is paginated, ask for 250 rows (maximum) and merge pages. Returned members are placed in 3rd dropdown. Can swap the choice submission for other logic--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +19,8 @@ Find out how your representative or senator has voted...
 </head>
 <body>
 
-<h1>Find Your U.S. Legislator</h1>
+<!--Start Form-->
+<h1>Find Your U.S. Legislator(s)</h1>
 
 <form id="lookupForm">
   <label>
@@ -47,8 +44,11 @@ Find out how your representative or senator has voted...
 
   <button type="submit">Select</button>
 </form>
+<!--end form -->
 
 <div class="msg" id="status"></div>
+
+<div id="memberDetails" style="margin-top: 2rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;"></div>
 
 <script src="assets/scripts/congress.js"></script> <!-- Call congress.js script-->
 </body>

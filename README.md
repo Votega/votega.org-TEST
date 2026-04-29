@@ -1,1 +1,2 @@
-This site uses the Beautiful Jekyll theme. A political issues awareness effort for voters within the State of Georgia. 
+# votega.org-dev
+Test/Dev Site
