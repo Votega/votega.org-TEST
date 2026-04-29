@@ -66,6 +66,10 @@ async function loadMembers () {
     const data = await res.json();
     let results = data.members || [];
     console.log(`Got ${results.length} prebuilt members`);
+
+    if (results.length === 0) {
+      throw new Error('No prebuilt member data found. Run the GitHub Actions workflow to generate assets/data/current-members.json.');
+    }
     
     // Filter by state name and chamber since API returns all members regardless of chamber filter
     const stateName = STATES.find(s => s.code === state)?.name;

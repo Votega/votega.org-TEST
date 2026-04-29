@@ -42,9 +42,10 @@ permalink: /member.html
       statusLine.textContent = '';
     } catch (err) {
       console.error('loadMemberDetails()', err);
-      statusLine.textContent = err.message.includes('HTTP') ?
-        'API error: ' + err.message :
-        'Could not load member details. Check the console.';
+      const message = err.message.includes('HTTP') ?
+        'Data file missing or inaccessible. Check that assets/data/current-members.json exists.' :
+        err.message;
+      statusLine.textContent = message;
       document.getElementById('memberDetails').innerHTML = '<p>Error loading details. <a href="my-representatives.html">Go back</a></p>';
     }
   }
