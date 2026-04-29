@@ -115,10 +115,8 @@ async function loadMembers () {
     memberSel.innerHTML = '<option value="">— choose —</option>' +
       results.map(m => {
         let label = m.name;
-        if (expectedChamber === 'House of Representatives') {
-          const currentTerm = m.terms?.item?.slice(-1)[0] || {};
-          const district = currentTerm.district ? `District ${currentTerm.district} - ` : '';
-          label = district + m.name;
+        if (expectedChamber === 'House of Representatives' && m.district) {
+          label = `District ${m.district} - ${m.name}`;
         }
         return `<option value="${m.bioguideId}">${label} (${m.partyName})</option>`;
       }).join('');
