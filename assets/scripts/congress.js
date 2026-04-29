@@ -77,15 +77,27 @@ async function loadMembers () {
     const chamberMap = { 'house': 'House of Representatives', 'senate': 'Senate' };
     const expectedChamber = chamberMap[chamber];
     
+    console.log(`Filtering for state="${stateName}" chamber="${expectedChamber}". Total results: ${results.length}`);
+    
     results = results.filter(m => {
-      if (!m || typeof m !== 'object' || m.state !== stateName || !m.name) return false;
-      // Check if the most recent term matches the requested chamber
-      const terms = m.terms?.item || [];
-      return terms.length > 0 && terms[0].chamber === expectedChamber;
+      if (!m || typeof m !== 'object') return false;
+      if (m.state !== stateName || !m.name) return false;
+      // Check if the member has terms and if any term matches the requested chamber
+      const terms = m.terms?.item || m.terms || [];
+      if (!Array.isArray(terms)) return false;
+      // Check if any term is for the requested chamber (look at current/recent terms)
+      const hasMatchingChamber = terms.some((t, idx) => {
+        const match = t.chamber === expectedChamber;
+        if (idx === 0 && !match) console.log(`Member "${m.name}" (${m.state}): term[0].chamber="${t.chamber}" (want "${expectedChamber}")`);
+        return match;
+      });
+      return hasMatchingChamber;
     });
+    
+    console.log(`After filtering: ${results.length} members`);
 
     if (results.length === 0) {
-      throw new Error('No members returned – check state/chamber.');
+      throw new Error(`No members returned for ${stateName} ${expectedChamber} – check API data.`);
     }
 
     results.sort((a,b) => a.name.localeCompare(b.name));
