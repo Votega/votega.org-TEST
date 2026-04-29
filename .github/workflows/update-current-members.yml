@@ -1,5 +1,8 @@
 name: Update Congress.gov current members data
 
+permissions:
+  contents: write  # Allows the bot to commit and push changes
+  
 on:
   workflow_dispatch:
   schedule:
