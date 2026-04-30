@@ -1,8 +1,6 @@
 // ---------- CONFIG -------------------------------------------------
-const API_ROOT  = 'https://api.congress.gov/v3';
-const API_KEY   = 'Oze0IkjnsuXYtNVpM3NXTqHqYRM8jgXnvbdiZVy1';
-const MAX_ROWS  = 250;// API max per page
-// Updated for JSON format and state filtering
+const DATA_URL  = 'assets/data/current-members.json';
+// The member list is prebuilt by GitHub Actions and served as static JSON.
 // -------------------------------------------------------------------
 
 const STATES = [
@@ -48,45 +46,88 @@ async function loadMembers () {
   const state   = stateSel.value;
   const chamber = chamberSel.value;
 
+  console.log('loadMembers called', {state, chamber});
+  
   memberSel.disabled = true;
   memberSel.innerHTML = '';
-  if (!state || !chamber) return;
+  if (!state || !chamber) {
+    console.log('Missing state or chamber, returning');
+    return;
+  }
 
   statusLine.textContent = 'Loading legislators…';
   try {
-    let page = 1, results = [];
-    while (true) {
-      const url = `${API_ROOT}/member?state=${state}&chamber=${chamber}` +
-                  `&pageSize=${MAX_ROWS}&page=${page}&format=json&api_key=${API_KEY}`;
-      console.log('GET', url);                    // easier to inspect in Network tab
-      const res  = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-      const data = await res.json();
-      const rows = data.members  ||                // new docs
-                   data.member   || [];            // legacy single-page format
-      results.push(...rows);
-
-      const last = data.pagination?.pageCount || 1;
-      if (page >= last) break;
-      page++;
+    const res  = await fetch(DATA_URL);
+    if (!res.ok) {
+      console.error(`HTTP error: ${res.status}`);
+      throw new Error(`HTTP ${res.status}`);
     }
 
-    // Filter by state name since API uses full names
-    const stateName = STATES.find(s => s.code === state)?.name;
-    results = results.filter(m => m && typeof m === 'object' && m.state === stateName && m.name);
+    const data = await res.json();
+    let results = data.members || [];
+    console.log(`Got ${results.length} prebuilt members`);
 
     if (results.length === 0) {
-      throw new Error('No members returned – check state/chamber.');
+      throw new Error('No prebuilt member data found. Run the GitHub Actions workflow to generate assets/data/current-members.json.');
+    }
+    
+    // Filter by state name and chamber since API returns all members regardless of chamber filter
+    const stateName = STATES.find(s => s.code === state)?.name;
+    const chamberMap = { 'house': 'House of Representatives', 'senate': 'Senate' };
+    const expectedChamber = chamberMap[chamber];
+    
+    console.log(`Filtering for state="${stateName}" chamber="${expectedChamber}". Total results: ${results.length}`);
+    
+    results = results.filter(m => {
+      if (!m || typeof m !== 'object') {
+        console.log('Filtered out: not an object');
+        return false;
+      }
+      if (m.state !== stateName) {
+        console.log(`Filtered out "${m.name}": state="${m.state}" (want "${stateName}")`);
+        return false;
+      }
+      if (!m.name) {
+        console.log('Filtered out: no name');
+        return false;
+      }
+      // Check if the member has terms and if any term matches the requested chamber
+      const terms = m.terms?.item || m.terms || [];
+      if (!Array.isArray(terms)) {
+        console.log(`"${m.name}": terms is not an array:`, terms);
+        return false;
+      }
+      // Check if any term is for the requested chamber
+      const hasMatchingChamber = terms.some(t => t.chamber === expectedChamber);
+      if (!hasMatchingChamber) {
+        console.log(`Filtered out "${m.name}": chambers=${terms.map(t => t.chamber).join('/')} (want "${expectedChamber}")`);
+      }
+      return hasMatchingChamber;
+    });
+    
+    console.log(`After filtering: ${results.length} members`);
+
+    if (results.length === 0) {
+      throw new Error(`No members returned for ${stateName} ${expectedChamber} – check API data.`);
     }
 
-    results.sort((a,b) => a.name.localeCompare(b.name));
+    results.sort((a,b) => {
+      if (expectedChamber === 'House of Representatives') {
+        const districtA = typeof a.district === 'number' ? a.district : Number.MAX_SAFE_INTEGER;
+        const districtB = typeof b.district === 'number' ? b.district : Number.MAX_SAFE_INTEGER;
+        if (districtA !== districtB) return districtA - districtB;
+      }
+      return a.name.localeCompare(b.name);
+    });
+
     memberSel.innerHTML = '<option value="">— choose —</option>' +
-      results.map(m =>
-        `<option value="${m.bioguideId}">
-           ${m.name} (${m.partyName})
-         </option>`
-      ).join('');
+      results.map(m => {
+        let label = m.name;
+        if (expectedChamber === 'House of Representatives' && m.district) {
+          label = `District ${m.district} - ${m.name}`;
+        }
+        return `<option value="${m.bioguideId}">${label} (${m.partyName})</option>`;
+      }).join('');
     memberSel.disabled = false;
     statusLine.textContent = '';
 
@@ -106,6 +147,11 @@ form.addEventListener('submit',e=>{
     return;
   }
   // Redirect to the member details page
-  window.location.href = `/member.html?bioguideId=${bioguideId}`;
+  // Get the base path (handles both votega.github.io/votega.org-TEST/ and votega.github.io/)
+  const pathname = window.location.pathname;
+  const basePath = pathname.includes('/votega.org-TEST/') 
+    ? '/votega.org-TEST/' 
+    : '/';
+  window.location.href = `${basePath}member.html?bioguideId=${bioguideId}`;
 });
 

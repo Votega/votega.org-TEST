@@ -24,28 +24,28 @@ permalink: /member.html
   }
 
   async function loadMemberDetails(bioguideId) {
-    const API_ROOT = 'https://api.congress.gov/v3';
-    const API_KEY = 'Oze0IkjnsuXYtNVpM3NXTqHqYRM8jgXnvbdiZVy1'; // Same as in congress.js
-
+    const DATA_URL = 'assets/data/current-members.json';
     const statusLine = document.getElementById('status');
     statusLine.textContent = 'Loading member details…';
 
     try {
-      const url = `${API_ROOT}/member/${bioguideId}?format=json&api_key=${API_KEY}`;
-      console.log('GET', url);
-      const res = await fetch(url);
+      const res = await fetch(DATA_URL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       const data = await res.json();
-      const member = data.member || {};
+      const member = (data.members || []).find(m => m.bioguideId === bioguideId) || {};
+      if (!member.bioguideId) {
+        throw new Error('Member not found in prebuilt data');
+      }
 
       displayMemberDetails(member);
       statusLine.textContent = '';
     } catch (err) {
       console.error('loadMemberDetails()', err);
-      statusLine.textContent = err.message.includes('HTTP') ?
-        'API error: ' + err.message :
-        'Could not load member details. Check the console.';
+      const message = err.message.includes('HTTP') ?
+        'Data file missing or inaccessible. Check that assets/data/current-members.json exists.' :
+        err.message;
+      statusLine.textContent = message;
       document.getElementById('memberDetails').innerHTML = '<p>Error loading details. <a href="my-representatives.html">Go back</a></p>';
     }
   }
@@ -53,16 +53,30 @@ permalink: /member.html
   function displayMemberDetails(member) {
     const detailsDiv = document.getElementById('memberDetails');
 
+    // Get name (top-level field)
+    const name = member.name || 'Unknown';
+
+    // Get party (top-level field)
+    const party = member.partyName || 'N/A';
+
+    // Get state (top-level field)
+    const state = member.state || 'N/A';
+
+    // Get current term (from terms.item array, take the last/most recent term)
+    const currentTerm = member.terms?.item?.slice(-1)[0] || {};
+    const chamber = currentTerm.chamber || 'N/A';
+    const district = member.district ? `District ${member.district}` : (chamber === 'Senate' ? 'U.S. Senator' : 'N/A');
+
+    // Note: website, phone, address, and biography are not provided by Congress.gov API
+    const imageUrl = member.depiction?.imageUrl;
+    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem;">` : '';
+
     const html = `
-      <h2>${member.name || 'Unknown'}</h2>
-      <p><strong>Party:</strong> ${member.partyName || 'N/A'}</p>
-      <p><strong>State:</strong> ${member.state || 'N/A'}</p>
-      <p><strong>District:</strong> ${member.district || 'N/A'}</p>
-      <p><strong>Chamber:</strong> ${member.terms?.[0]?.chamber || 'N/A'}</p>
-      <p><strong>Website:</strong> ${member.url ? `<a href="${member.url}" target="_blank">${member.url}</a>` : 'N/A'}</p>
-      <p><strong>Phone:</strong> ${member.phone || 'N/A'}</p>
-      <p><strong>Address:</strong> ${member.address || 'N/A'}</p>
-      <p><strong>Biography:</strong> ${member.biography || 'N/A'}</p>
+      ${imageHtml}
+      <h2>${name}</h2>
+      <p><strong>Party:</strong> ${party}</p>
+      <p><strong>State:</strong> ${state}</p>      <p><strong>District:</strong> ${district}</p>      <p><strong>Chamber:</strong> ${chamber}</p>
+      <p style="color: #666; font-size: 0.9em; margin-top: 1rem;"><em>Note: Contact information (website, phone, address, and district) is not provided by Congress.gov API. Visit senate.gov or house.gov for current contact details.</em></p>
       <p><a href="my-representatives.html">Search for another member</a></p>
     `;
     detailsDiv.innerHTML = html;
