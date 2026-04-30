@@ -64,10 +64,14 @@ permalink: /member.html
 
     // Get current term (from terms.item array, take the last/most recent term)
     const currentTerm = member.terms?.item?.slice(-1)[0] || {};
+   // Get chamber and district from current term 
     const chamber = currentTerm.chamber || 'N/A';
     const district = member.district ? `District ${member.district}` : (chamber === 'Senate' ? 'U.S. Senator' : 'N/A');
+   
+    // Get year of first term (startYear) from current-members.json
+    const startYear = member.startYear || 'N/A';
 
-    // Note: website, phone, address, and biography are not provided by Congress.gov API
+    // Get member picture
     const imageUrl = member.depiction?.imageUrl;
     const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem;">` : '';
 
@@ -76,6 +80,7 @@ permalink: /member.html
       <h2>${name}</h2>
       <p><strong>Party:</strong> ${party}</p>
       <p><strong>State:</strong> ${state}</p>      <p><strong>District:</strong> ${district}</p>      <p><strong>Chamber:</strong> ${chamber}</p>
+      <p><strong>First Term:</strong> ${startYear}</p>
       <!--
          <p style="color: #666; font-size: 0.9em; margin-top: 1rem;"><em>Note: Contact information (website, phone, address, and district) is not provided by Congress.gov API. Visit senate.gov or house.gov for current contact details.</em></p>
        -->
