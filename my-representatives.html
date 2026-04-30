@@ -1,14 +1,19 @@
-My Representatives
+<h1><center>My Representatives</center></h1>
+<h3><center>Find Your U.S. Legislator(s)</h3></center></h3>
 
-Find out how your representative or senator has voted
+Select your State and Chamber (House or Senate). A list of your Representatives or Senators, will appear in the drop-down list.<br> 
 
-<!-- Lookup Form
- States are hardcoded, user chooses a state and chamber. Member lookup now uses prebuilt JSON at assets/data/current-members.json instead of calling the Congress.gov API directly from the browser. Returned members are placed in the 3rd dropdown. Can swap the choice submission for other logic--> 
+<br>Select a member to view details about their term(s) in office. 
+
+<!--
+Lookup Form
+ States are hardcoded, user chooses a state and chamber. Form returns a list of members based on selection. Member lookup uses prebuilt current-members.JSON instead of calling the Congress.gov API directly from the browser. Returned members are placed in the last dropdown list. 
+ --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Congress Lookup (api.congress.gov)</title>
+  <title>Legislator Lookup (api.congress.gov)</title>
   <style>
     body {font-family: system-ui, sans-serif; margin:2rem; max-width:680px;}
     label {display:block; margin-top:1.2rem;}
@@ -20,8 +25,6 @@ Find out how your representative or senator has voted
 <body>
 
 <!--Start Form-->
-<h1>Find Your U.S. Legislator(s)</h1>
-
 <form id="lookupForm">
   <label>
     State
@@ -47,9 +50,8 @@ Find out how your representative or senator has voted
 <!--end form -->
 
 <div class="msg" id="status"></div>
-<!--<p style="color:#555; font-size:0.95rem; margin-top:1rem; max-width:680px;">Note: The Congress.gov state member endpoint does not support a direct chamber query filter, so this page retrieves the current state delegation and filters by chamber locally.</p>-->
 
-<!-- <div id="memberDetails" style="margin-top: 2rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px;"></div> -->
+<center><i>Data is sourced from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></i></center>
 
 <script src="assets/scripts/congress.js"></script> <!-- Call congress.js script-->
 </body>
