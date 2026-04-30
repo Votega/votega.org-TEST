@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-04-29T22:43:37Z",
-  "source": "https://api.congress.gov/v3/member?currentMember=true&format=json",
-  "count": 536,
+  "updatedAt": "2026-04-30T00:04:46Z",
+  "source": "https://api.congress.gov/v3/member?format=json (filtered by current term dates)",
+  "count": 543,
   "members": [
     {
       "bioguideId": "S001150",
@@ -87,6 +87,94 @@
       "url": "https://api.congress.gov/v3/member/F000485?format=json"
     },
     {
+      "bioguideId": "S001157",
+      "depiction": {
+        "attribution": "Congressional Pictorial Directory",
+        "imageUrl": "https://www.congress.gov/img/member/116_rp_ga_13_scott_david_200.jpg"
+      },
+      "district": 13,
+      "name": "Scott, David",
+      "partyName": "Democratic",
+      "state": "Georgia",
+      "terms": {
+        "item": [
+          {
+            "chamber": "House of Representatives",
+            "endYear": 2026,
+            "startYear": 2003
+          }
+        ]
+      },
+      "updateDate": "2026-04-23T10:59:01Z",
+      "url": "https://api.congress.gov/v3/member/S001157?format=json"
+    },
+    {
+      "bioguideId": "C001127",
+      "depiction": {
+        "attribution": "Image courtesy of the Member",
+        "imageUrl": "https://www.congress.gov/img/member/c001127_200.jpg"
+      },
+      "district": 20,
+      "name": "Cherfilus-McCormick, Sheila",
+      "partyName": "Democratic",
+      "state": "Florida",
+      "terms": {
+        "item": [
+          {
+            "chamber": "House of Representatives",
+            "endYear": 2026,
+            "startYear": 2022
+          }
+        ]
+      },
+      "updateDate": "2026-04-22T11:18:26Z",
+      "url": "https://api.congress.gov/v3/member/C001127?format=json"
+    },
+    {
+      "bioguideId": "G000594",
+      "depiction": {
+        "attribution": "Image courtesy of the Member",
+        "imageUrl": "https://www.congress.gov/img/member/g000594_200.jpg"
+      },
+      "district": 23,
+      "name": "Gonzales, Tony",
+      "partyName": "Republican",
+      "state": "Texas",
+      "terms": {
+        "item": [
+          {
+            "chamber": "House of Representatives",
+            "endYear": 2026,
+            "startYear": 2021
+          }
+        ]
+      },
+      "updateDate": "2026-04-15T19:41:13Z",
+      "url": "https://api.congress.gov/v3/member/G000594?format=json"
+    },
+    {
+      "bioguideId": "S001193",
+      "depiction": {
+        "attribution": "Image courtesy of the Member",
+        "imageUrl": "https://www.congress.gov/img/member/s001193_200.jpg"
+      },
+      "district": 14,
+      "name": "Swalwell, Eric",
+      "partyName": "Democratic",
+      "state": "California",
+      "terms": {
+        "item": [
+          {
+            "chamber": "House of Representatives",
+            "endYear": 2026,
+            "startYear": 2013
+          }
+        ]
+      },
+      "updateDate": "2026-04-15T11:45:35Z",
+      "url": "https://api.congress.gov/v3/member/S001193?format=json"
+    },
+    {
       "bioguideId": "C001091",
       "depiction": {
         "attribution": "Image courtesy of the Member",
@@ -148,6 +236,32 @@
       },
       "updateDate": "2026-04-09T20:02:15Z",
       "url": "https://api.congress.gov/v3/member/C001121?format=json"
+    },
+    {
+      "bioguideId": "M001190",
+      "depiction": {
+        "attribution": "<p>Official U.S. Senate Photo</p>",
+        "imageUrl": "https://www.congress.gov/img/member/m001190_200.jpg"
+      },
+      "name": "Mullin, Markwayne",
+      "partyName": "Republican",
+      "state": "Oklahoma",
+      "terms": {
+        "item": [
+          {
+            "chamber": "House of Representatives",
+            "endYear": 2023,
+            "startYear": 2013
+          },
+          {
+            "chamber": "Senate",
+            "endYear": 2026,
+            "startYear": 2023
+          }
+        ]
+      },
+      "updateDate": "2026-03-24T12:44:29Z",
+      "url": "https://api.congress.gov/v3/member/M001190?format=json"
     },
     {
       "bioguideId": "K000401",
@@ -2509,6 +2623,50 @@
       },
       "updateDate": "2026-01-08T19:47:12Z",
       "url": "https://api.congress.gov/v3/member/W000812?format=json"
+    },
+    {
+      "bioguideId": "L000578",
+      "depiction": {
+        "attribution": "Image courtesy of the Member",
+        "imageUrl": "https://www.congress.gov/img/member/l000578_200.jpg"
+      },
+      "district": 1,
+      "name": "LaMalfa, Doug",
+      "partyName": "Republican",
+      "state": "California",
+      "terms": {
+        "item": [
+          {
+            "chamber": "House of Representatives",
+            "endYear": 2026,
+            "startYear": 2013
+          }
+        ]
+      },
+      "updateDate": "2026-01-06T15:36:36Z",
+      "url": "https://api.congress.gov/v3/member/L000578?format=json"
+    },
+    {
+      "bioguideId": "G000596",
+      "depiction": {
+        "attribution": "Image courtesy of the Member",
+        "imageUrl": "https://www.congress.gov/img/member/g000596_200.jpg"
+      },
+      "district": 14,
+      "name": "Greene, Marjorie Taylor",
+      "partyName": "Republican",
+      "state": "Georgia",
+      "terms": {
+        "item": [
+          {
+            "chamber": "House of Representatives",
+            "endYear": 2026,
+            "startYear": 2021
+          }
+        ]
+      },
+      "updateDate": "2026-01-06T12:37:11Z",
+      "url": "https://api.congress.gov/v3/member/G000596?format=json"
     },
     {
       "bioguideId": "R000619",
