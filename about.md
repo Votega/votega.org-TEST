@@ -15,3 +15,9 @@ To be honest, as each year progresses I have further and further trust issues wi
 
 {: .box-note}
 This site is still under construction... 
+
+<div id="voteSmartWidgetEmbed" style="width: 250px; margin-top: 20px"></div>
+<link href="https://static2.votesmart.io/widget/index.css" rel="stylesheet">
+<script src="https://static2.votesmart.io/widget/index.js" type="text/javascript"></script>
+       
+    
