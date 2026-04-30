@@ -67,17 +67,18 @@ permalink: /member.html
    // Get chamber and district from current term 
     const chamber = currentTerm.chamber || 'N/A';
     const district = member.district ? `District ${member.district}` : (chamber === 'Senate' ? 'U.S. Senator' : 'N/A');
-   
-    // Get year of first term (startYear) from current-members.json
-      // Get all terms (array)
+         
+    // Get all terms (array) for startYear and yearsInOffice (for current chamber) calculation. 
       const termsArr = member.terms?.item || [];
       const terms = Array.isArray(termsArr) ? termsArr : [termsArr];
+      
       // Extract all valid startYears
       const startYears = terms.map(t => t.startYear).filter(y => typeof y === 'number');
+      
       // Find the latest startYear. This will account for members who started in one chamber but then moved to another (Adam Schiff, from California for example).
       const startYear = startYears.length ? Math.max(...startYears) : 'N/A';
 
-      // yearsInOffice 
+      // Calculate yearsInOffice (currentYear - startYear + 1). +1 to count the current year as well. 
       const currentYear = new Date().getFullYear();
       const yearsInOffice = startYear ? (currentYear - startYear + 1) : 'N/A';
       
