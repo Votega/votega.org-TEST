@@ -1,5 +1,4 @@
 {
-  "updatedAt": "2026-04-30T22:30:14Z",
   "source": "https://api.congress.gov/v3/member?format=json (filtered by current term dates)",
   "count": 543,
   "members": [
