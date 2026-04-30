@@ -78,9 +78,9 @@ permalink: /member.html
       // Find the latest startYear. This will account for members who started in one chamber but then moved to another (Adam Schiff, from California for example).
       const startYear = startYears.length ? Math.max(...startYears) : 'N/A';
 
-      // Calculate yearsInOffice (currentYear - startYear + 1). +1 to count the current year as well. 
+      // Calculate yearsInOffice (currentYear - startYear). Add +1 to count the current year as well. 
       const currentYear = new Date().getFullYear();
-      const yearsInOffice = startYear ? (currentYear - startYear + 1) : 'N/A';
+      const yearsInOffice = startYear ? (currentYear - startYear) : 'N/A';
       
     // Get member picture
     const imageUrl = member.depiction?.imageUrl;
