@@ -1,0 +1,53 @@
+name: Update Georgia General Assembly member data
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 7 * * *'  # daily at 07:00 UTC (one hour after Congress workflow)
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate GA member data
+        run: python scripts/generate_ga_members_data.py assets/data/ga-members.json
+        env:
+          OPENSTATES_API_KEY: ${{ secrets.OPENSTATES_API_KEY }}
+
+      - name: Validate generated data
+        run: |
+          if [ ! -f assets/data/ga-members.json ]; then
+            echo "Error: ga-members.json was not generated"
+            exit 1
+          fi
+          python -c "
+          import json
+          d = json.load(open('assets/data/ga-members.json'))
+          count = d['metadata']['count']
+          print(f'Validated: {count} GA members')
+          assert count > 200, f'Expected 200+ members, got {count}'
+          "
+
+      - name: Commit and push generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f assets/data/ga-members.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update Georgia General Assembly member data"
+            git push
+          fi

@@ -1,0 +1,201 @@
+---
+layout: default
+title: GA Legislator Details
+permalink: /ga-member.html
+---
+
+<h1>Georgia Legislator Details</h1>
+
+<style>
+  #pageLayout {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+  #memberDetails {
+    flex: 1;
+    min-width: 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  #stateSidebar {
+    width: 240px;
+    flex-shrink: 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: sticky;
+    top: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: none;
+  }
+  #stateSidebar h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+  .sidebar-group-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0.75rem 0 0.25rem 0;
+  }
+  .sidebar-member {
+    display: block;
+    padding: 0.3rem 0.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    color: inherit;
+    line-height: 1.3;
+  }
+  .sidebar-member:hover { background: #f0f0f0; }
+  .sidebar-member.current {
+    background: #e8f0fe;
+    font-weight: bold;
+    cursor: default;
+    pointer-events: none;
+  }
+  .sidebar-member-sub {
+    font-size: 0.75rem;
+    color: #666;
+  }
+  @media (max-width: 700px) {
+    #pageLayout { flex-direction: column; }
+    #stateSidebar { width: auto; position: static; max-height: 300px; display: block !important; }
+  }
+</style>
+
+<div id="pageLayout">
+  <div id="memberDetails">
+    <p>Loading member information...</p>
+  </div>
+  <div id="stateSidebar">
+    <h3 id="sidebarTitle">Nearby Districts</h3>
+    <div id="sidebarContent"></div>
+  </div>
+</div>
+
+<div class="msg" id="status"></div>
+
+<script>
+  const DATA_URL = 'assets/data/ga-members.json';
+
+  const urlParams  = new URLSearchParams(window.location.search);
+  const memberId   = urlParams.get('id');
+
+  if (!memberId) {
+    document.getElementById('memberDetails').innerHTML =
+      '<p>No member selected. <a href="ga-representatives.html">Go back</a></p>';
+  } else {
+    loadMemberDetails(memberId);
+  }
+
+  function getBasePath() {
+    return window.location.pathname.includes('/votega.org-TEST/') ? '/votega.org-TEST/' : '/';
+  }
+
+  async function loadMemberDetails(id) {
+    const statusLine = document.getElementById('status');
+    statusLine.textContent = 'Loading member details…';
+
+    try {
+      const res = await fetch(DATA_URL);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const data  = await res.json();
+      const all   = data.members || [];
+      const member = all.find(m => m.id === id);
+
+      if (!member) throw new Error('Member not found in data.');
+
+      displayMemberDetails(member);
+      displaySidebar(member, all);
+      statusLine.textContent = '';
+    } catch (err) {
+      console.error(err);
+      statusLine.textContent = err.message.includes('HTTP')
+        ? 'Data file missing or inaccessible. Check that assets/data/ga-members.json exists.'
+        : err.message;
+      document.getElementById('memberDetails').innerHTML =
+        '<p>Error loading details. <a href="ga-representatives.html">Go back</a></p>';
+    }
+  }
+
+  function displayMemberDetails(member) {
+    const currentYear = new Date().getFullYear();
+    const detailsDiv  = document.getElementById('memberDetails');
+
+    const name    = member.name || 'Unknown';
+    const imageHtml = member.imageUrl
+      ? `<img src="${member.imageUrl}" alt="${name}" style="max-width:200px;margin-bottom:1rem;border-radius:8px;">`
+      : '';
+
+    const phoneHtml   = member.phone   ? `<p><strong>Phone:</strong> ${member.phone}</p>`   : '';
+    const addressHtml = member.address ? `<p><strong>Address:</strong> ${member.address}</p>` : '';
+    const emailHtml   = member.email   ? `<p><strong>Email:</strong> <a href="mailto:${member.email}">${member.email}</a></p>` : '';
+    const websiteHtml = member.officialWebsiteUrl
+      ? `<p><strong>Official Website:</strong> <a href="${member.officialWebsiteUrl}" target="_blank">${member.officialWebsiteUrl}</a></p>`
+      : '';
+
+    detailsDiv.innerHTML = `
+      ${imageHtml}
+      <h2>${name}</h2>
+      ${member.birthYear
+        ? `<p style="display:flex;justify-content:space-between;">
+             <span><strong>Birth Year:</strong> ${member.birthYear}</span>
+             <span><strong>Age:</strong> ${currentYear - member.birthYear}</span>
+           </p>`
+        : ''}
+      <p><strong>Title:</strong> ${member.title || 'N/A'}</p>
+      <p><strong>Party:</strong> ${member.party || 'N/A'}</p>
+      <p><strong>Chamber:</strong> ${member.chamber || 'N/A'}</p>
+      <p><strong>District:</strong> ${member.district ?? 'N/A'}</p>
+      ${phoneHtml}
+      ${addressHtml}
+      ${emailHtml}
+      ${websiteHtml}
+      <p><a href="ga-representatives.html">Search for another member</a></p>
+    `;
+  }
+
+  function displaySidebar(current, all) {
+    const chamber = current.chamber;
+    if (!chamber) return;
+
+    const peers = all
+      .filter(m => m.chamber === chamber)
+      .sort((a, b) => (a.district ?? 999) - (b.district ?? 999));
+
+    if (peers.length <= 1) return;
+
+    const currentDist = current.district ?? 0;
+    const nearby = peers.filter(m =>
+      Math.abs((m.district ?? 0) - currentDist) <= 5
+    );
+
+    if (nearby.length <= 1) return;
+
+    const basePath = getBasePath();
+    const label = chamber === 'Senate' ? 'Senate' : 'House';
+
+    const items = nearby.map(m => {
+      const isCurrent = m.id === current.id;
+      const sub = `District ${m.district} · ${m.party || ''}`;
+      if (isCurrent) {
+        return `<span class="sidebar-member current">${m.name}<br><span class="sidebar-member-sub">${sub}</span></span>`;
+      }
+      return `<a class="sidebar-member" href="${basePath}ga-member.html?id=${encodeURIComponent(m.id)}">${m.name}<br><span class="sidebar-member-sub">${sub}</span></a>`;
+    }).join('');
+
+    document.getElementById('sidebarTitle').textContent = `Nearby ${label} Districts`;
+    document.getElementById('sidebarContent').innerHTML =
+      `<div class="sidebar-group-label">${label}</div>${items}`;
+    document.getElementById('stateSidebar').style.display = 'block';
+  }
+</script>
