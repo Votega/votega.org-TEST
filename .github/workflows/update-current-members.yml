@@ -66,7 +66,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/data/current-members.json
+          git add -f assets/data/current-members.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
