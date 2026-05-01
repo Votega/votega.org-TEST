@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate current-members.json from Congress.gov API
-Includes leadership positions for each member
+Fetches detailed member data including leadership positions, contact info, etc.
 """
 
 import json
@@ -12,7 +12,7 @@ import urllib.error
 from datetime import datetime
 
 # Configuration
-API_KEY = os.environ.get('CONGRESS_API_KEY') or ""
+API_KEY = os.environ.get('CONGRESS_API_KEY')
 BASE_URL = "https://api.congress.gov/v3"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
 
@@ -25,7 +25,7 @@ def fetch_url(url):
     """Fetch data from Congress.gov API with error handling"""
     try:
         req = urllib.request.Request(url)
-        req.add_header('X-API-Key', API_KEY)  # Now safe - API_KEY is validated as str
+        req.add_header('X-API-Key', API_KEY)
         with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
@@ -38,18 +38,108 @@ def fetch_url(url):
         print(f"Error fetching {url}: {e}")
         return None
 
-def get_member_leadership(bioguideId):
-    """Fetch leadership positions for a specific member"""
-    url = f"{BASE_URL}/member/{bioguideId}?api_key={API_KEY}"
+def get_member_details(bioguideId):
+    """Fetch detailed member data from /member/{bioguideId} endpoint"""
+    # Request JSON format explicitly
+    url = f"{BASE_URL}/member/{bioguideId}?api_key={API_KEY}&format=json"
     data = fetch_url(url)
     if data and 'member' in data:
-        return data['member'].get('leadership', [])
-    return []
+        return data['member']
+    return None
+
+def extract_leadership(member_data):
+    """Extract leadership positions from member data"""
+    leadership = member_data.get('leadership', [])
+    
+    # Handle both list and dict with 'item' key (API inconsistency)
+    if isinstance(leadership, dict):
+        leadership = leadership.get('item', [])
+    
+    # Ensure it's a list
+    if not isinstance(leadership, list):
+        leadership = [leadership] if leadership else []
+    
+    # Extract current leadership positions only
+    current_leadership = []
+    for position in leadership:
+        if isinstance(position, dict):
+            # Include if marked as current OR if no 'current' field (assume current)
+            if position.get('current') == True or 'current' not in position:
+                current_leadership.append({
+                    'title': position.get('type', position.get('title', 'Unknown')),
+                    'congress': position.get('congress', ''),
+                    'current': position.get('current', True)
+                })
+    
+    return current_leadership
+
+def extract_contact_info(member_data):
+    """Extract contact information from member data"""
+    address_info = member_data.get('addressInformation', {})
+    return {
+        'officeAddress': address_info.get('officeAddress', ''),
+        'city': address_info.get('city', ''),
+        'state': address_info.get('district', ''),  # DC is stored as 'district'
+        'zipCode': address_info.get('zipCode', ''),
+        'phoneNumber': address_info.get('phoneNumber', '')
+    }
+
+def extract_party(member_data):
+    """Extract current party affiliation"""
+    party_history = member_data.get('partyHistory', [])
+    
+    # Handle both list and dict with 'item' key
+    if isinstance(party_history, dict):
+        party_history = party_history.get('item', [])
+    
+    if not isinstance(party_history, list):
+        party_history = [party_history] if party_history else []
+    
+    # Get the most recent party
+    if party_history:
+        # Sort by startYear to get most recent
+        sorted_parties = sorted(party_history, key=lambda x: x.get('startYear', 0), reverse=True)
+        return {
+            'partyName': sorted_parties[0].get('partyName', 'Unknown'),
+            'partyAbbreviation': sorted_parties[0].get('partyAbbreviation', '')
+        }
+    
+    return {'partyName': 'Unknown', 'partyAbbreviation': ''}
+
+def enrich_member_data(bioguideId, basic_member):
+    """Fetch and enrich member data with detailed information"""
+    # Fetch detailed member data
+    member_details = get_member_details(bioguideId)
+    
+    if not member_details:
+        # Fall back to basic data if detailed fetch fails
+        print(f"    Warning: Could not fetch details for {bioguideId}, using basic data")
+        basic_member['leadership'] = []
+        basic_member['contactInfo'] = {}
+        basic_member['officialWebsiteUrl'] = ''
+        basic_member['birthYear'] = ''
+        basic_member['dataUpdatedAt'] = datetime.now().isoformat()
+        return basic_member
+    
+    # Extract and add enriched fields
+    basic_member['leadership'] = extract_leadership(member_details)
+    basic_member['contactInfo'] = extract_contact_info(member_details)
+    basic_member['officialWebsiteUrl'] = member_details.get('officialWebsiteUrl', '')
+    basic_member['birthYear'] = member_details.get('birthYear', '')
+    basic_member['currentMember'] = member_details.get('currentMember', False)
+    basic_member['honorificName'] = member_details.get('honorificName', '')
+    basic_member['firstName'] = member_details.get('firstName', '')
+    basic_member['lastName'] = member_details.get('lastName', '')
+    basic_member['sponsoredLegislation'] = member_details.get('sponsoredLegislation', {})
+    basic_member['cosponsoredLegislation'] = member_details.get('cosponsoredLegislation', {})
+    basic_member['dataUpdatedAt'] = datetime.now().isoformat()
+    
+    return basic_member
 
 def get_current_members():
     """Fetch all current members of Congress"""
     # Fetch all current members (both chambers)
-    url = f"{BASE_URL}/member?api_key={API_KEY}&limit=550"
+    url = f"{BASE_URL}/member?api_key={API_KEY}&limit=550&format=json"
     data = fetch_url(url)
     
     if not data or 'members' not in data:
@@ -59,13 +149,11 @@ def get_current_members():
     members = data['members'].get('member', [])
     print(f"Found {len(members)} members in initial fetch")
     
-    # Filter to only current members (those with current terms)
+    # Filter to only current members
     current_members = []
     for member in members:
-        # Check if member has current terms
         terms = member.get('terms', {}).get('item', [])
         if terms:
-            # Check if any term is current (endYear is null or in the future)
             current_year = datetime.now().year
             has_current_term = any(
                 term.get('endYear') is None or term.get('endYear', 0) >= current_year
@@ -77,24 +165,7 @@ def get_current_members():
     print(f"Filtered to {len(current_members)} current members")
     return current_members
 
-def enrich_member_data(member):
-    """Enrich member data with leadership positions"""
-    bioguideId = member.get('bioguideId', '')
-    
-    # Fetch leadership data from individual member endpoint
-    leadership = get_member_leadership(bioguideId)
-    
-    # Add leadership to member data
-    member['leadership'] = leadership
-    
-    # Add metadata
-    member['dataUpdatedAt'] = datetime.now().isoformat()
-    
-    return member
-
 def main():
-    # API key validation moved to top of script
-    
     print("Fetching current Congress members...")
     members = get_current_members()
     
@@ -102,16 +173,17 @@ def main():
         print("Error: No members fetched")
         sys.exit(1)
     
-    print("Enriching member data with leadership positions...")
+    print("Enriching member data with detailed information...")
     enriched_members = []
     for i, member in enumerate(members):
-        print(f"  Processing {i+1}/{len(members)}: {member.get('name', 'Unknown')}")
-        enriched_member = enrich_member_data(member)
+        bioguideId = member.get('bioguideId', '')
+        print(f"  Processing {i+1}/{len(members)}: {member.get('name', 'Unknown')} ({bioguideId})")
+        enriched_member = enrich_member_data(bioguideId, member)
         enriched_members.append(enriched_member)
         
         # Rate limiting: Congress.gov API allows 1000 requests per hour
-        # Add small delay to be safe
-        if (i + 1) % 10 == 0:
+        # We're making 2 requests per member (list + details), so pace accordingly
+        if (i + 1) % 5 == 0:
             print(f"  Progress: {i+1}/{len(members)} members processed")
     
     # Create output structure
@@ -119,7 +191,8 @@ def main():
         'metadata': {
             'generatedAt': datetime.now().isoformat(),
             'source': 'Congress.gov API',
-            'count': len(enriched_members)
+            'count': len(enriched_members),
+            'apiVersion': 'v3'
         },
         'members': enriched_members
     }
@@ -133,9 +206,11 @@ def main():
     
     print(f"Successfully wrote {len(enriched_members)} members to {OUTPUT_FILE}")
     
-    # Print summary of leadership positions found
+    # Print summary
     leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
+    contact_count = sum(1 for m in enriched_members if m.get('contactInfo', {}).get('phoneNumber'))
     print(f"Members with leadership positions: {leadership_count}")
+    print(f"Members with contact info: {contact_count}")
 
 if __name__ == '__main__':
     main()

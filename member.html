@@ -12,16 +12,9 @@ permalink: /member.html
 
 <div class="msg" id="status"></div>
 
-<!-- Debug panel (remove after testing) -->
-<div id="debugPanel" style="margin-top: 1rem; padding: 1rem; background: #f5f5f5; border: 1px solid #ddd; font-family: monospace; font-size: 12px; display: none;">
-  <h3>Debug Info</h3>
-  <pre id="debugContent"></pre>
-</div>
-
 <script>
-  const DEBUG = true; // Set to false after testing
+  const DEBUG = false; // Set to true for debugging
 
-  // Get bioguideId from URL parameter
   const urlParams = new URLSearchParams(window.location.search);
   const bioguideId = urlParams.get('bioguideId');
 
@@ -47,10 +40,8 @@ permalink: /member.html
         throw new Error('Member not found in prebuilt data');
       }
 
-      // Debug: Show raw member data
       if (DEBUG) {
-        document.getElementById('debugPanel').style.display = 'block';
-        document.getElementById('debugContent').textContent = JSON.stringify(member, null, 2);
+        console.log('Member data:', member);
       }
 
       displayMemberDetails(member);
@@ -68,13 +59,16 @@ permalink: /member.html
   function displayMemberDetails(member) {
     const detailsDiv = document.getElementById('memberDetails');
 
-    const name = member.name || 'Unknown';
-    const party = member.partyName || 'N/A';
-    const state = member.state || 'N/A';
+    const name = member.name || member.directOrderName || 'Unknown';
+    const honorific = member.honorificName || '';
+    const fullName = honorific ? `${honorific} ${name}` : name;
+    
+    const party = member.partyName || (member.partyHistory && member.partyHistory.item ? member.partyHistory.item[0]?.partyName : 'N/A');
+    const state = member.state || member.stateName || 'N/A';
 
     const currentTerm = member.terms?.item?.slice(-1)[0] || {};
     const chamber = currentTerm.chamber || 'N/A';
-    const district = member.district ? `District ${member.district}` : (chamber === 'Senate' ? 'U.S. Senator' : 'N/A');
+    const district = member.district ? `District ${member.district}` : (chamber === 'Senate' || chamber === 'House of Representatives' ? 'U.S. Senator' : 'N/A');
          
     const termsArr = member.terms?.item || [];
     const terms = Array.isArray(termsArr) ? termsArr : [termsArr];
@@ -84,40 +78,46 @@ permalink: /member.html
     const yearsInOffice = startYear ? (currentYear - startYear) : 'N/A';
       
     const imageUrl = member.depiction?.imageUrl;
-    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem;">` : '';
+    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem; border-radius: 8px;">` : '';
 
-    // Leadership - Try multiple possible field names
-    const leadership = member.leadership || member.leadershipPositions || [];
-    
+    // Leadership positions
+    const leadership = member.leadership || [];
     let leadershipHtml = '';
-    if (leadership && leadership.length > 0) {
-      // Handle different possible structures
+    if (leadership.length > 0) {
       const leadershipTitles = leadership.map(l => {
-        if (typeof l === 'string') return l;
-        if (l.title) return l.title;
-        if (l.positionTitle) return l.positionTitle;
-        if (l.name) return l.name;
-        return JSON.stringify(l);
+        const title = l.title || l.type || 'Unknown Position';
+        const congress = l.congress ? ` (${l.congress}${l.current === true ? ', Current' : ''})` : '';
+        return `${title}${congress}`;
       }).join(', ');
-      
       leadershipHtml = `<p><strong>Leadership Position(s):</strong> ${leadershipTitles}</p>`;
-    } else {
-      // Show "No leadership position" only in debug mode
-      if (DEBUG) {
-        leadershipHtml = '<p><strong>Leadership Position(s):</strong> None (or data not fetched)</p>';
-      }
     }
+
+    // Contact information
+    const contactInfo = member.contactInfo || {};
+    let contactHtml = '';
+    if (contactInfo.phoneNumber || contactInfo.officeAddress) {
+      const phone = contactInfo.phoneNumber ? `<br>📞 ${contactInfo.phoneNumber}` : '';
+      const address = contactInfo.officeAddress ? `<br>📍 ${contactInfo.officeAddress}, ${contactInfo.city}, ${contactInfo.state} ${contactInfo.zipCode}` : '';
+      contactHtml = `<p><strong>Office Contact:</strong>${address}${phone}</p>`;
+    }
+
+    // Official website
+    const websiteHtml = member.officialWebsiteUrl ? 
+      `<p><strong>Official Website:</strong> <a href="${member.officialWebsiteUrl}" target="_blank">${member.officialWebsiteUrl}</a></p>` : '';
 
     const html = `
       ${imageHtml}
-      <h2>${name}</h2>
+      <h2>${fullName}</h2>
       <p><strong>Party:</strong> ${party}</p>
       <p><strong>State:</strong> ${state}</p>
       <p><strong>District:</strong> ${district}</p>
       <p><strong>Chamber:</strong> ${chamber}</p>
       ${leadershipHtml}
+      ${contactHtml}
+      ${websiteHtml}
       <p><strong>First Term (Current Chamber):</strong> ${startYear}</p>
       <p><strong>Years in Office (Current Chamber):</strong> ${yearsInOffice}</p>
+      ${member.birthYear ? `<p><strong>Birth Year:</strong> ${member.birthYear}</p>` : ''}
          
       <p><a href="my-representatives.html">Search for another member</a></p>
     `;
