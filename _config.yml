@@ -27,7 +27,9 @@ navbar-links:
     - Covington: "https://www.votega.org/flock-covington/"
   2026 Election Cycle:
     - May 2026 - Primary Election: "https://www.votega.org/2026-04-27-2026-primary-election/"
-  My Representatives (Coming Soon):
+  My Representatives:
+    - Find my Congressional Representative: "https://votega.github.io/votega.org-TEST/my-representatives.html"
+    - Find my Georgia Legislative Representative: "https://votega.github.io/votega.org-TEST/ga-representatives.html"
 
 ################
 # --- Logo --- #
@@ -174,7 +176,7 @@ footer-hover-col: "#0085A1"
 #################################
 
 # Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
-gtag: "G-6EB1XGMS2B"
+#gtag: "G-YMBKNP9HMW" #TEST only - analytics tracked in production
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""

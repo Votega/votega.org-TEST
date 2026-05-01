@@ -1,0 +1,62 @@
+<h1><center>Georgia General Assembly</center></h1>
+<h3><center>Find Your GA State Legislator</center></h3>
+
+Select your County and Chamber (Senate or House). The districts serving your county will appear in the list.<br>
+
+<br>Select a member to view details about their time in office.
+
+<!--
+Lookup Form
+ User chooses a county and chamber. For House, districts are filtered by county.
+ For Senate, all 56 districts are shown (county-to-senate mapping pending).
+ Each district maps to exactly one member. Selecting a district redirects to ga-member.html.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GA Legislator Lookup</title>
+  <style>
+    body {font-family: system-ui, sans-serif; margin:2rem; max-width:680px;}
+    label {display:block; margin-top:1.2rem;}
+    select, button {width:100%; padding:8px; box-sizing:border-box;}
+    .msg{margin-top:1rem;color:#c00;}
+    [disabled]{background:#eee;}
+  </style>
+</head>
+<body>
+
+<!--Start Form-->
+<form id="lookupForm">
+  <label>
+    County
+    <select id="countySelect" required>
+      <option value="">— choose —</option>
+    </select>
+  </label>
+
+  <label>
+    Chamber
+    <select id="chamberSelect" required disabled>
+      <option value="">— choose —</option>
+      <option value="house">House of Representatives</option>
+      <option value="senate">Senate</option>
+    </select>
+  </label>
+
+  <label>
+    District / Member
+    <select id="districtSelect" required disabled></select>
+  </label>
+
+  <button type="submit">View Profile</button>
+</form>
+<!--end form-->
+
+<div class="msg" id="status"></div>
+
+<center><i>Data is sourced from the <a href="https://openstates.org" target="_blank">Open States API</a></i></center>
+
+<script src="assets/scripts/ga.js"></script>
+</body>
+</html>
