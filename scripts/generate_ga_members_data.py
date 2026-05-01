@@ -87,8 +87,10 @@ def normalize_member(raw):
     address = next((o.get('address', '') for o in offices if o.get('address')), '')
     email   = next((o.get('email', '')   for o in offices if o.get('email')),   '')
 
-    links   = raw.get('links', [])
-    website = links[0]['url'] if links else ''
+    links = raw.get('links', [])
+    raw_url = links[0]['url'] if links else ''
+    # Strip stale ?session= parameter — legis.ga.gov defaults to current session without it
+    website = raw_url.split('?')[0] if 'legis.ga.gov' in raw_url else raw_url
 
     birth_date = raw.get('birth_date', '') or ''
     birth_year = int(birth_date[:4]) if len(birth_date) >= 4 else None
