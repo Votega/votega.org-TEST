@@ -17,16 +17,50 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Ensure full git history if needed
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Generate current member data
-        run: python scripts/generate_current_members_data.py assets/data/current-members.json
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Debug - Check file structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files in root:"
+          ls -la
+          echo "Files in scripts directory:"
+          ls -la scripts/
+          echo "Files in assets directory:"
+          ls -la assets/
+          echo "Files in assets/data directory:"
+          ls -la assets/data/
+
+      - name: Generate current member data (includes leadership positions)
+        run: |
+          echo "Running script..."
+          python scripts/generate_current_members_data.py assets/data/current-members.json
+          echo "Script completed"
+          echo "Checking if file exists:"
+          ls -la assets/data/current-members.json 2>/dev/null || echo "File not found"
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+
+      - name: Validate generated data
+        run: |
+          if [ ! -f assets/data/current-members.json ]; then
+            echo "Error: current-members.json was not generated"
+            exit 1
+          fi
+          # Check that file is valid JSON
+          python -c "import json; json.load(open('assets/data/current-members.json'))" 
 
       - name: Commit and push generated data
         run: |
@@ -36,6 +70,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update current Congress member data"
+            git commit -m "Update current Congress member data (includes leadership positions)"
             git push
           fi

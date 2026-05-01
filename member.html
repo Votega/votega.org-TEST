@@ -13,7 +13,8 @@ permalink: /member.html
 <div class="msg" id="status"></div>
 
 <script>
-  // Get bioguideId from URL parameter
+  const DEBUG = false; // Set to true for debugging
+
   const urlParams = new URLSearchParams(window.location.search);
   const bioguideId = urlParams.get('bioguideId');
 
@@ -34,8 +35,13 @@ permalink: /member.html
 
       const data = await res.json();
       const member = (data.members || []).find(m => m.bioguideId === bioguideId) || {};
+      
       if (!member.bioguideId) {
         throw new Error('Member not found in prebuilt data');
+      }
+
+      if (DEBUG) {
+        console.log('Member data:', member);
       }
 
       displayMemberDetails(member);
@@ -53,49 +59,66 @@ permalink: /member.html
   function displayMemberDetails(member) {
     const detailsDiv = document.getElementById('memberDetails');
 
-    // Get name (top-level field)
-    const name = member.name || 'Unknown';
+    const name = member.name || member.directOrderName || 'Unknown';
+    const honorific = member.honorificName || '';
+    const fullName = honorific ? `${honorific} ${name}` : name;
+    
+    const party = member.partyName || (member.partyHistory && member.partyHistory.item ? member.partyHistory.item[0]?.partyName : 'N/A');
+    const state = member.state || member.stateName || 'N/A';
 
-    // Get party (top-level field)
-    const party = member.partyName || 'N/A';
-
-    // Get state (top-level field)
-    const state = member.state || 'N/A';
-
-    // Get current term (from terms.item array, take the last/most recent term)
     const currentTerm = member.terms?.item?.slice(-1)[0] || {};
-   // Get chamber and district from current term 
     const chamber = currentTerm.chamber || 'N/A';
-    const district = member.district ? `District ${member.district}` : (chamber === 'Senate' ? 'U.S. Senator' : 'N/A');
+    const district = member.district ? `District ${member.district}` : (chamber === 'Senate' || chamber === 'House of Representatives' ? 'U.S. Senator' : 'N/A');
          
-    // Get all terms (array) for startYear and yearsInOffice (for current chamber) calculation. 
-      const termsArr = member.terms?.item || [];
-      const terms = Array.isArray(termsArr) ? termsArr : [termsArr];
+    const termsArr = member.terms?.item || [];
+    const terms = Array.isArray(termsArr) ? termsArr : [termsArr];
+    const startYears = terms.map(t => t.startYear).filter(y => typeof y === 'number');
+    const startYear = startYears.length ? Math.max(...startYears) : 'N/A';
+    const currentYear = new Date().getFullYear();
+    const yearsInOffice = startYear ? (currentYear - startYear) : 'N/A';
       
-      // Extract all valid startYears
-      const startYears = terms.map(t => t.startYear).filter(y => typeof y === 'number');
-      
-      // Find the latest startYear. This will account for members who started in one chamber but then moved to another (Adam Schiff, from California for example).
-      const startYear = startYears.length ? Math.max(...startYears) : 'N/A';
-
-      // Calculate yearsInOffice (currentYear - startYear). Add +1 to count the current year as well. 
-      const currentYear = new Date().getFullYear();
-      const yearsInOffice = startYear ? (currentYear - startYear) : 'N/A';
-      
-    // Get member picture
     const imageUrl = member.depiction?.imageUrl;
-    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem;">` : '';
+    const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem; border-radius: 8px;">` : '';
+
+    // Leadership positions
+    const leadership = member.leadership || [];
+    let leadershipHtml = '';
+    if (leadership.length > 0) {
+      const leadershipTitles = leadership.map(l => {
+        const title = l.title || l.type || 'Unknown Position';
+        const congress = l.congress ? ` (${l.congress}${l.current === true ? ', Current' : ''})` : '';
+        return `${title}${congress}`;
+      }).join(', ');
+      leadershipHtml = `<p><strong>Leadership Position(s):</strong> ${leadershipTitles}</p>`;
+    }
+
+    // Contact information
+    const contactInfo = member.contactInfo || {};
+    let contactHtml = '';
+    if (contactInfo.phoneNumber || contactInfo.officeAddress) {
+      const phone = contactInfo.phoneNumber ? `<br>📞 ${contactInfo.phoneNumber}` : '';
+      const address = contactInfo.officeAddress ? `<br>📍 ${contactInfo.officeAddress}, ${contactInfo.city}, ${contactInfo.state} ${contactInfo.zipCode}` : '';
+      contactHtml = `<p><strong>Office Contact:</strong>${address}${phone}</p>`;
+    }
+
+    // Official website
+    const websiteHtml = member.officialWebsiteUrl ? 
+      `<p><strong>Official Website:</strong> <a href="${member.officialWebsiteUrl}" target="_blank">${member.officialWebsiteUrl}</a></p>` : '';
 
     const html = `
       ${imageHtml}
-      <h2>${name}</h2>
+      <h2>${fullName}</h2>
+      ${member.birthYear ? `<p><strong>Birth Year:</strong> ${member.birthYear}</p>` : ''}
       <p><strong>Party:</strong> ${party}</p>
-      <p><strong>State:</strong> ${state}</p>      <p><strong>District:</strong> ${district}</p>      <p><strong>Chamber:</strong> ${chamber}</p>
+      <p><strong>State:</strong> ${state}</p>
+      <p><strong>District:</strong> ${district}</p>
+      <p><strong>Chamber:</strong> ${chamber}</p>
+      ${leadershipHtml}
+      ${contactHtml}
+      ${websiteHtml}
       <p><strong>First Term (Current Chamber):</strong> ${startYear}</p>
       <p><strong>Years in Office (Current Chamber):</strong> ${yearsInOffice}</p>
-      <!--
-         <p style="color: #666; font-size: 0.9em; margin-top: 1rem;"><em>Note: Contact information (website, phone, address, and district) is not provided by Congress.gov API. Visit senate.gov or house.gov for current contact details.</em></p>
-       -->
+         
       <p><a href="my-representatives.html">Search for another member</a></p>
     `;
     detailsDiv.innerHTML = html;
