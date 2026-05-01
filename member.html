@@ -101,7 +101,16 @@ permalink: /member.html
     let contactHtml = '';
     if (contactInfo.phoneNumber || contactInfo.officeAddress) {
       const phone = contactInfo.phoneNumber ? `<br>📞 ${contactInfo.phoneNumber}` : '';
-      const address = contactInfo.officeAddress ? `<br>📍 ${contactInfo.officeAddress}` : '';
+      let addressStr = contactInfo.officeAddress || '';
+      if (addressStr) {
+        const zip = contactInfo.zipCode ? String(contactInfo.zipCode) : '';
+        if (zip && !addressStr.includes(zip)) {
+          const city = contactInfo.city || '';
+          const region = contactInfo.district || '';
+          addressStr = [addressStr, city, region, zip].filter(Boolean).join(', ').replace(/, (\d{5})$/, ' $1');
+        }
+      }
+      const address = addressStr ? `<br>📍 ${addressStr}` : '';
       contactHtml = `<p><strong>Office Contact:</strong>${address}${phone}</p>`;
     }
 
