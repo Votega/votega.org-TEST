@@ -99,30 +99,51 @@ def enrich_member_data(bioguideId, basic_member):
     return basic_member
 
 def get_current_members():
-    """Fetch all current members of Congress"""
-    url = f"{BASE_URL}/member?limit=550&format=json"
-    data = fetch_url(url)
-    
-    if not data or 'members' not in data:
-        print("Error: Could not fetch member list")
-        return []
-    
-    members = data['members'].get('member', [])
-    print(f"Found {len(members)} members in initial fetch")
-    
+    """Fetch all current members of Congress using pagination (max limit=250)"""
+    all_members = []
+    url = f"{BASE_URL}/member?limit=250&offset=0&format=json"
+
+    while url:
+        data = fetch_url(url)
+
+        if not data or 'members' not in data:
+            print("Error: Could not fetch member list")
+            return []
+
+        members_data = data['members']
+        if isinstance(members_data, list):
+            page_members = members_data
+        elif isinstance(members_data, dict):
+            page_members = members_data.get('member', [])
+            if not isinstance(page_members, list):
+                page_members = [page_members] if page_members else []
+        else:
+            page_members = []
+
+        all_members.extend(page_members)
+        print(f"Fetched {len(page_members)} members (total so far: {len(all_members)})")
+
+        # Follow pagination next link
+        next_url = data.get('pagination', {}).get('next', '')
+        if not next_url and isinstance(members_data, dict):
+            next_url = members_data.get('next', '')
+        url = next_url or None
+
+    print(f"Found {len(all_members)} members total")
+
     # Filter to only current members
+    current_year = datetime.now().year
     current_members = []
-    for member in members:
+    for member in all_members:
         terms = member.get('terms', {}).get('item', [])
         if terms:
-            current_year = datetime.now().year
             has_current_term = any(
                 term.get('endYear') is None or term.get('endYear', 0) >= current_year
                 for term in terms
             )
             if has_current_term:
                 current_members.append(member)
-    
+
     print(f"Filtered to {len(current_members)} current members")
     return current_members
 
