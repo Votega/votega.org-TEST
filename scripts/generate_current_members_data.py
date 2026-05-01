@@ -23,7 +23,8 @@ def fetch_url(url):
             separator = '&' if '?' in url else '?'
             url = f"{url}{separator}api_key={API_KEY}"
         
-        print(f"Fetching: {url[:100]}...")
+        safe_url = url.replace(API_KEY, "***") if API_KEY else url
+        print(f"Fetching: {safe_url[:100]}...")
         
         req = urllib.request.Request(url)
         # No header needed - API key works via query parameter
