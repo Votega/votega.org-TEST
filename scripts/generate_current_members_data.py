@@ -27,16 +27,19 @@ print(f"API Key length: {len(API_KEY)}")
 def fetch_url(url):
     """Fetch data from Congress.gov API with error handling"""
     try:
-        # Add API key as query parameter if not already present
-        if 'api_key=' not in url:
-            separator = '&' if '?' in url else '?'
-            url = f"{url}{separator}api_key={API_KEY}"
-        
         print(f"  Fetching: {url[:100]}...")  # Log URL (truncated for security)
         
+        # Create request object
         req = urllib.request.Request(url)
-        # Also add as header (some endpoints accept both)
-        if API_KEY is not None:
+        
+        # Add API key as header (this is the correct way according to their docs)
+        req.add_header('X-API-Key', API_KEY)
+        
+        # For some endpoints, they also accept it as query parameter
+        if 'api_key=' not in url and API_KEY:
+            separator = '&' if '?' in url else '?'
+            url = f"{url}{separator}api_key={API_KEY}"
+            req = urllib.request.Request(url)
             req.add_header('X-API-Key', API_KEY)
         
         with urllib.request.urlopen(req, timeout=30) as response:
@@ -147,6 +150,7 @@ def enrich_member_data(bioguideId, basic_member):
 
 def get_current_members():
     """Fetch all current members of Congress"""
+    # Try multiple approaches to get members
     url = f"{BASE_URL}/member?limit=550&format=json"
     data = fetch_url(url)
     
