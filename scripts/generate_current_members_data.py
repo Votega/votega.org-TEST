@@ -1,82 +1,138 @@
 #!/usr/bin/env python3
+"""
+Generate current-members.json from Congress.gov API
+Includes leadership positions for each member
+"""
+
 import json
 import os
 import sys
-import time
-import urllib.parse
 import urllib.request
+import urllib.error
+from datetime import datetime
 
+# Configuration
+API_KEY = os.environ.get('CONGRESS_API_KEY')
+BASE_URL = "https://api.congress.gov/v3"
+OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
 
-def fetch_page(api_key, offset=0):
-    query = urllib.parse.urlencode({
-        'format': 'json',
-        'limit': '250',
-        'api_key': api_key,
-        'offset': str(offset),
-    })
-    url = f'https://api.congress.gov/v3/member?{query}'
-    print('Fetching', url)
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(req) as resp:
-        if resp.status != 200:
-            raise RuntimeError(f'HTTP {resp.status}')
-        return json.load(resp)
+def fetch_url(url):
+    """Fetch data from Congress.gov API with error handling"""
+    try:
+        req = urllib.request.Request(url)
+        req.add_header('X-API-Key', API_KEY)
+        with urllib.request.urlopen(req, timeout=30) as response:
+            return json.loads(response.read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        print(f"HTTP Error {e.code}: {e.reason}")
+        return None
+    except urllib.error.URLError as e:
+        print(f"URL Error: {e.reason}")
+        return None
+    except Exception as e:
+        print(f"Error fetching {url}: {e}")
+        return None
 
+def get_member_leadership(bioguideId):
+    """Fetch leadership positions for a specific member"""
+    url = f"{BASE_URL}/member/{bioguideId}?api_key={API_KEY}"
+    data = fetch_url(url)
+    if data and 'member' in data:
+        return data['member'].get('leadership', [])
+    return []
 
-def is_current_member(member, year):
-    terms = member.get('terms', {}).get('item', [])
-    if not isinstance(terms, list):
-        return False
-    for term in terms:
-        if term.get('chamber') not in ('House of Representatives', 'Senate'):
-            continue
-        start = term.get('startYear')
-        end = term.get('endYear')
-        if isinstance(start, int) and start <= year and (end is None or end >= year):
-            return True
-        else:
-            print(f"Skipping {member.get('name')} ({member.get('state')}) - start: {start}, end: {end}")
-    return False
+def get_current_members():
+    """Fetch all current members of Congress"""
+    # Fetch all current members (both chambers)
+    url = f"{BASE_URL}/member?api_key={API_KEY}&limit=550"
+    data = fetch_url(url)
+    
+    if not data or 'members' not in data:
+        print("Error: Could not fetch member list")
+        return []
+    
+    members = data['members'].get('member', [])
+    print(f"Found {len(members)} members in initial fetch")
+    
+    # Filter to only current members (those with current terms)
+    current_members = []
+    for member in members:
+        # Check if member has current terms
+        terms = member.get('terms', {}).get('item', [])
+        if terms:
+            # Check if any term is current (endYear is null or in the future)
+            current_year = datetime.now().year
+            has_current_term = any(
+                term.get('endYear') is None or term.get('endYear', 0) >= current_year
+                for term in terms
+            )
+            if has_current_term:
+                current_members.append(member)
+    
+    print(f"Filtered to {len(current_members)} current members")
+    return current_members
 
+def enrich_member_data(member):
+    """Enrich member data with leadership positions"""
+    bioguideId = member.get('bioguideId', '')
+    
+    # Fetch leadership data from individual member endpoint
+    leadership = get_member_leadership(bioguideId)
+    
+    # Add leadership to member data
+    member['leadership'] = leadership
+    
+    # Add metadata
+    member['dataUpdatedAt'] = datetime.now().isoformat()
+    
+    return member
+
+def main():
+    if not API_KEY:
+        print("Error: CONGRESS_API_KEY environment variable not set")
+        sys.exit(1)
+    
+    print("Fetching current Congress members...")
+    members = get_current_members()
+    
+    if not members:
+        print("Error: No members fetched")
+        sys.exit(1)
+    
+    print("Enriching member data with leadership positions...")
+    enriched_members = []
+    for i, member in enumerate(members):
+        print(f"  Processing {i+1}/{len(members)}: {member.get('name', 'Unknown')}")
+        enriched_member = enrich_member_data(member)
+        enriched_members.append(enriched_member)
+        
+        # Rate limiting: Congress.gov API allows 1000 requests per hour
+        # Add small delay to be safe
+        if (i + 1) % 10 == 0:
+            print(f"  Progress: {i+1}/{len(members)} members processed")
+    
+    # Create output structure
+    output_data = {
+        'metadata': {
+            'generatedAt': datetime.now().isoformat(),
+            'source': 'Congress.gov API',
+            'count': len(enriched_members)
+        },
+        'members': enriched_members
+    }
+    
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    
+    # Write to file
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"Successfully wrote {len(enriched_members)} members to {OUTPUT_FILE}")
+    
+    # Print summary of leadership positions found
+    leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
+    print(f"Members with leadership positions: {leadership_count}")
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print('Usage: python scripts/generate_current_members_data.py <output-file>')
-        sys.exit(1)
-
-    output_path = sys.argv[1]
-    api_key = os.environ.get('CONGRESS_API_KEY')
-    if not api_key:
-        raise RuntimeError('CONGRESS_API_KEY environment variable is required')
-
-    members = []
-    offset = 0
-
-    # Fetch the full member list and derive current members from term dates.
-    while True:
-        data = fetch_page(api_key, offset)
-        page_members = data.get('members') or []
-        members.extend(page_members)
-        pagination = data.get('pagination', {})
-        if not pagination.get('next'):
-            break
-        offset += len(page_members)
-
-    current_year = time.gmtime().tm_year
-    current_members = [m for m in members if is_current_member(m, current_year)]
-
-    print(f'Fetched {len(members)} total members and {len(current_members)} current members from list endpoint')
-
-    output = {
-        'updatedAt': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
-        'source': 'https://api.congress.gov/v3/member?format=json (filtered by current term dates)',
-        'count': len(current_members),
-        'members': current_members,
-    }
-
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(output, f, indent=2)
-        f.write('\n')
-
-    print(f'Wrote {len(current_members)} members to {output_path}')
+    main()

@@ -64,33 +64,43 @@ permalink: /member.html
 
     // Get current term (from terms.item array, take the last/most recent term)
     const currentTerm = member.terms?.item?.slice(-1)[0] || {};
-   // Get chamber and district from current term 
+    // Get chamber and district from current term 
     const chamber = currentTerm.chamber || 'N/A';
     const district = member.district ? `District ${member.district}` : (chamber === 'Senate' ? 'U.S. Senator' : 'N/A');
          
     // Get all terms (array) for startYear and yearsInOffice (for current chamber) calculation. 
-      const termsArr = member.terms?.item || [];
-      const terms = Array.isArray(termsArr) ? termsArr : [termsArr];
+    const termsArr = member.terms?.item || [];
+    const terms = Array.isArray(termsArr) ? termsArr : [termsArr];
       
-      // Extract all valid startYears
-      const startYears = terms.map(t => t.startYear).filter(y => typeof y === 'number');
+    // Extract all valid startYears
+    const startYears = terms.map(t => t.startYear).filter(y => typeof y === 'number');
       
-      // Find the latest startYear. This will account for members who started in one chamber but then moved to another (Adam Schiff, from California for example).
-      const startYear = startYears.length ? Math.max(...startYears) : 'N/A';
+    // Find the latest startYear. This will account for members who started in one chamber but then moved to another.
+    const startYear = startYears.length ? Math.max(...startYears) : 'N/A';
 
-      // Calculate yearsInOffice (currentYear - startYear). Add +1 to count the current year as well. 
-      const currentYear = new Date().getFullYear();
-      const yearsInOffice = startYear ? (currentYear - startYear) : 'N/A';
+    // Calculate yearsInOffice (currentYear - startYear). Add +1 to count the current year as well. 
+    const currentYear = new Date().getFullYear();
+    const yearsInOffice = startYear ? (currentYear - startYear) : 'N/A';
       
     // Get member picture
     const imageUrl = member.depiction?.imageUrl;
     const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem;">` : '';
 
+    // Get leadership position (if any)
+    // Leadership data should be included in the prebuilt JSON from the workflow
+    const leadership = member.leadership || [];
+    const leadershipHtml = leadership.length > 0 ? 
+      `<p><strong>Leadership Position(s):</strong> ${leadership.map(l => l.title || l).join(', ')}</p>` : 
+      '';
+
     const html = `
       ${imageHtml}
       <h2>${name}</h2>
       <p><strong>Party:</strong> ${party}</p>
-      <p><strong>State:</strong> ${state}</p>      <p><strong>District:</strong> ${district}</p>      <p><strong>Chamber:</strong> ${chamber}</p>
+      <p><strong>State:</strong> ${state}</p>
+      <p><strong>District:</strong> ${district}</p>
+      <p><strong>Chamber:</strong> ${chamber}</p>
+      ${leadershipHtml}
       <p><strong>First Term (Current Chamber):</strong> ${startYear}</p>
       <p><strong>Years in Office (Current Chamber):</strong> ${yearsInOffice}</p>
          
