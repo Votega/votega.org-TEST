@@ -111,8 +111,13 @@ async function loadMembers () {
       const hasMatchingChamber = terms.some(t => t.chamber === expectedChamber);
       if (!hasMatchingChamber) {
         console.log(`Filtered out "${m.name}": chambers=${terms.map(t => t.chamber).join('/')} (want "${expectedChamber}")`);
+        return false;
       }
-      return hasMatchingChamber;
+      if (m.currentMember === false) {
+        console.log(`Filtered out "${m.name}": currentMember=false`);
+        return false;
+      }
+      return true;
     });
     
     console.log(`After filtering: ${results.length} members`);

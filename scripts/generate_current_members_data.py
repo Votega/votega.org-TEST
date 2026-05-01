@@ -167,8 +167,11 @@ def main():
         bioguideId = member.get('bioguideId', '')
         print(f"  Processing {i+1}/{len(members)}: {member.get('name', 'Unknown')} ({bioguideId})")
         enriched_member = enrich_member_data(bioguideId, member)
+        if enriched_member.get('currentMember') == False:
+            print(f"  Skipping {member.get('name', 'Unknown')}: currentMember=False")
+            continue
         enriched_members.append(enriched_member)
-        
+
         if (i + 1) % 5 == 0:
             print(f"  Progress: {i+1}/{len(members)} members processed")
     
