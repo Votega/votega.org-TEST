@@ -8,12 +8,14 @@ import os
 import sys
 import urllib.request
 import urllib.error
+import yaml
 from datetime import datetime
 
 # Configuration
 API_KEY = os.environ.get('CONGRESS_API_KEY')
 BASE_URL = "https://api.congress.gov/v3"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
+LEGISLATORS_BASE = "https://raw.githubusercontent.com/unitedstates/congress-legislators/main"
 
 def fetch_url(url):
     """Fetch data from Congress.gov API with error handling"""
@@ -72,6 +74,60 @@ def extract_leadership(member_data):
                 })
     
     return current_leadership
+
+def fetch_yaml(url):
+    """Fetch and parse a YAML file from a URL (no API key needed)."""
+    try:
+        print(f"Fetching YAML: {url}...")
+        req = urllib.request.Request(url, headers={'User-Agent': 'votega.org/1.0'})
+        with urllib.request.urlopen(req, timeout=30) as response:
+            return yaml.safe_load(response.read().decode('utf-8'))
+    except Exception as e:
+        print(f"Error fetching YAML {url}: {e}")
+        return None
+
+def get_committee_memberships():
+    """Fetch committee memberships from unitedstates/congress-legislators.
+    Returns a dict keyed by bioguideId -> list of full committee names."""
+
+    # Build committee code -> name lookup (full committees only, not subcommittees)
+    committees_data = fetch_yaml(f"{LEGISLATORS_BASE}/committees-current.yaml")
+    if not committees_data:
+        print("Warning: Could not fetch committees data, skipping committee enrichment")
+        return {}
+
+    committees_lookup = {}
+    for committee in committees_data:
+        thomas_id = committee.get('thomas_id', '')
+        name = committee.get('name', '')
+        if thomas_id and name:
+            committees_lookup[thomas_id] = name
+    print(f"Loaded {len(committees_lookup)} committees")
+
+    # Fetch membership: { committee_code: [ {bioguide, name, ...}, ... ] }
+    membership_data = fetch_yaml(f"{LEGISLATORS_BASE}/committee-membership-current.yaml")
+    if not membership_data:
+        print("Warning: Could not fetch committee membership data, skipping committee enrichment")
+        return {}
+
+    # Invert to bioguide -> [committee names]
+    lookup = {}
+    for code, members in membership_data.items():
+        committee_name = committees_lookup.get(code)
+        if not committee_name or not isinstance(members, list):
+            continue
+        for member in members:
+            bioguide = member.get('bioguide', '')
+            if not bioguide:
+                continue
+            if bioguide not in lookup:
+                lookup[bioguide] = []
+            if committee_name not in lookup[bioguide]:
+                lookup[bioguide].append(committee_name)
+
+    print(f"Built committee lookup for {len(lookup)} members")
+    return lookup
+
 
 def enrich_member_data(bioguideId, basic_member):
     """Fetch and enrich member data"""
@@ -171,7 +227,14 @@ def main():
 
         if (i + 1) % 5 == 0:
             print(f"  Progress: {i+1}/{len(members)} members processed")
-    
+
+    print("Fetching committee memberships...")
+    committee_lookup = get_committee_memberships()
+    for member in enriched_members:
+        member['committees'] = committee_lookup.get(member.get('bioguideId', ''), [])
+    committees_count = sum(1 for m in enriched_members if m.get('committees'))
+    print(f"Members with committee data: {committees_count}")
+
     # Create output structure
     output_data = {
         'metadata': {
@@ -203,6 +266,7 @@ def main():
     # Print summary
     leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
     print(f"Members with leadership positions: {leadership_count}")
+    print(f"Members with committee data: {committees_count}")
 
 if __name__ == '__main__':
     main()
