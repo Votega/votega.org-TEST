@@ -8,13 +8,14 @@ import os
 import sys
 import urllib.request
 import urllib.error
+import yaml
 from datetime import datetime
 
 # Configuration
 API_KEY = os.environ.get('CONGRESS_API_KEY')
 BASE_URL = "https://api.congress.gov/v3"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
-CURRENT_CONGRESS = 119
+LEGISLATORS_BASE = "https://raw.githubusercontent.com/unitedstates/congress-legislators/main"
 
 def fetch_url(url):
     """Fetch data from Congress.gov API with error handling"""
@@ -74,47 +75,55 @@ def extract_leadership(member_data):
     
     return current_leadership
 
+def fetch_yaml(url):
+    """Fetch and parse a YAML file from a URL (no API key needed)."""
+    try:
+        print(f"Fetching YAML: {url}...")
+        req = urllib.request.Request(url, headers={'User-Agent': 'votega.org/1.0'})
+        with urllib.request.urlopen(req, timeout=30) as response:
+            return yaml.safe_load(response.read().decode('utf-8'))
+    except Exception as e:
+        print(f"Error fetching YAML {url}: {e}")
+        return None
+
 def get_committee_memberships():
-    """Fetch all committee memberships for the current Congress.
-    Returns a dict keyed by bioguideId -> list of committee names."""
-    all_items = []
-    url = f"{BASE_URL}/committee-membership/{CURRENT_CONGRESS}?limit=250&format=json"
+    """Fetch committee memberships from unitedstates/congress-legislators.
+    Returns a dict keyed by bioguideId -> list of full committee names."""
 
-    while url:
-        data = fetch_url(url)
-        if not data:
-            print("Warning: Could not fetch committee memberships")
-            break
+    # Build committee code -> name lookup (full committees only, not subcommittees)
+    committees_data = fetch_yaml(f"{LEGISLATORS_BASE}/committees-current.yaml")
+    if not committees_data:
+        print("Warning: Could not fetch committees data, skipping committee enrichment")
+        return {}
 
-        items = data.get('committeeMembership') or data.get('committeeMemberships') or []
-        if isinstance(items, dict):
-            items = items.get('item', [])
-        if not isinstance(items, list):
-            items = [items] if items else []
+    committees_lookup = {}
+    for committee in committees_data:
+        thomas_id = committee.get('thomas_id', '')
+        name = committee.get('name', '')
+        if thomas_id and name:
+            committees_lookup[thomas_id] = name
+    print(f"Loaded {len(committees_lookup)} committees")
 
-        all_items.extend(items)
-        print(f"  Fetched {len(items)} committee membership records (total: {len(all_items)})")
+    # Fetch membership: { committee_code: [ {bioguide, name, ...}, ... ] }
+    membership_data = fetch_yaml(f"{LEGISLATORS_BASE}/committee-membership-current.yaml")
+    if not membership_data:
+        print("Warning: Could not fetch committee membership data, skipping committee enrichment")
+        return {}
 
-        next_url = data.get('pagination', {}).get('next', '')
-        url = next_url or None
-
+    # Invert to bioguide -> [committee names]
     lookup = {}
-    for item in all_items:
-        bioguide_id = item.get('bioguideId', '')
-        if not bioguide_id:
+    for code, members in membership_data.items():
+        committee_name = committees_lookup.get(code)
+        if not committee_name or not isinstance(members, list):
             continue
-        committees = item.get('committees', {})
-        if isinstance(committees, dict):
-            committee_items = committees.get('item', [])
-        elif isinstance(committees, list):
-            committee_items = committees
-        else:
-            committee_items = []
-        if not isinstance(committee_items, list):
-            committee_items = [committee_items] if committee_items else []
-        names = [c.get('name', '') for c in committee_items if isinstance(c, dict) and c.get('name')]
-        if names:
-            lookup[bioguide_id] = names
+        for member in members:
+            bioguide = member.get('bioguide', '')
+            if not bioguide:
+                continue
+            if bioguide not in lookup:
+                lookup[bioguide] = []
+            if committee_name not in lookup[bioguide]:
+                lookup[bioguide].append(committee_name)
 
     print(f"Built committee lookup for {len(lookup)} members")
     return lookup
