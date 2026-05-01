@@ -12,7 +12,15 @@ permalink: /member.html
 
 <div class="msg" id="status"></div>
 
+<!-- Debug panel (remove after testing) -->
+<div id="debugPanel" style="margin-top: 1rem; padding: 1rem; background: #f5f5f5; border: 1px solid #ddd; font-family: monospace; font-size: 12px; display: none;">
+  <h3>Debug Info</h3>
+  <pre id="debugContent"></pre>
+</div>
+
 <script>
+  const DEBUG = true; // Set to false after testing
+
   // Get bioguideId from URL parameter
   const urlParams = new URLSearchParams(window.location.search);
   const bioguideId = urlParams.get('bioguideId');
@@ -34,8 +42,15 @@ permalink: /member.html
 
       const data = await res.json();
       const member = (data.members || []).find(m => m.bioguideId === bioguideId) || {};
+      
       if (!member.bioguideId) {
         throw new Error('Member not found in prebuilt data');
+      }
+
+      // Debug: Show raw member data
+      if (DEBUG) {
+        document.getElementById('debugPanel').style.display = 'block';
+        document.getElementById('debugContent').textContent = JSON.stringify(member, null, 2);
       }
 
       displayMemberDetails(member);
@@ -53,45 +68,45 @@ permalink: /member.html
   function displayMemberDetails(member) {
     const detailsDiv = document.getElementById('memberDetails');
 
-    // Get name (top-level field)
     const name = member.name || 'Unknown';
-
-    // Get party (top-level field)
     const party = member.partyName || 'N/A';
-
-    // Get state (top-level field)
     const state = member.state || 'N/A';
 
-    // Get current term (from terms.item array, take the last/most recent term)
     const currentTerm = member.terms?.item?.slice(-1)[0] || {};
-    // Get chamber and district from current term 
     const chamber = currentTerm.chamber || 'N/A';
     const district = member.district ? `District ${member.district}` : (chamber === 'Senate' ? 'U.S. Senator' : 'N/A');
          
-    // Get all terms (array) for startYear and yearsInOffice (for current chamber) calculation. 
     const termsArr = member.terms?.item || [];
     const terms = Array.isArray(termsArr) ? termsArr : [termsArr];
-      
-    // Extract all valid startYears
     const startYears = terms.map(t => t.startYear).filter(y => typeof y === 'number');
-      
-    // Find the latest startYear. This will account for members who started in one chamber but then moved to another.
     const startYear = startYears.length ? Math.max(...startYears) : 'N/A';
-
-    // Calculate yearsInOffice (currentYear - startYear). Add +1 to count the current year as well. 
     const currentYear = new Date().getFullYear();
     const yearsInOffice = startYear ? (currentYear - startYear) : 'N/A';
       
-    // Get member picture
     const imageUrl = member.depiction?.imageUrl;
     const imageHtml = imageUrl ? `<img src="${imageUrl}" alt="${name}" style="max-width: 200px; margin-bottom: 1rem;">` : '';
 
-    // Get leadership position (if any)
-    // Leadership data should be included in the prebuilt JSON from the workflow
-    const leadership = member.leadership || [];
-    const leadershipHtml = leadership.length > 0 ? 
-      `<p><strong>Leadership Position(s):</strong> ${leadership.map(l => l.title || l).join(', ')}</p>` : 
-      '';
+    // Leadership - Try multiple possible field names
+    const leadership = member.leadership || member.leadershipPositions || [];
+    
+    let leadershipHtml = '';
+    if (leadership && leadership.length > 0) {
+      // Handle different possible structures
+      const leadershipTitles = leadership.map(l => {
+        if (typeof l === 'string') return l;
+        if (l.title) return l.title;
+        if (l.positionTitle) return l.positionTitle;
+        if (l.name) return l.name;
+        return JSON.stringify(l);
+      }).join(', ');
+      
+      leadershipHtml = `<p><strong>Leadership Position(s):</strong> ${leadershipTitles}</p>`;
+    } else {
+      // Show "No leadership position" only in debug mode
+      if (DEBUG) {
+        leadershipHtml = '<p><strong>Leadership Position(s):</strong> None (or data not fetched)</p>';
+      }
+    }
 
     const html = `
       ${imageHtml}
