@@ -16,11 +16,16 @@ API_KEY = os.environ.get('CONGRESS_API_KEY')
 BASE_URL = "https://api.congress.gov/v3"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
 
+# Validate API key exists
+if not API_KEY:
+    print("Error: CONGRESS_API_KEY environment variable not set")
+    sys.exit(1)
+
 def fetch_url(url):
     """Fetch data from Congress.gov API with error handling"""
     try:
         req = urllib.request.Request(url)
-        req.add_header('X-API-Key', API_KEY)
+        req.add_header('X-API-Key', API_KEY)  # Now safe - API_KEY is validated as str
         with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
@@ -88,9 +93,7 @@ def enrich_member_data(member):
     return member
 
 def main():
-    if not API_KEY:
-        print("Error: CONGRESS_API_KEY environment variable not set")
-        sys.exit(1)
+    # API key validation moved to top of script
     
     print("Fetching current Congress members...")
     members = get_current_members()
@@ -125,14 +128,3 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     
     # Write to file
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
-    
-    print(f"Successfully wrote {len(enriched_members)} members to {OUTPUT_FILE}")
-    
-    # Print summary of leadership positions found
-    leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
-    print(f"Members with leadership positions: {leadership_count}")
-
-if __name__ == '__main__':
-    main()
