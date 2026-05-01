@@ -26,8 +26,10 @@ def fetch_url(url):
         safe_url = url.replace(API_KEY, "***") if API_KEY else url
         print(f"Fetching: {safe_url[:100]}...")
         
-        req = urllib.request.Request(url)
-        # No header needed - API key works via query parameter
+        req = urllib.request.Request(url, headers={
+            'Accept': 'application/json',
+            'User-Agent': 'votega.org/1.0',
+        })
         
         with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
