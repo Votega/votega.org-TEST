@@ -417,12 +417,14 @@ chamberSel.addEventListener('change', updateDistricts);
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  const id = districtSel.value;
+  const id     = districtSel.value;
+  const county = countySel.value;
   if (!id) {
     statusLine.textContent = 'Please select a district.';
     return;
   }
-  window.location.href = `${getBasePath()}ga-member.html?id=${encodeURIComponent(id)}`;
+  const params = new URLSearchParams({ id, ...(county && { county }) });
+  window.location.href = `${getBasePath()}ga-member.html?${params}`;
 });
 
 loadData();
