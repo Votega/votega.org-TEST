@@ -3,6 +3,16 @@ const DATA_URL  = 'assets/data/current-members.json';
 // The member list is prebuilt by GitHub Actions and served as static JSON.
 // -------------------------------------------------------------------
 
+function formatMemberName(m) {
+  const honorific = m.honorificName || '';
+  const firstName = m.firstName || '';
+  const lastName = m.lastName || '';
+  const fallback = m.directOrderName || m.name || 'Unknown';
+  return (firstName && lastName)
+    ? `${honorific} ${firstName} ${lastName}`.trim()
+    : (honorific ? `${honorific} ${fallback}` : fallback);
+}
+
 const STATES = [
   {code:'AL',name:'Alabama'},{code:'AK',name:'Alaska'},{code:'AZ',name:'Arizona'},
   {code:'AR',name:'Arkansas'},{code:'CA',name:'California'},{code:'CO',name:'Colorado'},
@@ -122,9 +132,10 @@ async function loadMembers () {
 
     memberSel.innerHTML = '<option value="">— choose —</option>' +
       results.map(m => {
-        let label = m.name;
+        const displayName = formatMemberName(m);
+        let label = displayName;
         if (expectedChamber === 'House of Representatives' && m.district) {
-          label = `District ${m.district} - ${m.name}`;
+          label = `District ${m.district} - ${displayName}`;
         }
         return `<option value="${m.bioguideId}">${label} (${m.partyName})</option>`;
       }).join('');
