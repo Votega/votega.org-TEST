@@ -30,9 +30,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
+      - name: Debug - Check file structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files in root:"
+          ls -la
+          echo "Files in scripts directory:"
+          ls -la scripts/
+          echo "Files in assets directory:"
+          ls -la assets/
+          echo "Files in assets/data directory:"
+          ls -la assets/data/
+
       - name: Generate current member data (includes leadership positions)
         run: |
+          echo "Running script..."
           python scripts/generate_current_members_data.py assets/data/current-members.json
+          echo "Script completed"
+          echo "Checking if file exists:"
+          ls -la assets/data/current-members.json 2>/dev/null || echo "File not found"
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
 
