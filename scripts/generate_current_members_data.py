@@ -10,7 +10,6 @@ import sys
 import urllib.request
 import urllib.error
 from datetime import datetime
-from urllib.parse import urlencode
 
 # Configuration
 API_KEY = os.environ.get('CONGRESS_API_KEY')
@@ -139,4 +138,85 @@ def enrich_member_data(bioguideId, basic_member):
     basic_member['honorificName'] = member_details.get('honorificName', '')
     basic_member['firstName'] = member_details.get('firstName', '')
     basic_member['lastName'] = member_details.get('lastName', '')
-    basic_member['sponsoredLegislation'] = member
+    basic_member['sponsoredLegislation'] = member_details.get('sponsoredLegislation', {})
+    basic_member['cosponsoredLegislation'] = member_details.get('cosponsoredLegislation', {})
+    basic_member['dataUpdatedAt'] = datetime.now().isoformat()
+    
+    return basic_member
+
+def get_current_members():
+    """Fetch all current members of Congress"""
+    url = f"{BASE_URL}/member?limit=550&format=json"
+    data = fetch_url(url)
+    
+    if not data or 'members' not in data:
+        print("Error: Could not fetch member list")
+        return []
+    
+    members = data['members'].get('member', [])
+    print(f"Found {len(members)} members in initial fetch")
+    
+    # Filter to only current members
+    current_members = []
+    for member in members:
+        terms = member.get('terms', {}).get('item', [])
+        if terms:
+            current_year = datetime.now().year
+            has_current_term = any(
+                term.get('endYear') is None or term.get('endYear', 0) >= current_year
+                for term in terms
+            )
+            if has_current_term:
+                current_members.append(member)
+    
+    print(f"Filtered to {len(current_members)} current members")
+    return current_members
+
+def main():
+    print("Fetching current Congress members...")
+    members = get_current_members()
+    
+    if not members:
+        print("Error: No members fetched")
+        sys.exit(1)
+    
+    print("Enriching member data with detailed information...")
+    enriched_members = []
+    for i, member in enumerate(members):
+        bioguideId = member.get('bioguideId', '')
+        print(f"  Processing {i+1}/{len(members)}: {member.get('name', 'Unknown')} ({bioguideId})")
+        enriched_member = enrich_member_data(bioguideId, member)
+        enriched_members.append(enriched_member)
+        
+        # Rate limiting: Congress.gov API allows 1000 requests per hour
+        if (i + 1) % 5 == 0:
+            print(f"  Progress: {i+1}/{len(members)} members processed")
+    
+    # Create output structure
+    output_data = {
+        'metadata': {
+            'generatedAt': datetime.now().isoformat(),
+            'source': 'Congress.gov API',
+            'count': len(enriched_members),
+            'apiVersion': 'v3'
+        },
+        'members': enriched_members
+    }
+    
+    # Ensure output directory exists
+    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    
+    # Write to file
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"Successfully wrote {len(enriched_members)} members to {OUTPUT_FILE}")
+    
+    # Print summary
+    leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
+    contact_count = sum(1 for m in enriched_members if m.get('contactInfo', {}).get('phoneNumber'))
+    print(f"Members with leadership positions: {leadership_count}")
+    print(f"Members with contact info: {contact_count}")
+
+if __name__ == '__main__':
+    main()

@@ -108,6 +108,7 @@ permalink: /member.html
     const html = `
       ${imageHtml}
       <h2>${fullName}</h2>
+      ${member.birthYear ? `<p><strong>Birth Year:</strong> ${member.birthYear}</p>` : ''}
       <p><strong>Party:</strong> ${party}</p>
       <p><strong>State:</strong> ${state}</p>
       <p><strong>District:</strong> ${district}</p>
@@ -117,7 +118,6 @@ permalink: /member.html
       ${websiteHtml}
       <p><strong>First Term (Current Chamber):</strong> ${startYear}</p>
       <p><strong>Years in Office (Current Chamber):</strong> ${yearsInOffice}</p>
-      ${member.birthYear ? `<p><strong>Birth Year:</strong> ${member.birthYear}</p>` : ''}
          
       <p><a href="my-representatives.html">Search for another member</a></p>
     `;
