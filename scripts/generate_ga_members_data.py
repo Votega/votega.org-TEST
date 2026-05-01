@@ -9,16 +9,17 @@ import os
 import sys
 import urllib.request
 import urllib.error
+import urllib.parse
 from datetime import datetime
 
 API_KEY = os.environ.get('OPENSTATES_API_KEY')
 BASE_URL = "https://v3.openstates.org"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/ga-members.json"
+GA_JURISDICTION = "ocd-jurisdiction/country:us/state:ga/government"
 
 
 def fetch_url(url):
     try:
-        safe_url = url if not API_KEY else url  # key is in header, not URL
         print(f"Fetching: {url[:120]}...")
         req = urllib.request.Request(url, headers={
             'X-API-Key': API_KEY,
@@ -28,7 +29,8 @@ def fetch_url(url):
         with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
-        print(f"HTTP Error {e.code}: {e.reason}")
+        body = e.read().decode('utf-8', errors='replace')
+        print(f"HTTP Error {e.code}: {e.reason} — {body[:300]}")
         return None
     except Exception as e:
         print(f"Error fetching: {e}")
@@ -41,14 +43,14 @@ def get_all_members():
     per_page = 100
 
     while True:
-        url = (
-            f"{BASE_URL}/people"
-            f"?jurisdiction=ga"
-            f"&page={page}"
-            f"&per_page={per_page}"
-            f"&include=links"
-            f"&include=contact_details"
-        )
+        params = urllib.parse.urlencode([
+            ('jurisdiction', GA_JURISDICTION),
+            ('page',         page),
+            ('per_page',     per_page),
+            ('include',      'links'),
+            ('include',      'contact_details'),
+        ])
+        url = f"{BASE_URL}/people?{params}"
         data = fetch_url(url)
 
         if not data or 'results' not in data:
