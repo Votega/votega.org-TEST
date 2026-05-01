@@ -40,7 +40,7 @@ def fetch_url(url):
 def get_all_members():
     all_members = []
     page = 1
-    per_page = 100
+    per_page = 50
 
     while True:
         params = urllib.parse.urlencode([
