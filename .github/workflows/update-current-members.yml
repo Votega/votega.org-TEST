@@ -31,7 +31,9 @@ jobs:
           pip install requests
 
       - name: Generate current member data (includes leadership positions)
-        run: python assets/scripts/generate_current_members_data.py assets/data/current-members.json
+        run: |
+          cd assets/scripts
+          python generate_current_members_data.py ../../assets/data/current-members.json
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
 
