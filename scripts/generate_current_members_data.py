@@ -12,7 +12,7 @@ import urllib.error
 from datetime import datetime
 
 # Configuration
-API_KEY = os.environ.get('CONGRESS_API_KEY')
+API_KEY = os.environ.get('CONGRESS_API_KEY', '')
 BASE_URL = "https://api.congress.gov/v3"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
 
