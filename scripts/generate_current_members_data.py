@@ -12,7 +12,7 @@ import urllib.error
 from datetime import datetime
 
 # Configuration
-API_KEY = os.environ.get('CONGRESS_API_KEY', '')
+API_KEY = os.environ.get('CONGRESS_API_KEY')
 BASE_URL = "https://api.congress.gov/v3"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
 
@@ -128,3 +128,14 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     
     # Write to file
+    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"Successfully wrote {len(enriched_members)} members to {OUTPUT_FILE}")
+    
+    # Print summary of leadership positions found
+    leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
+    print(f"Members with leadership positions: {leadership_count}")
+
+if __name__ == '__main__':
+    main()
