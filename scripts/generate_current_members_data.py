@@ -14,6 +14,7 @@ from datetime import datetime
 API_KEY = os.environ.get('CONGRESS_API_KEY')
 BASE_URL = "https://api.congress.gov/v3"
 OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members.json"
+CURRENT_CONGRESS = 119
 
 def fetch_url(url):
     """Fetch data from Congress.gov API with error handling"""
@@ -72,6 +73,52 @@ def extract_leadership(member_data):
                 })
     
     return current_leadership
+
+def get_committee_memberships():
+    """Fetch all committee memberships for the current Congress.
+    Returns a dict keyed by bioguideId -> list of committee names."""
+    all_items = []
+    url = f"{BASE_URL}/committee-membership/{CURRENT_CONGRESS}?limit=250&format=json"
+
+    while url:
+        data = fetch_url(url)
+        if not data:
+            print("Warning: Could not fetch committee memberships")
+            break
+
+        items = data.get('committeeMembership') or data.get('committeeMemberships') or []
+        if isinstance(items, dict):
+            items = items.get('item', [])
+        if not isinstance(items, list):
+            items = [items] if items else []
+
+        all_items.extend(items)
+        print(f"  Fetched {len(items)} committee membership records (total: {len(all_items)})")
+
+        next_url = data.get('pagination', {}).get('next', '')
+        url = next_url or None
+
+    lookup = {}
+    for item in all_items:
+        bioguide_id = item.get('bioguideId', '')
+        if not bioguide_id:
+            continue
+        committees = item.get('committees', {})
+        if isinstance(committees, dict):
+            committee_items = committees.get('item', [])
+        elif isinstance(committees, list):
+            committee_items = committees
+        else:
+            committee_items = []
+        if not isinstance(committee_items, list):
+            committee_items = [committee_items] if committee_items else []
+        names = [c.get('name', '') for c in committee_items if isinstance(c, dict) and c.get('name')]
+        if names:
+            lookup[bioguide_id] = names
+
+    print(f"Built committee lookup for {len(lookup)} members")
+    return lookup
+
 
 def enrich_member_data(bioguideId, basic_member):
     """Fetch and enrich member data"""
@@ -171,7 +218,14 @@ def main():
 
         if (i + 1) % 5 == 0:
             print(f"  Progress: {i+1}/{len(members)} members processed")
-    
+
+    print("Fetching committee memberships...")
+    committee_lookup = get_committee_memberships()
+    for member in enriched_members:
+        member['committees'] = committee_lookup.get(member.get('bioguideId', ''), [])
+    committees_count = sum(1 for m in enriched_members if m.get('committees'))
+    print(f"Members with committee data: {committees_count}")
+
     # Create output structure
     output_data = {
         'metadata': {
@@ -203,6 +257,7 @@ def main():
     # Print summary
     leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
     print(f"Members with leadership positions: {leadership_count}")
+    print(f"Members with committee data: {committees_count}")
 
 if __name__ == '__main__':
     main()

@@ -96,6 +96,14 @@ permalink: /member.html
       leadershipHtml = `<p><strong>Leadership Position(s):</strong> ${leadershipTitles}</p>`;
     }
 
+    // Committees
+    const committees = member.committees || [];
+    let committeesHtml = '';
+    if (committees.length > 0) {
+      const committeeItems = committees.map(c => `<li>${c}</li>`).join('');
+      committeesHtml = `<p><strong>Committees:</strong></p><ul>${committeeItems}</ul>`;
+    }
+
     // Contact information
     const contactInfo = member.contactInfo || {};
     let contactHtml = '';
@@ -127,6 +135,7 @@ permalink: /member.html
       <p><strong>District:</strong> ${district}</p>
       <p><strong>Chamber:</strong> ${chamber}</p>
       ${leadershipHtml}
+      ${committeesHtml}
       ${contactHtml}
       ${websiteHtml}
       <p><strong>First Term (Current Chamber):</strong> ${startYear}</p>
