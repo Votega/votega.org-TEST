@@ -240,47 +240,61 @@ permalink: /ga-member.html
     `;
   }
 
-  function displaySidebar(current, all) {
-    const chamber = current.chamber;
-    if (!chamber) return;
-
-    const label = chamber === 'Senate' ? 'Senate' : 'House';
-    let peers, titleText;
-
-    if (selectedCounty) {
-      const lookup = chamber === 'Senate' ? COUNTY_SENATE_DISTRICTS : COUNTY_HOUSE_DISTRICTS;
-      const countyDistricts = lookup[selectedCounty] || [];
-      if (countyDistricts.length <= 1) return;
-      peers = all
-        .filter(m => m.chamber === chamber && countyDistricts.includes(m.district))
-        .sort((a, b) => (a.district ?? 999) - (b.district ?? 999));
-      titleText = `${selectedCounty} County`;
-    } else {
-      // Fallback for direct links: show ±5 nearby districts
-      const currentDist = current.district ?? 0;
-      peers = all
-        .filter(m => m.chamber === chamber && Math.abs((m.district ?? 0) - currentDist) <= 5)
-        .sort((a, b) => (a.district ?? 999) - (b.district ?? 999));
-      titleText = `Nearby ${label} Districts`;
-    }
-
-    if (peers.length <= 1) return;
-
-    const basePath   = getBasePath();
-    const countyParam = selectedCounty ? `&county=${encodeURIComponent(selectedCounty)}` : '';
-
-    const items = peers.map(m => {
-      const isCurrent = m.id === current.id;
+  function renderGroup(members, label, currentId, basePath, countyParam) {
+    if (!members.length) return '';
+    const items = members.map(m => {
+      const isCurrent = m.id === currentId;
       const sub = `District ${m.district} · ${m.party || ''}`;
       if (isCurrent) {
         return `<span class="sidebar-member current">${m.name}<br><span class="sidebar-member-sub">${sub}</span></span>`;
       }
       return `<a class="sidebar-member" href="${basePath}ga-member.html?id=${encodeURIComponent(m.id)}${countyParam}">${m.name}<br><span class="sidebar-member-sub">${sub}</span></a>`;
     }).join('');
+    return `<div class="sidebar-group-label">${label}</div>${items}`;
+  }
+
+  function displaySidebar(current, all) {
+    const chamber = current.chamber;
+    if (!chamber) return;
+
+    const basePath    = getBasePath();
+    const countyParam = selectedCounty ? `&county=${encodeURIComponent(selectedCounty)}` : '';
+
+    const otherChamber     = chamber === 'Senate' ? 'House of Representatives' : 'Senate';
+    const primaryLabel     = chamber === 'Senate' ? 'Senate' : 'House';
+    const secondaryLabel   = chamber === 'Senate' ? 'House' : 'Senate';
+
+    let primaryPeers, secondaryPeers, titleText;
+
+    if (selectedCounty) {
+      const primaryLookup   = chamber === 'Senate' ? COUNTY_SENATE_DISTRICTS : COUNTY_HOUSE_DISTRICTS;
+      const secondaryLookup = chamber === 'Senate' ? COUNTY_HOUSE_DISTRICTS  : COUNTY_SENATE_DISTRICTS;
+
+      primaryPeers = all
+        .filter(m => m.chamber === chamber && (primaryLookup[selectedCounty] || []).includes(m.district))
+        .sort((a, b) => (a.district ?? 999) - (b.district ?? 999));
+
+      secondaryPeers = all
+        .filter(m => m.chamber === otherChamber && (secondaryLookup[selectedCounty] || []).includes(m.district))
+        .sort((a, b) => (a.district ?? 999) - (b.district ?? 999));
+
+      titleText = `${selectedCounty} County`;
+    } else {
+      // Fallback for direct links: ±5 nearby districts in same chamber, no cross-chamber
+      const currentDist = current.district ?? 0;
+      primaryPeers = all
+        .filter(m => m.chamber === chamber && Math.abs((m.district ?? 0) - currentDist) <= 5)
+        .sort((a, b) => (a.district ?? 999) - (b.district ?? 999));
+      secondaryPeers = [];
+      titleText = `Nearby ${primaryLabel} Districts`;
+    }
+
+    if (primaryPeers.length <= 1 && secondaryPeers.length === 0) return;
 
     document.getElementById('sidebarTitle').textContent = titleText;
     document.getElementById('sidebarContent').innerHTML =
-      `<div class="sidebar-group-label">${label}</div>${items}`;
+      renderGroup(primaryPeers,   primaryLabel,   current.id, basePath, countyParam) +
+      renderGroup(secondaryPeers, secondaryLabel, current.id, basePath, countyParam);
     document.getElementById('stateSidebar').style.display = 'block';
   }
 </script>
