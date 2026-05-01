@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-05-01T11:22:00.933834",
+    "generatedAt": "2026-05-01T12:11:51.048208",
     "source": "Congress.gov API",
     "count": 543,
     "apiVersion": "v3"
@@ -52,7 +52,8 @@
         "count": 5841,
         "url": "https://api.congress.gov/v3/member/S001150/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:25.373456"
+      "dataUpdatedAt": "2026-05-01T12:08:27.286880",
+      "committees": []
     },
     {
       "bioguideId": "A000383",
@@ -88,7 +89,8 @@
         "count": 3,
         "url": "https://api.congress.gov/v3/member/A000383/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:25.822627"
+      "dataUpdatedAt": "2026-05-01T12:08:27.637591",
+      "committees": []
     },
     {
       "bioguideId": "M001246",
@@ -129,7 +131,8 @@
         "count": 15,
         "url": "https://api.congress.gov/v3/member/M001246/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:26.102545"
+      "dataUpdatedAt": "2026-05-01T12:08:27.987730",
+      "committees": []
     },
     {
       "bioguideId": "F000485",
@@ -173,7 +176,8 @@
         "count": 24,
         "url": "https://api.congress.gov/v3/member/F000485/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:26.381356"
+      "dataUpdatedAt": "2026-05-01T12:08:28.337969",
+      "committees": []
     },
     {
       "bioguideId": "S001157",
@@ -212,7 +216,8 @@
         "count": 3547,
         "url": "https://api.congress.gov/v3/member/S001157/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:26.861476"
+      "dataUpdatedAt": "2026-05-01T12:08:28.688444",
+      "committees": []
     },
     {
       "bioguideId": "C001127",
@@ -251,7 +256,8 @@
         "count": 1292,
         "url": "https://api.congress.gov/v3/member/C001127/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:27.324066"
+      "dataUpdatedAt": "2026-05-01T12:08:29.065021",
+      "committees": []
     },
     {
       "bioguideId": "G000594",
@@ -290,7 +296,8 @@
         "count": 529,
         "url": "https://api.congress.gov/v3/member/G000594/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:27.757120"
+      "dataUpdatedAt": "2026-05-01T12:08:29.418613",
+      "committees": []
     },
     {
       "bioguideId": "S001193",
@@ -329,7 +336,8 @@
         "count": 3323,
         "url": "https://api.congress.gov/v3/member/S001193/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:28.223980"
+      "dataUpdatedAt": "2026-05-01T12:08:29.794781",
+      "committees": []
     },
     {
       "bioguideId": "C001091",
@@ -373,7 +381,8 @@
         "count": 1657,
         "url": "https://api.congress.gov/v3/member/C001091/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:28.495800"
+      "dataUpdatedAt": "2026-05-01T12:08:30.146431",
+      "committees": []
     },
     {
       "bioguideId": "M001237",
@@ -417,7 +426,8 @@
         "count": 312,
         "url": "https://api.congress.gov/v3/member/M001237/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:28.774341"
+      "dataUpdatedAt": "2026-05-01T12:08:30.500491",
+      "committees": []
     },
     {
       "bioguideId": "C001121",
@@ -461,7 +471,8 @@
         "count": 1589,
         "url": "https://api.congress.gov/v3/member/C001121/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:29.056910"
+      "dataUpdatedAt": "2026-05-01T12:08:30.853335",
+      "committees": []
     },
     {
       "bioguideId": "M001190",
@@ -504,7 +515,8 @@
         "count": 1596,
         "url": "https://api.congress.gov/v3/member/M001190/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:29.319091"
+      "dataUpdatedAt": "2026-05-01T12:08:31.203353",
+      "committees": []
     },
     {
       "bioguideId": "K000401",
@@ -548,7 +560,8 @@
         "count": 274,
         "url": "https://api.congress.gov/v3/member/K000401/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:29.791738"
+      "dataUpdatedAt": "2026-05-01T12:08:31.580397",
+      "committees": []
     },
     {
       "bioguideId": "B001296",
@@ -592,7 +605,8 @@
         "count": 2275,
         "url": "https://api.congress.gov/v3/member/B001296/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:30.058584"
+      "dataUpdatedAt": "2026-05-01T12:08:31.959607",
+      "committees": []
     },
     {
       "bioguideId": "Y000064",
@@ -640,7 +654,8 @@
         "count": 2100,
         "url": "https://api.congress.gov/v3/member/Y000064/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:30.348412"
+      "dataUpdatedAt": "2026-05-01T12:08:32.312922",
+      "committees": []
     },
     {
       "bioguideId": "W000779",
@@ -681,14 +696,15 @@
       "firstName": "Ron",
       "lastName": "Wyden",
       "sponsoredLegislation": {
-        "count": 1998,
+        "count": 2000,
         "url": "https://api.congress.gov/v3/member/W000779/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 8517,
+        "count": 8524,
         "url": "https://api.congress.gov/v3/member/W000779/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:30.630735"
+      "dataUpdatedAt": "2026-05-01T12:08:32.667042",
+      "committees": []
     },
     {
       "bioguideId": "W000437",
@@ -733,10 +749,11 @@
         "url": "https://api.congress.gov/v3/member/W000437/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 4479,
+        "count": 4481,
         "url": "https://api.congress.gov/v3/member/W000437/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:30.896374"
+      "dataUpdatedAt": "2026-05-01T12:08:33.018684",
+      "committees": []
     },
     {
       "bioguideId": "W000802",
@@ -779,7 +796,8 @@
         "count": 4826,
         "url": "https://api.congress.gov/v3/member/W000802/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:31.389682"
+      "dataUpdatedAt": "2026-05-01T12:08:33.394501",
+      "committees": []
     },
     {
       "bioguideId": "W000800",
@@ -827,7 +845,8 @@
         "count": 5401,
         "url": "https://api.congress.gov/v3/member/W000800/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:31.660962"
+      "dataUpdatedAt": "2026-05-01T12:08:33.772171",
+      "committees": []
     },
     {
       "bioguideId": "W000817",
@@ -870,7 +889,8 @@
         "count": 4324,
         "url": "https://api.congress.gov/v3/member/W000817/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:31.935945"
+      "dataUpdatedAt": "2026-05-01T12:08:34.123033",
+      "committees": []
     },
     {
       "bioguideId": "W000790",
@@ -913,7 +933,8 @@
         "count": 1230,
         "url": "https://api.congress.gov/v3/member/W000790/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:32.209314"
+      "dataUpdatedAt": "2026-05-01T12:08:34.475331",
+      "committees": []
     },
     {
       "bioguideId": "W000805",
@@ -956,7 +977,8 @@
         "count": 2487,
         "url": "https://api.congress.gov/v3/member/W000805/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:32.493207"
+      "dataUpdatedAt": "2026-05-01T12:08:34.829231",
+      "committees": []
     },
     {
       "bioguideId": "V000128",
@@ -1001,10 +1023,11 @@
         "url": "https://api.congress.gov/v3/member/V000128/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 6788,
+        "count": 6794,
         "url": "https://api.congress.gov/v3/member/V000128/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:32.779441"
+      "dataUpdatedAt": "2026-05-01T12:08:35.183219",
+      "committees": []
     },
     {
       "bioguideId": "T000278",
@@ -1047,7 +1070,8 @@
         "count": 661,
         "url": "https://api.congress.gov/v3/member/T000278/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:33.058596"
+      "dataUpdatedAt": "2026-05-01T12:08:35.559181",
+      "committees": []
     },
     {
       "bioguideId": "T000476",
@@ -1090,7 +1114,8 @@
         "count": 2593,
         "url": "https://api.congress.gov/v3/member/T000476/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:33.345070"
+      "dataUpdatedAt": "2026-05-01T12:08:35.911153",
+      "committees": []
     },
     {
       "bioguideId": "T000250",
@@ -1159,7 +1184,8 @@
         "count": 2795,
         "url": "https://api.congress.gov/v3/member/T000250/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:33.795051"
+      "dataUpdatedAt": "2026-05-01T12:08:36.264290",
+      "committees": []
     },
     {
       "bioguideId": "S001198",
@@ -1202,7 +1228,8 @@
         "count": 1780,
         "url": "https://api.congress.gov/v3/member/S001198/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:34.132635"
+      "dataUpdatedAt": "2026-05-01T12:08:36.616377",
+      "committees": []
     },
     {
       "bioguideId": "S001203",
@@ -1245,7 +1272,8 @@
         "count": 2762,
         "url": "https://api.congress.gov/v3/member/S001203/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:34.411884"
+      "dataUpdatedAt": "2026-05-01T12:08:36.968036",
+      "committees": []
     },
     {
       "bioguideId": "S001208",
@@ -1293,7 +1321,8 @@
         "count": 1503,
         "url": "https://api.congress.gov/v3/member/S001208/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:34.852608"
+      "dataUpdatedAt": "2026-05-01T12:08:37.318399",
+      "committees": []
     },
     {
       "bioguideId": "S001232",
@@ -1329,14 +1358,15 @@
       "firstName": "Tim",
       "lastName": "Sheehy",
       "sponsoredLegislation": {
-        "count": 68,
+        "count": 69,
         "url": "https://api.congress.gov/v3/member/S001232/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 281,
+        "count": 282,
         "url": "https://api.congress.gov/v3/member/S001232/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:35.120273"
+      "dataUpdatedAt": "2026-05-01T12:08:37.678519",
+      "committees": []
     },
     {
       "bioguideId": "S001181",
@@ -1379,7 +1409,8 @@
         "count": 4254,
         "url": "https://api.congress.gov/v3/member/S001181/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:35.400580"
+      "dataUpdatedAt": "2026-05-01T12:08:38.116549",
+      "committees": []
     },
     {
       "bioguideId": "S001217",
@@ -1421,7 +1452,8 @@
         "count": 1722,
         "url": "https://api.congress.gov/v3/member/S001217/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:35.680269"
+      "dataUpdatedAt": "2026-05-01T12:08:38.494378",
+      "committees": []
     },
     {
       "bioguideId": "S001184",
@@ -1469,7 +1501,8 @@
         "count": 1890,
         "url": "https://api.congress.gov/v3/member/S001184/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:35.959192"
+      "dataUpdatedAt": "2026-05-01T12:08:38.871604",
+      "committees": []
     },
     {
       "bioguideId": "S000148",
@@ -1543,7 +1576,8 @@
         "count": 8075,
         "url": "https://api.congress.gov/v3/member/S000148/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:36.230720"
+      "dataUpdatedAt": "2026-05-01T12:08:39.222642",
+      "committees": []
     },
     {
       "bioguideId": "S001227",
@@ -1586,7 +1620,8 @@
         "count": 384,
         "url": "https://api.congress.gov/v3/member/S001227/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:36.492751"
+      "dataUpdatedAt": "2026-05-01T12:08:39.574514",
+      "committees": []
     },
     {
       "bioguideId": "S001194",
@@ -1622,14 +1657,15 @@
       "firstName": "Brian",
       "lastName": "Schatz",
       "sponsoredLegislation": {
-        "count": 685,
+        "count": 687,
         "url": "https://api.congress.gov/v3/member/S001194/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 2307,
+        "count": 2310,
         "url": "https://api.congress.gov/v3/member/S001194/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:36.774770"
+      "dataUpdatedAt": "2026-05-01T12:08:39.930658",
+      "committees": []
     },
     {
       "bioguideId": "S000033",
@@ -1677,7 +1713,8 @@
         "count": 7854,
         "url": "https://api.congress.gov/v3/member/S000033/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:37.042551"
+      "dataUpdatedAt": "2026-05-01T12:08:40.305911",
+      "committees": []
     },
     {
       "bioguideId": "R000605",
@@ -1720,7 +1757,8 @@
         "count": 1860,
         "url": "https://api.congress.gov/v3/member/R000605/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:37.331196"
+      "dataUpdatedAt": "2026-05-01T12:08:40.681874",
+      "committees": []
     },
     {
       "bioguideId": "R000608",
@@ -1768,7 +1806,8 @@
         "count": 2530,
         "url": "https://api.congress.gov/v3/member/R000608/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:37.603867"
+      "dataUpdatedAt": "2026-05-01T12:08:41.031414",
+      "committees": []
     },
     {
       "bioguideId": "R000584",
@@ -1811,7 +1850,8 @@
         "count": 2828,
         "url": "https://api.congress.gov/v3/member/R000584/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:37.865170"
+      "dataUpdatedAt": "2026-05-01T12:08:41.383438",
+      "committees": []
     },
     {
       "bioguideId": "R000618",
@@ -1847,14 +1887,15 @@
       "firstName": "Pete",
       "lastName": "Ricketts",
       "sponsoredLegislation": {
-        "count": 116,
+        "count": 118,
         "url": "https://api.congress.gov/v3/member/R000618/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 702,
+        "count": 707,
         "url": "https://api.congress.gov/v3/member/R000618/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:38.138899"
+      "dataUpdatedAt": "2026-05-01T12:08:41.736864",
+      "committees": []
     },
     {
       "bioguideId": "R000122",
@@ -1902,7 +1943,8 @@
         "count": 4950,
         "url": "https://api.congress.gov/v3/member/R000122/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:38.410325"
+      "dataUpdatedAt": "2026-05-01T12:08:42.087708",
+      "committees": []
     },
     {
       "bioguideId": "P000595",
@@ -1950,7 +1992,8 @@
         "count": 3517,
         "url": "https://api.congress.gov/v3/member/P000595/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:38.683503"
+      "dataUpdatedAt": "2026-05-01T12:08:42.647914",
+      "committees": []
     },
     {
       "bioguideId": "P000603",
@@ -1993,7 +2036,8 @@
         "count": 1116,
         "url": "https://api.congress.gov/v3/member/P000603/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:39.119630"
+      "dataUpdatedAt": "2026-05-01T12:08:42.999700",
+      "committees": []
     },
     {
       "bioguideId": "P000145",
@@ -2036,7 +2080,8 @@
         "count": 2054,
         "url": "https://api.congress.gov/v3/member/P000145/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:39.401126"
+      "dataUpdatedAt": "2026-05-01T12:08:43.376561",
+      "committees": []
     },
     {
       "bioguideId": "O000174",
@@ -2072,14 +2117,15 @@
       "firstName": "Jon",
       "lastName": "Ossoff",
       "sponsoredLegislation": {
-        "count": 217,
+        "count": 218,
         "url": "https://api.congress.gov/v3/member/O000174/sponsored-legislation"
       },
       "cosponsoredLegislation": {
         "count": 786,
         "url": "https://api.congress.gov/v3/member/O000174/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:39.673149"
+      "dataUpdatedAt": "2026-05-01T12:08:43.726723",
+      "committees": []
     },
     {
       "bioguideId": "M001111",
@@ -2133,7 +2179,8 @@
         "count": 6342,
         "url": "https://api.congress.gov/v3/member/M001111/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:39.951581"
+      "dataUpdatedAt": "2026-05-01T12:08:44.077958",
+      "committees": []
     },
     {
       "bioguideId": "M001169",
@@ -2181,7 +2228,8 @@
         "count": 3429,
         "url": "https://api.congress.gov/v3/member/M001169/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:40.231033"
+      "dataUpdatedAt": "2026-05-01T12:08:44.599029",
+      "committees": []
     },
     {
       "bioguideId": "M001153",
@@ -2217,14 +2265,15 @@
       "firstName": "Lisa",
       "lastName": "Murkowski",
       "sponsoredLegislation": {
-        "count": 1212,
+        "count": 1213,
         "url": "https://api.congress.gov/v3/member/M001153/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 3583,
+        "count": 3585,
         "url": "https://api.congress.gov/v3/member/M001153/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:40.511310"
+      "dataUpdatedAt": "2026-05-01T12:08:44.953194",
+      "committees": []
     },
     {
       "bioguideId": "M001242",
@@ -2260,14 +2309,15 @@
       "firstName": "Bernie",
       "lastName": "Moreno",
       "sponsoredLegislation": {
-        "count": 29,
+        "count": 30,
         "url": "https://api.congress.gov/v3/member/M001242/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 170,
+        "count": 171,
         "url": "https://api.congress.gov/v3/member/M001242/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:40.782245"
+      "dataUpdatedAt": "2026-05-01T12:08:45.303909",
+      "committees": []
     },
     {
       "bioguideId": "M000934",
@@ -2312,10 +2362,11 @@
         "url": "https://api.congress.gov/v3/member/M000934/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 3812,
+        "count": 3814,
         "url": "https://api.congress.gov/v3/member/M000934/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:41.066314"
+      "dataUpdatedAt": "2026-05-01T12:08:45.684427",
+      "committees": []
     },
     {
       "bioguideId": "M001244",
@@ -2358,7 +2409,8 @@
         "count": 172,
         "url": "https://api.congress.gov/v3/member/M001244/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:41.494968"
+      "dataUpdatedAt": "2026-05-01T12:08:46.061644",
+      "committees": []
     },
     {
       "bioguideId": "M001176",
@@ -2394,14 +2446,15 @@
       "firstName": "Jeff",
       "lastName": "Merkley",
       "sponsoredLegislation": {
-        "count": 1225,
+        "count": 1226,
         "url": "https://api.congress.gov/v3/member/M001176/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 4882,
+        "count": 4889,
         "url": "https://api.congress.gov/v3/member/M001176/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:41.762693"
+      "dataUpdatedAt": "2026-05-01T12:08:46.439874",
+      "committees": []
     },
     {
       "bioguideId": "M001243",
@@ -2444,7 +2497,8 @@
         "count": 213,
         "url": "https://api.congress.gov/v3/member/M001243/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:42.213565"
+      "dataUpdatedAt": "2026-05-01T12:08:46.791746",
+      "committees": []
     },
     {
       "bioguideId": "M000355",
@@ -2523,7 +2577,8 @@
         "count": 2828,
         "url": "https://api.congress.gov/v3/member/M000355/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:42.492798"
+      "dataUpdatedAt": "2026-05-01T12:08:47.146006",
+      "committees": []
     },
     {
       "bioguideId": "M001198",
@@ -2571,7 +2626,8 @@
         "count": 1785,
         "url": "https://api.congress.gov/v3/member/M001198/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:42.772879"
+      "dataUpdatedAt": "2026-05-01T12:08:47.529359",
+      "committees": []
     },
     {
       "bioguideId": "M000133",
@@ -2616,10 +2672,11 @@
         "url": "https://api.congress.gov/v3/member/M000133/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 10140,
+        "count": 10144,
         "url": "https://api.congress.gov/v3/member/M000133/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:43.034692"
+      "dataUpdatedAt": "2026-05-01T12:08:47.879531",
+      "committees": []
     },
     {
       "bioguideId": "L000571",
@@ -2664,10 +2721,11 @@
         "url": "https://api.congress.gov/v3/member/L000571/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 2203,
+        "count": 2204,
         "url": "https://api.congress.gov/v3/member/L000571/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:43.308899"
+      "dataUpdatedAt": "2026-05-01T12:08:48.256932",
+      "committees": []
     },
     {
       "bioguideId": "L000570",
@@ -2718,10 +2776,11 @@
         "url": "https://api.congress.gov/v3/member/L000570/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 3202,
+        "count": 3206,
         "url": "https://api.congress.gov/v3/member/L000570/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:43.580728"
+      "dataUpdatedAt": "2026-05-01T12:08:48.612074",
+      "committees": []
     },
     {
       "bioguideId": "L000577",
@@ -2764,7 +2823,8 @@
         "count": 1758,
         "url": "https://api.congress.gov/v3/member/L000577/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:43.852818"
+      "dataUpdatedAt": "2026-05-01T12:08:48.963567",
+      "committees": []
     },
     {
       "bioguideId": "L000575",
@@ -2818,7 +2878,8 @@
         "count": 2359,
         "url": "https://api.congress.gov/v3/member/L000575/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:44.141894"
+      "dataUpdatedAt": "2026-05-01T12:08:49.317548",
+      "committees": []
     },
     {
       "bioguideId": "K000367",
@@ -2861,7 +2922,8 @@
         "count": 5579,
         "url": "https://api.congress.gov/v3/member/K000367/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:44.402950"
+      "dataUpdatedAt": "2026-05-01T12:08:49.671984",
+      "committees": []
     },
     {
       "bioguideId": "K000383",
@@ -2901,10 +2963,11 @@
         "url": "https://api.congress.gov/v3/member/K000383/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 3132,
+        "count": 3135,
         "url": "https://api.congress.gov/v3/member/K000383/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:44.678348"
+      "dataUpdatedAt": "2026-05-01T12:08:50.025092",
+      "committees": []
     },
     {
       "bioguideId": "K000394",
@@ -2949,10 +3012,11 @@
         "url": "https://api.congress.gov/v3/member/K000394/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 1914,
+        "count": 1916,
         "url": "https://api.congress.gov/v3/member/K000394/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:44.950916"
+      "dataUpdatedAt": "2026-05-01T12:08:50.379905",
+      "committees": []
     },
     {
       "bioguideId": "K000393",
@@ -2995,7 +3059,8 @@
         "count": 1128,
         "url": "https://api.congress.gov/v3/member/K000393/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:45.387103"
+      "dataUpdatedAt": "2026-05-01T12:08:50.757110",
+      "committees": []
     },
     {
       "bioguideId": "K000377",
@@ -3031,14 +3096,15 @@
       "firstName": "Mark",
       "lastName": "Kelly",
       "sponsoredLegislation": {
-        "count": 255,
+        "count": 256,
         "url": "https://api.congress.gov/v3/member/K000377/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 1181,
+        "count": 1183,
         "url": "https://api.congress.gov/v3/member/K000377/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:45.658170"
+      "dataUpdatedAt": "2026-05-01T12:08:51.107880",
+      "committees": []
     },
     {
       "bioguideId": "K000384",
@@ -3081,7 +3147,8 @@
         "count": 2852,
         "url": "https://api.congress.gov/v3/member/K000384/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:45.945797"
+      "dataUpdatedAt": "2026-05-01T12:08:51.458923",
+      "committees": []
     },
     {
       "bioguideId": "J000312",
@@ -3121,10 +3188,11 @@
         "url": "https://api.congress.gov/v3/member/J000312/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 242,
+        "count": 243,
         "url": "https://api.congress.gov/v3/member/J000312/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:46.225496"
+      "dataUpdatedAt": "2026-05-01T12:08:51.809749",
+      "committees": []
     },
     {
       "bioguideId": "J000293",
@@ -3167,7 +3235,8 @@
         "count": 1323,
         "url": "https://api.congress.gov/v3/member/J000293/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:46.499631"
+      "dataUpdatedAt": "2026-05-01T12:08:52.162640",
+      "committees": []
     },
     {
       "bioguideId": "H001079",
@@ -3210,7 +3279,8 @@
         "count": 1510,
         "url": "https://api.congress.gov/v3/member/H001079/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:46.778959"
+      "dataUpdatedAt": "2026-05-01T12:08:52.515255",
+      "committees": []
     },
     {
       "bioguideId": "H001104",
@@ -3253,7 +3323,8 @@
         "count": 132,
         "url": "https://api.congress.gov/v3/member/H001104/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:47.060177"
+      "dataUpdatedAt": "2026-05-01T12:08:52.893302",
+      "committees": []
     },
     {
       "bioguideId": "H001061",
@@ -3296,7 +3367,8 @@
         "count": 2014,
         "url": "https://api.congress.gov/v3/member/H001061/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:47.342697"
+      "dataUpdatedAt": "2026-05-01T12:08:53.245126",
+      "committees": []
     },
     {
       "bioguideId": "H001042",
@@ -3344,7 +3416,8 @@
         "count": 5024,
         "url": "https://api.congress.gov/v3/member/H001042/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:47.618468"
+      "dataUpdatedAt": "2026-05-01T12:08:53.625175",
+      "committees": []
     },
     {
       "bioguideId": "H000273",
@@ -3387,7 +3460,8 @@
         "count": 1009,
         "url": "https://api.congress.gov/v3/member/H000273/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:47.907522"
+      "dataUpdatedAt": "2026-05-01T12:08:54.003308",
+      "committees": []
     },
     {
       "bioguideId": "H001046",
@@ -3428,14 +3502,15 @@
       "firstName": "Martin",
       "lastName": "Heinrich",
       "sponsoredLegislation": {
-        "count": 601,
+        "count": 602,
         "url": "https://api.congress.gov/v3/member/H001046/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 3251,
+        "count": 3254,
         "url": "https://api.congress.gov/v3/member/H001046/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:48.179605"
+      "dataUpdatedAt": "2026-05-01T12:08:54.355971",
+      "committees": []
     },
     {
       "bioguideId": "H001089",
@@ -3477,7 +3552,8 @@
         "count": 951,
         "url": "https://api.congress.gov/v3/member/H001089/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:48.458899"
+      "dataUpdatedAt": "2026-05-01T12:08:54.711930",
+      "committees": []
     },
     {
       "bioguideId": "H001076",
@@ -3520,7 +3596,8 @@
         "count": 2463,
         "url": "https://api.congress.gov/v3/member/H001076/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:48.720800"
+      "dataUpdatedAt": "2026-05-01T12:08:55.239532",
+      "committees": []
     },
     {
       "bioguideId": "H000601",
@@ -3563,7 +3640,8 @@
         "count": 844,
         "url": "https://api.congress.gov/v3/member/H000601/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:49.001710"
+      "dataUpdatedAt": "2026-05-01T12:08:55.618067",
+      "committees": []
     },
     {
       "bioguideId": "G000386",
@@ -3625,14 +3703,15 @@
       "firstName": "Chuck",
       "lastName": "Grassley",
       "sponsoredLegislation": {
-        "count": 2461,
+        "count": 2462,
         "url": "https://api.congress.gov/v3/member/G000386/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 7543,
+        "count": 7544,
         "url": "https://api.congress.gov/v3/member/G000386/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:49.282445"
+      "dataUpdatedAt": "2026-05-01T12:08:55.969377",
+      "committees": []
     },
     {
       "bioguideId": "G000359",
@@ -3680,7 +3759,8 @@
         "count": 3621,
         "url": "https://api.congress.gov/v3/member/G000359/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:49.548753"
+      "dataUpdatedAt": "2026-05-01T12:08:56.321253",
+      "committees": []
     },
     {
       "bioguideId": "G000555",
@@ -3728,7 +3808,8 @@
         "count": 5143,
         "url": "https://api.congress.gov/v3/member/G000555/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:49.821326"
+      "dataUpdatedAt": "2026-05-01T12:08:56.849385",
+      "committees": []
     },
     {
       "bioguideId": "G000574",
@@ -3776,7 +3857,8 @@
         "count": 2712,
         "url": "https://api.congress.gov/v3/member/G000574/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:50.097563"
+      "dataUpdatedAt": "2026-05-01T12:08:57.227019",
+      "committees": []
     },
     {
       "bioguideId": "F000463",
@@ -3819,7 +3901,8 @@
         "count": 1563,
         "url": "https://api.congress.gov/v3/member/F000463/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:50.358889"
+      "dataUpdatedAt": "2026-05-01T12:08:57.577344",
+      "committees": []
     },
     {
       "bioguideId": "F000479",
@@ -3862,7 +3945,8 @@
         "count": 802,
         "url": "https://api.congress.gov/v3/member/F000479/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:50.630672"
+      "dataUpdatedAt": "2026-05-01T12:08:57.956865",
+      "committees": []
     },
     {
       "bioguideId": "E000295",
@@ -3898,14 +3982,15 @@
       "firstName": "Joni",
       "lastName": "Ernst",
       "sponsoredLegislation": {
-        "count": 652,
+        "count": 654,
         "url": "https://api.congress.gov/v3/member/E000295/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 1900,
+        "count": 1901,
         "url": "https://api.congress.gov/v3/member/E000295/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:50.901032"
+      "dataUpdatedAt": "2026-05-01T12:08:58.308132",
+      "committees": []
     },
     {
       "bioguideId": "D000563",
@@ -3994,7 +4079,8 @@
         "count": 10431,
         "url": "https://api.congress.gov/v3/member/D000563/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:51.190503"
+      "dataUpdatedAt": "2026-05-01T12:08:58.658050",
+      "committees": []
     },
     {
       "bioguideId": "D000622",
@@ -4042,7 +4128,8 @@
         "count": 3255,
         "url": "https://api.congress.gov/v3/member/D000622/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:51.638009"
+      "dataUpdatedAt": "2026-05-01T12:08:59.009003",
+      "committees": []
     },
     {
       "bioguideId": "D000618",
@@ -4090,7 +4177,8 @@
         "count": 2476,
         "url": "https://api.congress.gov/v3/member/D000618/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:51.922071"
+      "dataUpdatedAt": "2026-05-01T12:08:59.584066",
+      "committees": []
     },
     {
       "bioguideId": "C001114",
@@ -4138,7 +4226,8 @@
         "count": 909,
         "url": "https://api.congress.gov/v3/member/C001114/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:52.183405"
+      "dataUpdatedAt": "2026-05-01T12:08:59.934864",
+      "committees": []
     },
     {
       "bioguideId": "C001098",
@@ -4181,7 +4270,8 @@
         "count": 2059,
         "url": "https://api.congress.gov/v3/member/C001098/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:52.471774"
+      "dataUpdatedAt": "2026-05-01T12:09:00.294693",
+      "committees": []
     },
     {
       "bioguideId": "C000880",
@@ -4226,10 +4316,11 @@
         "url": "https://api.congress.gov/v3/member/C000880/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 4390,
+        "count": 4393,
         "url": "https://api.congress.gov/v3/member/C000880/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:52.746758"
+      "dataUpdatedAt": "2026-05-01T12:09:00.673004",
+      "committees": []
     },
     {
       "bioguideId": "C001096",
@@ -4274,10 +4365,11 @@
         "url": "https://api.congress.gov/v3/member/C001096/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 3271,
+        "count": 3272,
         "url": "https://api.congress.gov/v3/member/C001096/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:53.028925"
+      "dataUpdatedAt": "2026-05-01T12:09:01.026198",
+      "committees": []
     },
     {
       "bioguideId": "C001095",
@@ -4318,14 +4410,15 @@
       "firstName": "Tom",
       "lastName": "Cotton",
       "sponsoredLegislation": {
-        "count": 561,
+        "count": 563,
         "url": "https://api.congress.gov/v3/member/C001095/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 1922,
+        "count": 1923,
         "url": "https://api.congress.gov/v3/member/C001095/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:53.301536"
+      "dataUpdatedAt": "2026-05-01T12:09:01.379226",
+      "committees": []
     },
     {
       "bioguideId": "C001113",
@@ -4361,14 +4454,15 @@
       "firstName": "Catherine",
       "lastName": "Cortez Masto",
       "sponsoredLegislation": {
-        "count": 663,
+        "count": 664,
         "url": "https://api.congress.gov/v3/member/C001113/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 2232,
+        "count": 2235,
         "url": "https://api.congress.gov/v3/member/C001113/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:53.583719"
+      "dataUpdatedAt": "2026-05-01T12:09:01.759250",
+      "committees": []
     },
     {
       "bioguideId": "C001056",
@@ -4427,7 +4521,8 @@
         "count": 4030,
         "url": "https://api.congress.gov/v3/member/C001056/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:53.856194"
+      "dataUpdatedAt": "2026-05-01T12:09:02.137251",
+      "committees": []
     },
     {
       "bioguideId": "C001088",
@@ -4463,14 +4558,15 @@
       "firstName": "Christopher",
       "lastName": "Coons",
       "sponsoredLegislation": {
-        "count": 772,
+        "count": 774,
         "url": "https://api.congress.gov/v3/member/C001088/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 4061,
+        "count": 4065,
         "url": "https://api.congress.gov/v3/member/C001088/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:54.131747"
+      "dataUpdatedAt": "2026-05-01T12:09:02.489237",
+      "committees": []
     },
     {
       "bioguideId": "C001035",
@@ -4513,7 +4609,8 @@
         "count": 6583,
         "url": "https://api.congress.gov/v3/member/C001035/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:54.583285"
+      "dataUpdatedAt": "2026-05-01T12:09:02.848937",
+      "committees": []
     },
     {
       "bioguideId": "C001075",
@@ -4561,7 +4658,8 @@
         "count": 2482,
         "url": "https://api.congress.gov/v3/member/C001075/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:54.860621"
+      "dataUpdatedAt": "2026-05-01T12:09:03.200955",
+      "committees": []
     },
     {
       "bioguideId": "C001047",
@@ -4609,7 +4707,8 @@
         "count": 3931,
         "url": "https://api.congress.gov/v3/member/C001047/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:55.123241"
+      "dataUpdatedAt": "2026-05-01T12:09:03.552314",
+      "committees": []
     },
     {
       "bioguideId": "C000127",
@@ -4650,14 +4749,15 @@
       "firstName": "Maria",
       "lastName": "Cantwell",
       "sponsoredLegislation": {
-        "count": 1001,
+        "count": 1002,
         "url": "https://api.congress.gov/v3/member/C000127/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 4239,
+        "count": 4240,
         "url": "https://api.congress.gov/v3/member/C000127/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:55.406938"
+      "dataUpdatedAt": "2026-05-01T12:09:03.902250",
+      "committees": []
     },
     {
       "bioguideId": "B001305",
@@ -4698,14 +4798,15 @@
       "firstName": "Ted",
       "lastName": "Budd",
       "sponsoredLegislation": {
-        "count": 260,
+        "count": 261,
         "url": "https://api.congress.gov/v3/member/B001305/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 1955,
+        "count": 1959,
         "url": "https://api.congress.gov/v3/member/B001305/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:55.687517"
+      "dataUpdatedAt": "2026-05-01T12:09:04.256310",
+      "committees": []
     },
     {
       "bioguideId": "B001319",
@@ -4745,10 +4846,11 @@
         "url": "https://api.congress.gov/v3/member/B001319/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 669,
+        "count": 670,
         "url": "https://api.congress.gov/v3/member/B001319/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:55.960473"
+      "dataUpdatedAt": "2026-05-01T12:09:04.612367",
+      "committees": []
     },
     {
       "bioguideId": "B001236",
@@ -4796,7 +4898,8 @@
         "count": 4211,
         "url": "https://api.congress.gov/v3/member/B001236/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:56.234200"
+      "dataUpdatedAt": "2026-05-01T12:09:04.964032",
+      "committees": []
     },
     {
       "bioguideId": "B001288",
@@ -4839,7 +4942,8 @@
         "count": 4165,
         "url": "https://api.congress.gov/v3/member/B001288/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:56.500955"
+      "dataUpdatedAt": "2026-05-01T12:09:05.347880",
+      "committees": []
     },
     {
       "bioguideId": "B001303",
@@ -4884,10 +4988,11 @@
         "url": "https://api.congress.gov/v3/member/B001303/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 2383,
+        "count": 2384,
         "url": "https://api.congress.gov/v3/member/B001303/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:56.773332"
+      "dataUpdatedAt": "2026-05-01T12:09:05.699346",
+      "committees": []
     },
     {
       "bioguideId": "B001277",
@@ -4927,10 +5032,11 @@
         "url": "https://api.congress.gov/v3/member/B001277/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 6135,
+        "count": 6137,
         "url": "https://api.congress.gov/v3/member/B001277/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:57.049493"
+      "dataUpdatedAt": "2026-05-01T12:09:06.049642",
+      "committees": []
     },
     {
       "bioguideId": "B001243",
@@ -4975,10 +5081,11 @@
         "url": "https://api.congress.gov/v3/member/B001243/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 4801,
+        "count": 4802,
         "url": "https://api.congress.gov/v3/member/B001243/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:57.312400"
+      "dataUpdatedAt": "2026-05-01T12:09:06.398204",
+      "committees": []
     },
     {
       "bioguideId": "B001267",
@@ -5021,7 +5128,8 @@
         "count": 3196,
         "url": "https://api.congress.gov/v3/member/B001267/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:57.583798"
+      "dataUpdatedAt": "2026-05-01T12:09:06.775980",
+      "committees": []
     },
     {
       "bioguideId": "B001261",
@@ -5067,10 +5175,11 @@
         "url": "https://api.congress.gov/v3/member/B001261/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 2436,
+        "count": 2439,
         "url": "https://api.congress.gov/v3/member/B001261/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:57.861723"
+      "dataUpdatedAt": "2026-05-01T12:09:07.127415",
+      "committees": []
     },
     {
       "bioguideId": "B001299",
@@ -5111,14 +5220,15 @@
       "firstName": "Jim",
       "lastName": "Banks",
       "sponsoredLegislation": {
-        "count": 250,
+        "count": 251,
         "url": "https://api.congress.gov/v3/member/B001299/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 1334,
+        "count": 1335,
         "url": "https://api.congress.gov/v3/member/B001299/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:58.136390"
+      "dataUpdatedAt": "2026-05-01T12:09:07.508067",
+      "committees": []
     },
     {
       "bioguideId": "B001230",
@@ -5159,14 +5269,15 @@
       "firstName": "Tammy",
       "lastName": "Baldwin",
       "sponsoredLegislation": {
-        "count": 733,
+        "count": 734,
         "url": "https://api.congress.gov/v3/member/B001230/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 6807,
+        "count": 6809,
         "url": "https://api.congress.gov/v3/member/B001230/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:58.412044"
+      "dataUpdatedAt": "2026-05-01T12:09:07.859582",
+      "committees": []
     },
     {
       "bioguideId": "A000382",
@@ -5201,14 +5312,15 @@
       "firstName": "Angela",
       "lastName": "Alsobrooks",
       "sponsoredLegislation": {
-        "count": 71,
+        "count": 72,
         "url": "https://api.congress.gov/v3/member/A000382/sponsored-legislation"
       },
       "cosponsoredLegislation": {
-        "count": 408,
+        "count": 410,
         "url": "https://api.congress.gov/v3/member/A000382/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:58.689918"
+      "dataUpdatedAt": "2026-05-01T12:09:08.210649",
+      "committees": []
     },
     {
       "bioguideId": "F000476",
@@ -5252,7 +5364,8 @@
         "count": 913,
         "url": "https://api.congress.gov/v3/member/F000476/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:58.966821"
+      "dataUpdatedAt": "2026-05-01T12:09:08.562802",
+      "committees": []
     },
     {
       "bioguideId": "M001245",
@@ -5296,7 +5409,8 @@
         "count": 49,
         "url": "https://api.congress.gov/v3/member/M001245/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:59.255133"
+      "dataUpdatedAt": "2026-05-01T12:09:08.914111",
+      "committees": []
     },
     {
       "bioguideId": "C001120",
@@ -5340,7 +5454,8 @@
         "count": 1255,
         "url": "https://api.congress.gov/v3/member/C001120/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:59.519672"
+      "dataUpdatedAt": "2026-05-01T12:09:09.264159",
+      "committees": []
     },
     {
       "bioguideId": "L000566",
@@ -5384,7 +5499,8 @@
         "count": 2317,
         "url": "https://api.congress.gov/v3/member/L000566/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:19:59.801078"
+      "dataUpdatedAt": "2026-05-01T12:09:09.641505",
+      "committees": []
     },
     {
       "bioguideId": "C001118",
@@ -5428,7 +5544,8 @@
         "count": 1069,
         "url": "https://api.congress.gov/v3/member/C001118/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:00.077113"
+      "dataUpdatedAt": "2026-05-01T12:09:09.995666",
+      "committees": []
     },
     {
       "bioguideId": "C001059",
@@ -5472,7 +5589,8 @@
         "count": 3909,
         "url": "https://api.congress.gov/v3/member/C001059/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:00.350360"
+      "dataUpdatedAt": "2026-05-01T12:09:10.348314",
+      "committees": []
     },
     {
       "bioguideId": "W000812",
@@ -5516,7 +5634,8 @@
         "count": 1611,
         "url": "https://api.congress.gov/v3/member/W000812/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:00.623471"
+      "dataUpdatedAt": "2026-05-01T12:09:10.724722",
+      "committees": []
     },
     {
       "bioguideId": "L000578",
@@ -5555,7 +5674,8 @@
         "count": 2466,
         "url": "https://api.congress.gov/v3/member/L000578/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:00.906002"
+      "dataUpdatedAt": "2026-05-01T12:09:11.080429",
+      "committees": []
     },
     {
       "bioguideId": "G000596",
@@ -5594,7 +5714,8 @@
         "count": 432,
         "url": "https://api.congress.gov/v3/member/G000596/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:01.188726"
+      "dataUpdatedAt": "2026-05-01T12:09:11.433247",
+      "committees": []
     },
     {
       "bioguideId": "R000619",
@@ -5638,7 +5759,8 @@
         "count": 318,
         "url": "https://api.congress.gov/v3/member/R000619/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:01.469753"
+      "dataUpdatedAt": "2026-05-01T12:09:11.783941",
+      "committees": []
     },
     {
       "bioguideId": "D000628",
@@ -5682,7 +5804,8 @@
         "count": 1136,
         "url": "https://api.congress.gov/v3/member/D000628/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:01.732580"
+      "dataUpdatedAt": "2026-05-01T12:09:12.137971",
+      "committees": []
     },
     {
       "bioguideId": "N000147",
@@ -5725,7 +5848,8 @@
         "count": 17168,
         "url": "https://api.congress.gov/v3/member/N000147/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:01.996097"
+      "dataUpdatedAt": "2026-05-01T12:09:12.487892",
+      "committees": []
     },
     {
       "bioguideId": "D000216",
@@ -5769,7 +5893,8 @@
         "count": 6491,
         "url": "https://api.congress.gov/v3/member/D000216/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:02.279435"
+      "dataUpdatedAt": "2026-05-01T12:09:12.839727",
+      "committees": []
     },
     {
       "bioguideId": "W000187",
@@ -5813,7 +5938,8 @@
         "count": 4752,
         "url": "https://api.congress.gov/v3/member/W000187/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:02.559637"
+      "dataUpdatedAt": "2026-05-01T12:09:13.217345",
+      "committees": []
     },
     {
       "bioguideId": "P000197",
@@ -5888,7 +6014,8 @@
         "count": 5071,
         "url": "https://api.congress.gov/v3/member/P000197/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:02.834170"
+      "dataUpdatedAt": "2026-05-01T12:09:13.595843",
+      "committees": []
     },
     {
       "bioguideId": "V000139",
@@ -5932,7 +6059,8 @@
         "count": 35,
         "url": "https://api.congress.gov/v3/member/V000139/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:03.116489"
+      "dataUpdatedAt": "2026-05-01T12:09:13.948493",
+      "committees": []
     },
     {
       "bioguideId": "G000606",
@@ -5976,7 +6104,8 @@
         "count": 236,
         "url": "https://api.congress.gov/v3/member/G000606/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:03.395258"
+      "dataUpdatedAt": "2026-05-01T12:09:14.300635",
+      "committees": []
     },
     {
       "bioguideId": "C001087",
@@ -6020,7 +6149,8 @@
         "count": 1606,
         "url": "https://api.congress.gov/v3/member/C001087/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:03.667566"
+      "dataUpdatedAt": "2026-05-01T12:09:14.677154",
+      "committees": []
     },
     {
       "bioguideId": "W000830",
@@ -6064,7 +6194,8 @@
         "count": 220,
         "url": "https://api.congress.gov/v3/member/W000830/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:03.931836"
+      "dataUpdatedAt": "2026-05-01T12:09:15.030533",
+      "committees": []
     },
     {
       "bioguideId": "F000484",
@@ -6108,7 +6239,8 @@
         "count": 160,
         "url": "https://api.congress.gov/v3/member/F000484/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:04.209177"
+      "dataUpdatedAt": "2026-05-01T12:09:15.384170",
+      "committees": []
     },
     {
       "bioguideId": "P000622",
@@ -6152,7 +6284,8 @@
         "count": 78,
         "url": "https://api.congress.gov/v3/member/P000622/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:04.483280"
+      "dataUpdatedAt": "2026-05-01T12:09:15.734817",
+      "committees": []
     },
     {
       "bioguideId": "V000138",
@@ -6196,7 +6329,8 @@
         "count": 849,
         "url": "https://api.congress.gov/v3/member/V000138/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:04.756543"
+      "dataUpdatedAt": "2026-05-01T12:09:16.088085",
+      "committees": []
     },
     {
       "bioguideId": "T000490",
@@ -6240,7 +6374,8 @@
         "count": 165,
         "url": "https://api.congress.gov/v3/member/T000490/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:05.038477"
+      "dataUpdatedAt": "2026-05-01T12:09:16.442458",
+      "committees": []
     },
     {
       "bioguideId": "S001230",
@@ -6284,7 +6419,8 @@
         "count": 333,
         "url": "https://api.congress.gov/v3/member/S001230/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:05.329073"
+      "dataUpdatedAt": "2026-05-01T12:09:16.821213",
+      "committees": []
     },
     {
       "bioguideId": "S001229",
@@ -6328,7 +6464,8 @@
         "count": 181,
         "url": "https://api.congress.gov/v3/member/S001229/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:05.607302"
+      "dataUpdatedAt": "2026-05-01T12:09:17.201382",
+      "committees": []
     },
     {
       "bioguideId": "S001228",
@@ -6372,7 +6509,8 @@
         "count": 276,
         "url": "https://api.congress.gov/v3/member/S001228/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:05.885410"
+      "dataUpdatedAt": "2026-05-01T12:09:17.577154",
+      "committees": []
     },
     {
       "bioguideId": "R000622",
@@ -6416,7 +6554,8 @@
         "count": 328,
         "url": "https://api.congress.gov/v3/member/R000622/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:06.160905"
+      "dataUpdatedAt": "2026-05-01T12:09:17.930862",
+      "committees": []
     },
     {
       "bioguideId": "P000621",
@@ -6460,7 +6599,8 @@
         "count": 180,
         "url": "https://api.congress.gov/v3/member/P000621/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:06.438915"
+      "dataUpdatedAt": "2026-05-01T12:09:18.282713",
+      "committees": []
     },
     {
       "bioguideId": "O000176",
@@ -6504,7 +6644,8 @@
         "count": 249,
         "url": "https://api.congress.gov/v3/member/O000176/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:06.717455"
+      "dataUpdatedAt": "2026-05-01T12:09:18.633819",
+      "committees": []
     },
     {
       "bioguideId": "M001240",
@@ -6548,7 +6689,8 @@
         "count": 227,
         "url": "https://api.congress.gov/v3/member/M001240/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:06.982171"
+      "dataUpdatedAt": "2026-05-01T12:09:18.986950",
+      "committees": []
     },
     {
       "bioguideId": "M001239",
@@ -6592,7 +6734,8 @@
         "count": 259,
         "url": "https://api.congress.gov/v3/member/M001239/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:07.262724"
+      "dataUpdatedAt": "2026-05-01T12:09:19.340829",
+      "committees": []
     },
     {
       "bioguideId": "M001236",
@@ -6636,7 +6779,8 @@
         "count": 240,
         "url": "https://api.congress.gov/v3/member/M001236/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:07.534465"
+      "dataUpdatedAt": "2026-05-01T12:09:19.693671",
+      "committees": []
     },
     {
       "bioguideId": "M001235",
@@ -6680,7 +6824,8 @@
         "count": 121,
         "url": "https://api.congress.gov/v3/member/M001235/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:07.812287"
+      "dataUpdatedAt": "2026-05-01T12:09:20.116313",
+      "committees": []
     },
     {
       "bioguideId": "M001233",
@@ -6724,7 +6869,8 @@
         "count": 189,
         "url": "https://api.congress.gov/v3/member/M001233/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:08.085071"
+      "dataUpdatedAt": "2026-05-01T12:09:20.469439",
+      "committees": []
     },
     {
       "bioguideId": "M001232",
@@ -6768,7 +6914,8 @@
         "count": 396,
         "url": "https://api.congress.gov/v3/member/M001232/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:08.365513"
+      "dataUpdatedAt": "2026-05-01T12:09:20.820983",
+      "committees": []
     },
     {
       "bioguideId": "M001231",
@@ -6812,7 +6959,8 @@
         "count": 243,
         "url": "https://api.congress.gov/v3/member/M001231/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:08.627371"
+      "dataUpdatedAt": "2026-05-01T12:09:21.175393",
+      "committees": []
     },
     {
       "bioguideId": "M001230",
@@ -6856,7 +7004,8 @@
         "count": 195,
         "url": "https://api.congress.gov/v3/member/M001230/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:08.908541"
+      "dataUpdatedAt": "2026-05-01T12:09:21.530425",
+      "committees": []
     },
     {
       "bioguideId": "L000606",
@@ -6900,7 +7049,8 @@
         "count": 389,
         "url": "https://api.congress.gov/v3/member/L000606/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:09.188523"
+      "dataUpdatedAt": "2026-05-01T12:09:21.880444",
+      "committees": []
     },
     {
       "bioguideId": "K000405",
@@ -6944,7 +7094,8 @@
         "count": 70,
         "url": "https://api.congress.gov/v3/member/K000405/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:09.452161"
+      "dataUpdatedAt": "2026-05-01T12:09:22.232803",
+      "committees": []
     },
     {
       "bioguideId": "K000403",
@@ -6988,7 +7139,8 @@
         "count": 124,
         "url": "https://api.congress.gov/v3/member/K000403/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:09.732315"
+      "dataUpdatedAt": "2026-05-01T12:09:22.586046",
+      "committees": []
     },
     {
       "bioguideId": "J000310",
@@ -7032,7 +7184,8 @@
         "count": 393,
         "url": "https://api.congress.gov/v3/member/J000310/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:10.002855"
+      "dataUpdatedAt": "2026-05-01T12:09:22.937442",
+      "committees": []
     },
     {
       "bioguideId": "H001103",
@@ -7075,7 +7228,8 @@
         "count": 177,
         "url": "https://api.congress.gov/v3/member/H001103/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:10.277470"
+      "dataUpdatedAt": "2026-05-01T12:09:23.290309",
+      "committees": []
     },
     {
       "bioguideId": "H001102",
@@ -7119,7 +7273,8 @@
         "count": 185,
         "url": "https://api.congress.gov/v3/member/H001102/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:10.551827"
+      "dataUpdatedAt": "2026-05-01T12:09:23.667484",
+      "committees": []
     },
     {
       "bioguideId": "H001101",
@@ -7163,7 +7318,8 @@
         "count": 247,
         "url": "https://api.congress.gov/v3/member/H001101/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:10.822322"
+      "dataUpdatedAt": "2026-05-01T12:09:24.019335",
+      "committees": []
     },
     {
       "bioguideId": "G000604",
@@ -7207,7 +7363,8 @@
         "count": 269,
         "url": "https://api.congress.gov/v3/member/G000604/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:11.085965"
+      "dataUpdatedAt": "2026-05-01T12:09:24.370397",
+      "committees": []
     },
     {
       "bioguideId": "G000603",
@@ -7251,7 +7408,8 @@
         "count": 300,
         "url": "https://api.congress.gov/v3/member/G000603/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:11.424613"
+      "dataUpdatedAt": "2026-05-01T12:09:24.750089",
+      "committees": []
     },
     {
       "bioguideId": "G000602",
@@ -7295,7 +7453,8 @@
         "count": 260,
         "url": "https://api.congress.gov/v3/member/G000602/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:11.715209"
+      "dataUpdatedAt": "2026-05-01T12:09:25.103346",
+      "committees": []
     },
     {
       "bioguideId": "G000601",
@@ -7338,7 +7497,8 @@
         "count": 192,
         "url": "https://api.congress.gov/v3/member/G000601/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:11.993337"
+      "dataUpdatedAt": "2026-05-01T12:09:25.479439",
+      "committees": []
     },
     {
       "bioguideId": "F000483",
@@ -7382,7 +7542,8 @@
         "count": 293,
         "url": "https://api.congress.gov/v3/member/F000483/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:12.273412"
+      "dataUpdatedAt": "2026-05-01T12:09:25.855738",
+      "committees": []
     },
     {
       "bioguideId": "F000482",
@@ -7425,7 +7586,8 @@
         "count": 113,
         "url": "https://api.congress.gov/v3/member/F000482/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:12.547199"
+      "dataUpdatedAt": "2026-05-01T12:09:26.232822",
+      "committees": []
     },
     {
       "bioguideId": "E000301",
@@ -7469,7 +7631,8 @@
         "count": 308,
         "url": "https://api.congress.gov/v3/member/E000301/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:12.830222"
+      "dataUpdatedAt": "2026-05-01T12:09:26.585779",
+      "committees": []
     },
     {
       "bioguideId": "D000635",
@@ -7513,7 +7676,8 @@
         "count": 297,
         "url": "https://api.congress.gov/v3/member/D000635/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:13.107838"
+      "dataUpdatedAt": "2026-05-01T12:09:26.935302",
+      "committees": []
     },
     {
       "bioguideId": "D000634",
@@ -7557,7 +7721,8 @@
         "count": 141,
         "url": "https://api.congress.gov/v3/member/D000634/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:13.370717"
+      "dataUpdatedAt": "2026-05-01T12:09:27.292981",
+      "committees": []
     },
     {
       "bioguideId": "C001136",
@@ -7601,7 +7766,8 @@
         "count": 194,
         "url": "https://api.congress.gov/v3/member/C001136/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:13.645554"
+      "dataUpdatedAt": "2026-05-01T12:09:27.645392",
+      "committees": []
     },
     {
       "bioguideId": "B001327",
@@ -7645,7 +7811,8 @@
         "count": 276,
         "url": "https://api.congress.gov/v3/member/B001327/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:13.919333"
+      "dataUpdatedAt": "2026-05-01T12:09:28.001577",
+      "committees": []
     },
     {
       "bioguideId": "B001326",
@@ -7689,7 +7856,8 @@
         "count": 285,
         "url": "https://api.congress.gov/v3/member/B001326/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:14.202048"
+      "dataUpdatedAt": "2026-05-01T12:09:28.376581",
+      "committees": []
     },
     {
       "bioguideId": "B001325",
@@ -7733,7 +7901,8 @@
         "count": 239,
         "url": "https://api.congress.gov/v3/member/B001325/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:14.483759"
+      "dataUpdatedAt": "2026-05-01T12:09:28.728638",
+      "committees": []
     },
     {
       "bioguideId": "B001322",
@@ -7777,7 +7946,8 @@
         "count": 168,
         "url": "https://api.congress.gov/v3/member/B001322/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:14.755217"
+      "dataUpdatedAt": "2026-05-01T12:09:29.082762",
+      "committees": []
     },
     {
       "bioguideId": "B001321",
@@ -7821,7 +7991,8 @@
         "count": 162,
         "url": "https://api.congress.gov/v3/member/B001321/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:15.028326"
+      "dataUpdatedAt": "2026-05-01T12:09:29.434354",
+      "committees": []
     },
     {
       "bioguideId": "M001218",
@@ -7865,7 +8036,8 @@
         "count": 507,
         "url": "https://api.congress.gov/v3/member/M001218/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:15.303384"
+      "dataUpdatedAt": "2026-05-01T12:09:29.789873",
+      "committees": []
     },
     {
       "bioguideId": "S001188",
@@ -7914,7 +8086,8 @@
         "count": 611,
         "url": "https://api.congress.gov/v3/member/S001188/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:15.573130"
+      "dataUpdatedAt": "2026-05-01T12:09:30.140142",
+      "committees": []
     },
     {
       "bioguideId": "F000110",
@@ -7963,7 +8136,8 @@
         "count": 575,
         "url": "https://api.congress.gov/v3/member/F000110/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:15.855617"
+      "dataUpdatedAt": "2026-05-01T12:09:30.516983",
+      "committees": []
     },
     {
       "bioguideId": "O000177",
@@ -8007,7 +8181,8 @@
         "count": 139,
         "url": "https://api.congress.gov/v3/member/O000177/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:16.134194"
+      "dataUpdatedAt": "2026-05-01T12:09:30.874858",
+      "committees": []
     },
     {
       "bioguideId": "M001238",
@@ -8050,7 +8225,8 @@
         "count": 552,
         "url": "https://api.congress.gov/v3/member/M001238/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:16.416580"
+      "dataUpdatedAt": "2026-05-01T12:09:31.237646",
+      "committees": []
     },
     {
       "bioguideId": "M001234",
@@ -8094,7 +8270,8 @@
         "count": 206,
         "url": "https://api.congress.gov/v3/member/M001234/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:16.695050"
+      "dataUpdatedAt": "2026-05-01T12:09:31.591994",
+      "committees": []
     },
     {
       "bioguideId": "K000404",
@@ -8137,7 +8314,8 @@
         "count": 121,
         "url": "https://api.congress.gov/v3/member/K000404/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:16.962577"
+      "dataUpdatedAt": "2026-05-01T12:09:31.944737",
+      "committees": []
     },
     {
       "bioguideId": "J000311",
@@ -8181,7 +8359,8 @@
         "count": 107,
         "url": "https://api.congress.gov/v3/member/J000311/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:17.234349"
+      "dataUpdatedAt": "2026-05-01T12:09:32.295426",
+      "committees": []
     },
     {
       "bioguideId": "H001099",
@@ -8225,7 +8404,8 @@
         "count": 211,
         "url": "https://api.congress.gov/v3/member/H001099/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:17.510147"
+      "dataUpdatedAt": "2026-05-01T12:09:32.651113",
+      "committees": []
     },
     {
       "bioguideId": "F000481",
@@ -8269,7 +8449,8 @@
         "count": 283,
         "url": "https://api.congress.gov/v3/member/F000481/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:17.790803"
+      "dataUpdatedAt": "2026-05-01T12:09:33.028044",
+      "committees": []
     },
     {
       "bioguideId": "E000300",
@@ -8313,7 +8494,8 @@
         "count": 197,
         "url": "https://api.congress.gov/v3/member/E000300/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:18.068614"
+      "dataUpdatedAt": "2026-05-01T12:09:33.404597",
+      "committees": []
     },
     {
       "bioguideId": "C001137",
@@ -8357,7 +8539,8 @@
         "count": 106,
         "url": "https://api.congress.gov/v3/member/C001137/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:18.357628"
+      "dataUpdatedAt": "2026-05-01T12:09:33.756163",
+      "committees": []
     },
     {
       "bioguideId": "B001324",
@@ -8401,7 +8584,8 @@
         "count": 414,
         "url": "https://api.congress.gov/v3/member/B001324/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:18.631350"
+      "dataUpdatedAt": "2026-05-01T12:09:34.107621",
+      "committees": []
     },
     {
       "bioguideId": "W000829",
@@ -8445,7 +8629,8 @@
         "count": 214,
         "url": "https://api.congress.gov/v3/member/W000829/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:18.903763"
+      "dataUpdatedAt": "2026-05-01T12:09:34.475016",
+      "committees": []
     },
     {
       "bioguideId": "M001229",
@@ -8489,7 +8674,8 @@
         "count": 570,
         "url": "https://api.congress.gov/v3/member/M001229/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:19.186359"
+      "dataUpdatedAt": "2026-05-01T12:09:34.832969",
+      "committees": []
     },
     {
       "bioguideId": "F000480",
@@ -8533,7 +8719,8 @@
         "count": 148,
         "url": "https://api.congress.gov/v3/member/F000480/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:19.465838"
+      "dataUpdatedAt": "2026-05-01T12:09:35.185138",
+      "committees": []
     },
     {
       "bioguideId": "K000402",
@@ -8577,7 +8764,8 @@
         "count": 618,
         "url": "https://api.congress.gov/v3/member/K000402/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:19.739420"
+      "dataUpdatedAt": "2026-05-01T12:09:35.565533",
+      "committees": []
     },
     {
       "bioguideId": "M001228",
@@ -8621,7 +8809,8 @@
         "count": 192,
         "url": "https://api.congress.gov/v3/member/M001228/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:20.020401"
+      "dataUpdatedAt": "2026-05-01T12:09:35.915140",
+      "committees": []
     },
     {
       "bioguideId": "A000380",
@@ -8665,7 +8854,8 @@
         "count": 588,
         "url": "https://api.congress.gov/v3/member/A000380/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:20.486607"
+      "dataUpdatedAt": "2026-05-01T12:09:36.266555",
+      "committees": []
     },
     {
       "bioguideId": "M001227",
@@ -8709,7 +8899,8 @@
         "count": 842,
         "url": "https://api.congress.gov/v3/member/M001227/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:20.748808"
+      "dataUpdatedAt": "2026-05-01T12:09:36.644155",
+      "committees": []
     },
     {
       "bioguideId": "V000135",
@@ -8753,7 +8944,8 @@
         "count": 619,
         "url": "https://api.congress.gov/v3/member/V000135/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:21.022455"
+      "dataUpdatedAt": "2026-05-01T12:09:36.994339",
+      "committees": []
     },
     {
       "bioguideId": "S001224",
@@ -8797,7 +8989,8 @@
         "count": 579,
         "url": "https://api.congress.gov/v3/member/S001224/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:21.301137"
+      "dataUpdatedAt": "2026-05-01T12:09:37.371724",
+      "committees": []
     },
     {
       "bioguideId": "G000600",
@@ -8841,7 +9034,8 @@
         "count": 520,
         "url": "https://api.congress.gov/v3/member/G000600/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:21.578552"
+      "dataUpdatedAt": "2026-05-01T12:09:37.730185",
+      "committees": []
     },
     {
       "bioguideId": "O000175",
@@ -8885,7 +9079,8 @@
         "count": 670,
         "url": "https://api.congress.gov/v3/member/O000175/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:21.844986"
+      "dataUpdatedAt": "2026-05-01T12:09:38.082715",
+      "committees": []
     },
     {
       "bioguideId": "M001224",
@@ -8929,7 +9124,8 @@
         "count": 421,
         "url": "https://api.congress.gov/v3/member/M001224/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:22.124585"
+      "dataUpdatedAt": "2026-05-01T12:09:38.460293",
+      "committees": []
     },
     {
       "bioguideId": "M001223",
@@ -8973,7 +9169,8 @@
         "count": 1031,
         "url": "https://api.congress.gov/v3/member/M001223/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:22.402198"
+      "dataUpdatedAt": "2026-05-01T12:09:38.841614",
+      "committees": []
     },
     {
       "bioguideId": "L000603",
@@ -9017,7 +9214,8 @@
         "count": 243,
         "url": "https://api.congress.gov/v3/member/L000603/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:22.673228"
+      "dataUpdatedAt": "2026-05-01T12:09:39.192500",
+      "committees": []
     },
     {
       "bioguideId": "L000602",
@@ -9061,7 +9259,8 @@
         "count": 943,
         "url": "https://api.congress.gov/v3/member/L000602/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:22.955586"
+      "dataUpdatedAt": "2026-05-01T12:09:39.543401",
+      "committees": []
     },
     {
       "bioguideId": "K000399",
@@ -9105,7 +9304,8 @@
         "count": 633,
         "url": "https://api.congress.gov/v3/member/K000399/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:23.228096"
+      "dataUpdatedAt": "2026-05-01T12:09:39.905217",
+      "committees": []
     },
     {
       "bioguideId": "H001095",
@@ -9149,7 +9349,8 @@
         "count": 323,
         "url": "https://api.congress.gov/v3/member/H001095/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:23.513787"
+      "dataUpdatedAt": "2026-05-01T12:09:40.254681",
+      "committees": []
     },
     {
       "bioguideId": "H001096",
@@ -9192,7 +9393,8 @@
         "count": 517,
         "url": "https://api.congress.gov/v3/member/H001096/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:23.788582"
+      "dataUpdatedAt": "2026-05-01T12:09:40.628873",
+      "committees": []
     },
     {
       "bioguideId": "F000478",
@@ -9236,7 +9438,8 @@
         "count": 390,
         "url": "https://api.congress.gov/v3/member/F000478/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:24.065940"
+      "dataUpdatedAt": "2026-05-01T12:09:40.986720",
+      "committees": []
     },
     {
       "bioguideId": "D000530",
@@ -9280,7 +9483,8 @@
         "count": 957,
         "url": "https://api.congress.gov/v3/member/D000530/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:24.344497"
+      "dataUpdatedAt": "2026-05-01T12:09:41.551612",
+      "committees": []
     },
     {
       "bioguideId": "D000594",
@@ -9324,7 +9528,8 @@
         "count": 457,
         "url": "https://api.congress.gov/v3/member/D000594/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:24.615429"
+      "dataUpdatedAt": "2026-05-01T12:09:41.916587",
+      "committees": []
     },
     {
       "bioguideId": "C001130",
@@ -9368,7 +9573,8 @@
         "count": 931,
         "url": "https://api.congress.gov/v3/member/C001130/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:24.904945"
+      "dataUpdatedAt": "2026-05-01T12:09:42.267839",
+      "committees": []
     },
     {
       "bioguideId": "C001131",
@@ -9412,7 +9618,8 @@
         "count": 634,
         "url": "https://api.congress.gov/v3/member/C001131/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:25.178175"
+      "dataUpdatedAt": "2026-05-01T12:09:42.620521",
+      "committees": []
     },
     {
       "bioguideId": "B001318",
@@ -9455,7 +9662,8 @@
         "count": 776,
         "url": "https://api.congress.gov/v3/member/B001318/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:25.449962"
+      "dataUpdatedAt": "2026-05-01T12:09:42.975652",
+      "committees": []
     },
     {
       "bioguideId": "M001212",
@@ -9499,7 +9707,8 @@
         "count": 1091,
         "url": "https://api.congress.gov/v3/member/M001212/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:25.736453"
+      "dataUpdatedAt": "2026-05-01T12:09:43.338617",
+      "committees": []
     },
     {
       "bioguideId": "F000472",
@@ -9543,7 +9752,8 @@
         "count": 792,
         "url": "https://api.congress.gov/v3/member/F000472/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:26.011613"
+      "dataUpdatedAt": "2026-05-01T12:09:43.691784",
+      "committees": []
     },
     {
       "bioguideId": "B000825",
@@ -9587,7 +9797,8 @@
         "count": 888,
         "url": "https://api.congress.gov/v3/member/B000825/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:26.291541"
+      "dataUpdatedAt": "2026-05-01T12:09:44.041207",
+      "committees": []
     },
     {
       "bioguideId": "M001205",
@@ -9631,7 +9842,8 @@
         "count": 937,
         "url": "https://api.congress.gov/v3/member/M001205/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:26.571937"
+      "dataUpdatedAt": "2026-05-01T12:09:44.421780",
+      "committees": []
     },
     {
       "bioguideId": "M001208",
@@ -9675,7 +9887,8 @@
         "count": 1324,
         "url": "https://api.congress.gov/v3/member/M001208/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:26.837354"
+      "dataUpdatedAt": "2026-05-01T12:09:44.795600",
+      "committees": []
     },
     {
       "bioguideId": "C001123",
@@ -9724,7 +9937,8 @@
         "count": 1126,
         "url": "https://api.congress.gov/v3/member/C001123/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:27.110254"
+      "dataUpdatedAt": "2026-05-01T12:09:45.172659",
+      "committees": []
     },
     {
       "bioguideId": "S001205",
@@ -9768,7 +9982,8 @@
         "count": 2196,
         "url": "https://api.congress.gov/v3/member/S001205/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:27.373395"
+      "dataUpdatedAt": "2026-05-01T12:09:45.551092",
+      "committees": []
     },
     {
       "bioguideId": "G000581",
@@ -9812,7 +10027,8 @@
         "count": 1571,
         "url": "https://api.congress.gov/v3/member/G000581/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:27.644871"
+      "dataUpdatedAt": "2026-05-01T12:09:46.150653",
+      "committees": []
     },
     {
       "bioguideId": "S001201",
@@ -9856,7 +10072,8 @@
         "count": 2735,
         "url": "https://api.congress.gov/v3/member/S001201/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:27.924439"
+      "dataUpdatedAt": "2026-05-01T12:09:46.503170",
+      "committees": []
     },
     {
       "bioguideId": "G000553",
@@ -9900,7 +10117,8 @@
         "count": 3945,
         "url": "https://api.congress.gov/v3/member/G000553/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:28.199544"
+      "dataUpdatedAt": "2026-05-01T12:09:46.895295",
+      "committees": []
     },
     {
       "bioguideId": "D000399",
@@ -9944,7 +10162,8 @@
         "count": 3759,
         "url": "https://api.congress.gov/v3/member/D000399/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:28.478470"
+      "dataUpdatedAt": "2026-05-01T12:09:47.453857",
+      "committees": []
     },
     {
       "bioguideId": "V000136",
@@ -9988,7 +10207,8 @@
         "count": 534,
         "url": "https://api.congress.gov/v3/member/V000136/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:28.739755"
+      "dataUpdatedAt": "2026-05-01T12:09:47.812103",
+      "committees": []
     },
     {
       "bioguideId": "T000487",
@@ -10032,7 +10252,8 @@
         "count": 1639,
         "url": "https://api.congress.gov/v3/member/T000487/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:29.020751"
+      "dataUpdatedAt": "2026-05-01T12:09:48.382785",
+      "committees": []
     },
     {
       "bioguideId": "T000488",
@@ -10076,7 +10297,8 @@
         "count": 1433,
         "url": "https://api.congress.gov/v3/member/T000488/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:29.282401"
+      "dataUpdatedAt": "2026-05-01T12:09:48.907702",
+      "committees": []
     },
     {
       "bioguideId": "S001223",
@@ -10120,7 +10342,8 @@
         "count": 482,
         "url": "https://api.congress.gov/v3/member/S001223/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:29.564247"
+      "dataUpdatedAt": "2026-05-01T12:09:49.429852",
+      "committees": []
     },
     {
       "bioguideId": "S001225",
@@ -10164,7 +10387,8 @@
         "count": 646,
         "url": "https://api.congress.gov/v3/member/S001225/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:29.837921"
+      "dataUpdatedAt": "2026-05-01T12:09:49.822990",
+      "committees": []
     },
     {
       "bioguideId": "S001221",
@@ -10208,7 +10432,8 @@
         "count": 652,
         "url": "https://api.congress.gov/v3/member/S001221/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:30.112313"
+      "dataUpdatedAt": "2026-05-01T12:09:50.175362",
+      "committees": []
     },
     {
       "bioguideId": "S001226",
@@ -10252,7 +10477,8 @@
         "count": 1185,
         "url": "https://api.congress.gov/v3/member/S001226/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:30.393053"
+      "dataUpdatedAt": "2026-05-01T12:09:50.536221",
+      "committees": []
     },
     {
       "bioguideId": "R000617",
@@ -10296,7 +10522,8 @@
         "count": 1037,
         "url": "https://api.congress.gov/v3/member/R000617/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:30.682029"
+      "dataUpdatedAt": "2026-05-01T12:09:50.887185",
+      "committees": []
     },
     {
       "bioguideId": "N000193",
@@ -10340,7 +10567,8 @@
         "count": 831,
         "url": "https://api.congress.gov/v3/member/N000193/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:30.961408"
+      "dataUpdatedAt": "2026-05-01T12:09:51.267702",
+      "committees": []
     },
     {
       "bioguideId": "M001219",
@@ -10383,7 +10611,8 @@
         "count": 579,
         "url": "https://api.congress.gov/v3/member/M001219/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:31.259551"
+      "dataUpdatedAt": "2026-05-01T12:09:51.617840",
+      "committees": []
     },
     {
       "bioguideId": "M001217",
@@ -10427,7 +10656,8 @@
         "count": 770,
         "url": "https://api.congress.gov/v3/member/M001217/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:31.534438"
+      "dataUpdatedAt": "2026-05-01T12:09:51.969765",
+      "committees": []
     },
     {
       "bioguideId": "M001216",
@@ -10471,7 +10701,8 @@
         "count": 374,
         "url": "https://api.congress.gov/v3/member/M001216/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:31.813075"
+      "dataUpdatedAt": "2026-05-01T12:09:52.345340",
+      "committees": []
     },
     {
       "bioguideId": "M001222",
@@ -10515,7 +10746,8 @@
         "count": 428,
         "url": "https://api.congress.gov/v3/member/M001222/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:32.083574"
+      "dataUpdatedAt": "2026-05-01T12:09:52.696351",
+      "committees": []
     },
     {
       "bioguideId": "M001226",
@@ -10559,7 +10791,8 @@
         "count": 536,
         "url": "https://api.congress.gov/v3/member/M001226/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:32.357974"
+      "dataUpdatedAt": "2026-05-01T12:09:53.076559",
+      "committees": []
     },
     {
       "bioguideId": "M001220",
@@ -10603,7 +10836,8 @@
         "count": 654,
         "url": "https://api.congress.gov/v3/member/M001220/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:32.639554"
+      "dataUpdatedAt": "2026-05-01T12:09:53.453354",
+      "committees": []
     },
     {
       "bioguideId": "L000596",
@@ -10647,7 +10881,8 @@
         "count": 574,
         "url": "https://api.congress.gov/v3/member/L000596/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:32.917292"
+      "dataUpdatedAt": "2026-05-01T12:09:53.805901",
+      "committees": []
     },
     {
       "bioguideId": "L000597",
@@ -10691,7 +10926,8 @@
         "count": 342,
         "url": "https://api.congress.gov/v3/member/L000597/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:33.180733"
+      "dataUpdatedAt": "2026-05-01T12:09:54.157384",
+      "committees": []
     },
     {
       "bioguideId": "L000599",
@@ -10735,7 +10971,8 @@
         "count": 2106,
         "url": "https://api.congress.gov/v3/member/L000599/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:33.454078"
+      "dataUpdatedAt": "2026-05-01T12:09:54.509836",
+      "committees": []
     },
     {
       "bioguideId": "L000600",
@@ -10779,7 +11016,8 @@
         "count": 594,
         "url": "https://api.congress.gov/v3/member/L000600/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:33.727107"
+      "dataUpdatedAt": "2026-05-01T12:09:54.863579",
+      "committees": []
     },
     {
       "bioguideId": "L000601",
@@ -10823,7 +11061,8 @@
         "count": 922,
         "url": "https://api.congress.gov/v3/member/L000601/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:33.992233"
+      "dataUpdatedAt": "2026-05-01T12:09:55.216719",
+      "committees": []
     },
     {
       "bioguideId": "L000598",
@@ -10867,7 +11106,8 @@
         "count": 616,
         "url": "https://api.congress.gov/v3/member/L000598/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:34.263072"
+      "dataUpdatedAt": "2026-05-01T12:09:55.569093",
+      "committees": []
     },
     {
       "bioguideId": "K000398",
@@ -10911,7 +11151,8 @@
         "count": 665,
         "url": "https://api.congress.gov/v3/member/K000398/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:34.550000"
+      "dataUpdatedAt": "2026-05-01T12:09:55.968795",
+      "committees": []
     },
     {
       "bioguideId": "J000307",
@@ -10955,7 +11196,8 @@
         "count": 268,
         "url": "https://api.congress.gov/v3/member/J000307/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:34.829231"
+      "dataUpdatedAt": "2026-05-01T12:09:56.346999",
+      "committees": []
     },
     {
       "bioguideId": "J000309",
@@ -10999,7 +11241,8 @@
         "count": 996,
         "url": "https://api.congress.gov/v3/member/J000309/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:35.108833"
+      "dataUpdatedAt": "2026-05-01T12:09:56.706842",
+      "committees": []
     },
     {
       "bioguideId": "I000058",
@@ -11043,7 +11286,8 @@
         "count": 606,
         "url": "https://api.congress.gov/v3/member/I000058/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:35.383740"
+      "dataUpdatedAt": "2026-05-01T12:09:57.076568",
+      "committees": []
     },
     {
       "bioguideId": "H001094",
@@ -11087,7 +11331,8 @@
         "count": 585,
         "url": "https://api.congress.gov/v3/member/H001094/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:35.647853"
+      "dataUpdatedAt": "2026-05-01T12:09:57.436448",
+      "committees": []
     },
     {
       "bioguideId": "H001093",
@@ -11131,7 +11376,8 @@
         "count": 459,
         "url": "https://api.congress.gov/v3/member/H001093/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:35.930011"
+      "dataUpdatedAt": "2026-05-01T12:09:57.788446",
+      "committees": []
     },
     {
       "bioguideId": "G000599",
@@ -11175,7 +11421,8 @@
         "count": 1287,
         "url": "https://api.congress.gov/v3/member/G000599/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:36.206461"
+      "dataUpdatedAt": "2026-05-01T12:09:58.137091",
+      "committees": []
     },
     {
       "bioguideId": "F000477",
@@ -11219,7 +11466,8 @@
         "count": 748,
         "url": "https://api.congress.gov/v3/member/F000477/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:36.484197"
+      "dataUpdatedAt": "2026-05-01T12:09:58.509035",
+      "committees": []
     },
     {
       "bioguideId": "E000235",
@@ -11263,7 +11511,8 @@
         "count": 405,
         "url": "https://api.congress.gov/v3/member/E000235/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:36.937055"
+      "dataUpdatedAt": "2026-05-01T12:09:58.865860",
+      "committees": []
     },
     {
       "bioguideId": "E000246",
@@ -11307,7 +11556,8 @@
         "count": 486,
         "url": "https://api.congress.gov/v3/member/E000246/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:37.198451"
+      "dataUpdatedAt": "2026-05-01T12:09:59.216569",
+      "committees": []
     },
     {
       "bioguideId": "D000230",
@@ -11351,7 +11601,8 @@
         "count": 1449,
         "url": "https://api.congress.gov/v3/member/D000230/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:37.484820"
+      "dataUpdatedAt": "2026-05-01T12:09:59.604353",
+      "committees": []
     },
     {
       "bioguideId": "C001129",
@@ -11395,7 +11646,8 @@
         "count": 375,
         "url": "https://api.congress.gov/v3/member/C001129/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:37.762688"
+      "dataUpdatedAt": "2026-05-01T12:09:59.955279",
+      "committees": []
     },
     {
       "bioguideId": "B001316",
@@ -11439,7 +11691,8 @@
         "count": 376,
         "url": "https://api.congress.gov/v3/member/B001316/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:38.040406"
+      "dataUpdatedAt": "2026-05-01T12:10:00.307174",
+      "committees": []
     },
     {
       "bioguideId": "B001315",
@@ -11483,7 +11736,8 @@
         "count": 903,
         "url": "https://api.congress.gov/v3/member/B001315/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:38.325339"
+      "dataUpdatedAt": "2026-05-01T12:10:00.656718",
+      "committees": []
     },
     {
       "bioguideId": "B001317",
@@ -11527,7 +11781,8 @@
         "count": 467,
         "url": "https://api.congress.gov/v3/member/B001317/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:38.774762"
+      "dataUpdatedAt": "2026-05-01T12:10:01.044731",
+      "committees": []
     },
     {
       "bioguideId": "A000379",
@@ -11571,7 +11826,8 @@
         "count": 346,
         "url": "https://api.congress.gov/v3/member/A000379/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:39.046060"
+      "dataUpdatedAt": "2026-05-01T12:10:01.396156",
+      "committees": []
     },
     {
       "bioguideId": "R000579",
@@ -11615,7 +11871,8 @@
         "count": 579,
         "url": "https://api.congress.gov/v3/member/R000579/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:39.317616"
+      "dataUpdatedAt": "2026-05-01T12:10:01.753039",
+      "committees": []
     },
     {
       "bioguideId": "M001215",
@@ -11659,7 +11916,8 @@
         "count": 1192,
         "url": "https://api.congress.gov/v3/member/M001215/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:39.590563"
+      "dataUpdatedAt": "2026-05-01T12:10:02.136524",
+      "committees": []
     },
     {
       "bioguideId": "M001136",
@@ -11709,7 +11967,8 @@
         "count": 485,
         "url": "https://api.congress.gov/v3/member/M001136/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:39.866305"
+      "dataUpdatedAt": "2026-05-01T12:10:02.517652",
+      "committees": []
     },
     {
       "bioguideId": "H001091",
@@ -11753,7 +12012,8 @@
         "count": 896,
         "url": "https://api.congress.gov/v3/member/H001091/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:40.128432"
+      "dataUpdatedAt": "2026-05-01T12:10:02.869530",
+      "committees": []
     },
     {
       "bioguideId": "G000593",
@@ -11797,7 +12057,8 @@
         "count": 745,
         "url": "https://api.congress.gov/v3/member/G000593/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:40.402912"
+      "dataUpdatedAt": "2026-05-01T12:10:03.224038",
+      "committees": []
     },
     {
       "bioguideId": "T000481",
@@ -11841,7 +12102,8 @@
         "count": 3251,
         "url": "https://api.congress.gov/v3/member/T000481/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:40.696143"
+      "dataUpdatedAt": "2026-05-01T12:10:03.575745",
+      "committees": []
     },
     {
       "bioguideId": "T000478",
@@ -11890,7 +12152,8 @@
         "count": 1796,
         "url": "https://api.congress.gov/v3/member/T000478/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:40.978154"
+      "dataUpdatedAt": "2026-05-01T12:10:03.925238",
+      "committees": []
     },
     {
       "bioguideId": "M001199",
@@ -11934,7 +12197,8 @@
         "count": 1202,
         "url": "https://api.congress.gov/v3/member/M001199/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:41.241812"
+      "dataUpdatedAt": "2026-05-01T12:10:04.276626",
+      "committees": []
     },
     {
       "bioguideId": "R000609",
@@ -11978,7 +12242,8 @@
         "count": 1709,
         "url": "https://api.congress.gov/v3/member/R000609/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:41.523908"
+      "dataUpdatedAt": "2026-05-01T12:10:04.627153",
+      "committees": []
     },
     {
       "bioguideId": "L000585",
@@ -12022,7 +12287,8 @@
         "count": 1065,
         "url": "https://api.congress.gov/v3/member/L000585/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:41.803256"
+      "dataUpdatedAt": "2026-05-01T12:10:05.006430",
+      "committees": []
     },
     {
       "bioguideId": "Z000018",
@@ -12071,7 +12337,8 @@
         "count": 703,
         "url": "https://api.congress.gov/v3/member/Z000018/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:42.080215"
+      "dataUpdatedAt": "2026-05-01T12:10:05.551010",
+      "committees": []
     },
     {
       "bioguideId": "D000624",
@@ -12115,7 +12382,8 @@
         "count": 3028,
         "url": "https://api.congress.gov/v3/member/D000624/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:42.360395"
+      "dataUpdatedAt": "2026-05-01T12:10:05.903500",
+      "committees": []
     },
     {
       "bioguideId": "M001194",
@@ -12159,7 +12427,8 @@
         "count": 1560,
         "url": "https://api.congress.gov/v3/member/M001194/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:42.642463"
+      "dataUpdatedAt": "2026-05-01T12:10:06.280214",
+      "committees": []
     },
     {
       "bioguideId": "H001067",
@@ -12203,7 +12472,8 @@
         "count": 1668,
         "url": "https://api.congress.gov/v3/member/H001067/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:42.919570"
+      "dataUpdatedAt": "2026-05-01T12:10:06.636804",
+      "committees": []
     },
     {
       "bioguideId": "F000462",
@@ -12247,7 +12517,8 @@
         "count": 2243,
         "url": "https://api.congress.gov/v3/member/F000462/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:43.185591"
+      "dataUpdatedAt": "2026-05-01T12:10:06.990101",
+      "committees": []
     },
     {
       "bioguideId": "H001058",
@@ -12291,7 +12562,8 @@
         "count": 1689,
         "url": "https://api.congress.gov/v3/member/H001058/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:43.461847"
+      "dataUpdatedAt": "2026-05-01T12:10:07.343007",
+      "committees": []
     },
     {
       "bioguideId": "W000798",
@@ -12340,7 +12612,8 @@
         "count": 2104,
         "url": "https://api.congress.gov/v3/member/W000798/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:43.728391"
+      "dataUpdatedAt": "2026-05-01T12:10:07.721244",
+      "committees": []
     },
     {
       "bioguideId": "N000002",
@@ -12384,7 +12657,8 @@
         "count": 7603,
         "url": "https://api.congress.gov/v3/member/N000002/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:44.003616"
+      "dataUpdatedAt": "2026-05-01T12:10:08.071519",
+      "committees": []
     },
     {
       "bioguideId": "W000797",
@@ -12428,7 +12702,8 @@
         "count": 4397,
         "url": "https://api.congress.gov/v3/member/W000797/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:44.292382"
+      "dataUpdatedAt": "2026-05-01T12:10:08.449162",
+      "committees": []
     },
     {
       "bioguideId": "D000600",
@@ -12472,7 +12747,8 @@
         "count": 2168,
         "url": "https://api.congress.gov/v3/member/D000600/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:44.567129"
+      "dataUpdatedAt": "2026-05-01T12:10:08.801316",
+      "committees": []
     },
     {
       "bioguideId": "S001220",
@@ -12516,7 +12792,8 @@
         "count": 210,
         "url": "https://api.congress.gov/v3/member/S001220/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:44.841229"
+      "dataUpdatedAt": "2026-05-01T12:10:09.154128",
+      "committees": []
     },
     {
       "bioguideId": "P000620",
@@ -12560,7 +12837,8 @@
         "count": 862,
         "url": "https://api.congress.gov/v3/member/P000620/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:45.112861"
+      "dataUpdatedAt": "2026-05-01T12:10:09.507639",
+      "committees": []
     },
     {
       "bioguideId": "M001225",
@@ -12604,7 +12882,8 @@
         "count": 1044,
         "url": "https://api.congress.gov/v3/member/M001225/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:45.389870"
+      "dataUpdatedAt": "2026-05-01T12:10:09.857564",
+      "committees": []
     },
     {
       "bioguideId": "K000400",
@@ -12648,7 +12927,8 @@
         "count": 810,
         "url": "https://api.congress.gov/v3/member/K000400/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:45.841236"
+      "dataUpdatedAt": "2026-05-01T12:10:10.233801",
+      "committees": []
     },
     {
       "bioguideId": "G000598",
@@ -12692,7 +12972,8 @@
         "count": 753,
         "url": "https://api.congress.gov/v3/member/G000598/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:46.121639"
+      "dataUpdatedAt": "2026-05-01T12:10:10.587313",
+      "committees": []
     },
     {
       "bioguideId": "C001132",
@@ -12736,7 +13017,8 @@
         "count": 980,
         "url": "https://api.congress.gov/v3/member/C001132/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:46.393139"
+      "dataUpdatedAt": "2026-05-01T12:10:10.942625",
+      "committees": []
     },
     {
       "bioguideId": "C001133",
@@ -12780,7 +13062,8 @@
         "count": 640,
         "url": "https://api.congress.gov/v3/member/C001133/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:46.827119"
+      "dataUpdatedAt": "2026-05-01T12:10:11.318070",
+      "committees": []
     },
     {
       "bioguideId": "B001314",
@@ -12824,7 +13107,8 @@
         "count": 380,
         "url": "https://api.congress.gov/v3/member/B001314/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:47.105250"
+      "dataUpdatedAt": "2026-05-01T12:10:11.668152",
+      "committees": []
     },
     {
       "bioguideId": "Y000067",
@@ -12868,7 +13152,8 @@
         "count": 523,
         "url": "https://api.congress.gov/v3/member/Y000067/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:47.380193"
+      "dataUpdatedAt": "2026-05-01T12:10:12.018759",
+      "committees": []
     },
     {
       "bioguideId": "F000475",
@@ -12912,7 +13197,8 @@
         "count": 705,
         "url": "https://api.congress.gov/v3/member/F000475/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:47.659614"
+      "dataUpdatedAt": "2026-05-01T12:10:12.401573",
+      "committees": []
     },
     {
       "bioguideId": "F000474",
@@ -12956,7 +13242,8 @@
         "count": 416,
         "url": "https://api.congress.gov/v3/member/F000474/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:47.922016"
+      "dataUpdatedAt": "2026-05-01T12:10:12.754497",
+      "committees": []
     },
     {
       "bioguideId": "C001126",
@@ -13000,7 +13287,8 @@
         "count": 604,
         "url": "https://api.congress.gov/v3/member/C001126/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:48.201949"
+      "dataUpdatedAt": "2026-05-01T12:10:13.109955",
+      "committees": []
     },
     {
       "bioguideId": "B001313",
@@ -13044,7 +13332,8 @@
         "count": 970,
         "url": "https://api.congress.gov/v3/member/B001313/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:48.479805"
+      "dataUpdatedAt": "2026-05-01T12:10:13.462663",
+      "committees": []
     },
     {
       "bioguideId": "E000071",
@@ -13088,7 +13377,8 @@
         "count": 675,
         "url": "https://api.congress.gov/v3/member/E000071/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:48.752873"
+      "dataUpdatedAt": "2026-05-01T12:10:13.816721",
+      "committees": []
     },
     {
       "bioguideId": "S001218",
@@ -13132,7 +13422,8 @@
         "count": 1507,
         "url": "https://api.congress.gov/v3/member/S001218/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:49.226823"
+      "dataUpdatedAt": "2026-05-01T12:10:14.170290",
+      "committees": []
     },
     {
       "bioguideId": "C001125",
@@ -13176,7 +13467,8 @@
         "count": 1360,
         "url": "https://api.congress.gov/v3/member/C001125/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:49.659444"
+      "dataUpdatedAt": "2026-05-01T12:10:14.546854",
+      "committees": []
     },
     {
       "bioguideId": "L000595",
@@ -13220,7 +13512,8 @@
         "count": 442,
         "url": "https://api.congress.gov/v3/member/L000595/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:50.071707"
+      "dataUpdatedAt": "2026-05-01T12:10:14.905380",
+      "committees": []
     },
     {
       "bioguideId": "O000019",
@@ -13264,7 +13557,8 @@
         "count": 721,
         "url": "https://api.congress.gov/v3/member/O000019/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:50.353725"
+      "dataUpdatedAt": "2026-05-01T12:10:15.257311",
+      "committees": []
     },
     {
       "bioguideId": "K000397",
@@ -13308,7 +13602,8 @@
         "count": 1036,
         "url": "https://api.congress.gov/v3/member/K000397/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:50.819277"
+      "dataUpdatedAt": "2026-05-01T12:10:15.607779",
+      "committees": []
     },
     {
       "bioguideId": "V000134",
@@ -13352,7 +13647,8 @@
         "count": 756,
         "url": "https://api.congress.gov/v3/member/V000134/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:51.099413"
+      "dataUpdatedAt": "2026-05-01T12:10:15.959314",
+      "committees": []
     },
     {
       "bioguideId": "S001159",
@@ -13396,7 +13692,8 @@
         "count": 1245,
         "url": "https://api.congress.gov/v3/member/S001159/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:51.389633"
+      "dataUpdatedAt": "2026-05-01T12:10:16.337327",
+      "committees": []
     },
     {
       "bioguideId": "O000086",
@@ -13440,7 +13737,8 @@
         "count": 860,
         "url": "https://api.congress.gov/v3/member/O000086/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:51.660634"
+      "dataUpdatedAt": "2026-05-01T12:10:16.686620",
+      "committees": []
     },
     {
       "bioguideId": "N000026",
@@ -13484,7 +13782,8 @@
         "count": 792,
         "url": "https://api.congress.gov/v3/member/N000026/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:51.934562"
+      "dataUpdatedAt": "2026-05-01T12:10:17.080401",
+      "committees": []
     },
     {
       "bioguideId": "M001213",
@@ -13528,7 +13827,8 @@
         "count": 568,
         "url": "https://api.congress.gov/v3/member/M001213/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:52.208896"
+      "dataUpdatedAt": "2026-05-01T12:10:17.429905",
+      "committees": []
     },
     {
       "bioguideId": "J000305",
@@ -13572,7 +13872,8 @@
         "count": 1345,
         "url": "https://api.congress.gov/v3/member/J000305/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:52.485764"
+      "dataUpdatedAt": "2026-05-01T12:10:17.809046",
+      "committees": []
     },
     {
       "bioguideId": "J000304",
@@ -13616,7 +13917,8 @@
         "count": 933,
         "url": "https://api.congress.gov/v3/member/J000304/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:52.923284"
+      "dataUpdatedAt": "2026-05-01T12:10:18.164002",
+      "committees": []
     },
     {
       "bioguideId": "F000471",
@@ -13660,7 +13962,8 @@
         "count": 522,
         "url": "https://api.congress.gov/v3/member/F000471/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:53.206097"
+      "dataUpdatedAt": "2026-05-01T12:10:18.543848",
+      "committees": []
     },
     {
       "bioguideId": "H001090",
@@ -13704,7 +14007,8 @@
         "count": 1882,
         "url": "https://api.congress.gov/v3/member/H001090/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:53.478226"
+      "dataUpdatedAt": "2026-05-01T12:10:18.904829",
+      "committees": []
     },
     {
       "bioguideId": "S001211",
@@ -13748,7 +14052,8 @@
         "count": 1113,
         "url": "https://api.congress.gov/v3/member/S001211/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:53.753032"
+      "dataUpdatedAt": "2026-05-01T12:10:19.257552",
+      "committees": []
     },
     {
       "bioguideId": "P000613",
@@ -13792,7 +14097,8 @@
         "count": 3003,
         "url": "https://api.congress.gov/v3/member/P000613/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:54.033762"
+      "dataUpdatedAt": "2026-05-01T12:10:19.607514",
+      "committees": []
     },
     {
       "bioguideId": "L000582",
@@ -13842,7 +14148,8 @@
         "count": 4000,
         "url": "https://api.congress.gov/v3/member/L000582/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:54.319305"
+      "dataUpdatedAt": "2026-05-01T12:10:19.967039",
+      "committees": []
     },
     {
       "bioguideId": "A000371",
@@ -13897,7 +14204,8 @@
         "count": 1827,
         "url": "https://api.congress.gov/v3/member/A000371/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:54.595024"
+      "dataUpdatedAt": "2026-05-01T12:10:20.529903",
+      "committees": []
     },
     {
       "bioguideId": "D000623",
@@ -13941,7 +14249,8 @@
         "count": 3652,
         "url": "https://api.congress.gov/v3/member/D000623/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:54.865624"
+      "dataUpdatedAt": "2026-05-01T12:10:20.881909",
+      "committees": []
     },
     {
       "bioguideId": "P000608",
@@ -13985,7 +14294,8 @@
         "count": 3433,
         "url": "https://api.congress.gov/v3/member/P000608/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:55.139787"
+      "dataUpdatedAt": "2026-05-01T12:10:21.260158",
+      "committees": []
     },
     {
       "bioguideId": "V000130",
@@ -14029,7 +14339,8 @@
         "count": 3124,
         "url": "https://api.congress.gov/v3/member/V000130/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:55.401293"
+      "dataUpdatedAt": "2026-05-01T12:10:21.612199",
+      "committees": []
     },
     {
       "bioguideId": "T000472",
@@ -14073,7 +14384,8 @@
         "count": 3836,
         "url": "https://api.congress.gov/v3/member/T000472/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:55.666144"
+      "dataUpdatedAt": "2026-05-01T12:10:21.962546",
+      "committees": []
     },
     {
       "bioguideId": "R000599",
@@ -14117,7 +14429,8 @@
         "count": 1956,
         "url": "https://api.congress.gov/v3/member/R000599/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:55.938969"
+      "dataUpdatedAt": "2026-05-01T12:10:22.312415",
+      "committees": []
     },
     {
       "bioguideId": "V000129",
@@ -14166,7 +14479,8 @@
         "count": 1834,
         "url": "https://api.congress.gov/v3/member/V000129/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:56.216880"
+      "dataUpdatedAt": "2026-05-01T12:10:22.662964",
+      "committees": []
     },
     {
       "bioguideId": "B001287",
@@ -14210,7 +14524,8 @@
         "count": 1922,
         "url": "https://api.congress.gov/v3/member/B001287/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:56.494459"
+      "dataUpdatedAt": "2026-05-01T12:10:23.023705",
+      "committees": []
     },
     {
       "bioguideId": "G000559",
@@ -14254,7 +14569,8 @@
         "count": 3697,
         "url": "https://api.congress.gov/v3/member/G000559/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:56.774796"
+      "dataUpdatedAt": "2026-05-01T12:10:23.376336",
+      "committees": []
     },
     {
       "bioguideId": "C001080",
@@ -14298,7 +14614,8 @@
         "count": 5268,
         "url": "https://api.congress.gov/v3/member/C001080/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:57.038244"
+      "dataUpdatedAt": "2026-05-01T12:10:23.727395",
+      "committees": []
     },
     {
       "bioguideId": "S001183",
@@ -14342,7 +14659,8 @@
         "count": 1509,
         "url": "https://api.congress.gov/v3/member/S001183/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:57.309932"
+      "dataUpdatedAt": "2026-05-01T12:10:24.082836",
+      "committees": []
     },
     {
       "bioguideId": "G000565",
@@ -14386,7 +14704,8 @@
         "count": 2682,
         "url": "https://api.congress.gov/v3/member/G000565/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:57.590344"
+      "dataUpdatedAt": "2026-05-01T12:10:24.486937",
+      "committees": []
     },
     {
       "bioguideId": "M001177",
@@ -14430,7 +14749,8 @@
         "count": 1892,
         "url": "https://api.congress.gov/v3/member/M001177/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:57.872062"
+      "dataUpdatedAt": "2026-05-01T12:10:24.837941",
+      "committees": []
     },
     {
       "bioguideId": "M001163",
@@ -14474,7 +14794,8 @@
         "count": 4461,
         "url": "https://api.congress.gov/v3/member/M001163/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:58.160546"
+      "dataUpdatedAt": "2026-05-01T12:10:25.215010",
+      "committees": []
     },
     {
       "bioguideId": "T000460",
@@ -14518,7 +14839,8 @@
         "count": 4372,
         "url": "https://api.congress.gov/v3/member/T000460/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:58.438819"
+      "dataUpdatedAt": "2026-05-01T12:10:25.565539",
+      "committees": []
     },
     {
       "bioguideId": "S000344",
@@ -14562,7 +14884,8 @@
         "count": 5361,
         "url": "https://api.congress.gov/v3/member/S000344/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:58.710082"
+      "dataUpdatedAt": "2026-05-01T12:10:25.942135",
+      "committees": []
     },
     {
       "bioguideId": "S000250",
@@ -14611,7 +14934,8 @@
         "count": 4636,
         "url": "https://api.congress.gov/v3/member/S000250/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:58.984198"
+      "dataUpdatedAt": "2026-05-01T12:10:26.317618",
+      "committees": []
     },
     {
       "bioguideId": "I000056",
@@ -14660,7 +14984,8 @@
         "count": 2469,
         "url": "https://api.congress.gov/v3/member/I000056/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:59.257835"
+      "dataUpdatedAt": "2026-05-01T12:10:26.700033",
+      "committees": []
     },
     {
       "bioguideId": "C000059",
@@ -14704,7 +15029,8 @@
         "count": 5186,
         "url": "https://api.congress.gov/v3/member/C000059/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:59.530425"
+      "dataUpdatedAt": "2026-05-01T12:10:27.051738",
+      "committees": []
     },
     {
       "bioguideId": "L000397",
@@ -14748,7 +15074,8 @@
         "count": 8360,
         "url": "https://api.congress.gov/v3/member/L000397/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:20:59.814461"
+      "dataUpdatedAt": "2026-05-01T12:10:27.406431",
+      "committees": []
     },
     {
       "bioguideId": "W000788",
@@ -14792,7 +15119,8 @@
         "count": 1925,
         "url": "https://api.congress.gov/v3/member/W000788/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:00.094207"
+      "dataUpdatedAt": "2026-05-01T12:10:27.758002",
+      "committees": []
     },
     {
       "bioguideId": "T000486",
@@ -14836,7 +15164,8 @@
         "count": 1261,
         "url": "https://api.congress.gov/v3/member/T000486/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:00.373022"
+      "dataUpdatedAt": "2026-05-01T12:10:28.109176",
+      "committees": []
     },
     {
       "bioguideId": "S000929",
@@ -14880,7 +15209,8 @@
         "count": 299,
         "url": "https://api.congress.gov/v3/member/S000929/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:00.647204"
+      "dataUpdatedAt": "2026-05-01T12:10:28.482985",
+      "committees": []
     },
     {
       "bioguideId": "S000168",
@@ -14924,7 +15254,8 @@
         "count": 1287,
         "url": "https://api.congress.gov/v3/member/S000168/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:00.932843"
+      "dataUpdatedAt": "2026-05-01T12:10:28.875860",
+      "committees": []
     },
     {
       "bioguideId": "R000305",
@@ -14968,7 +15299,8 @@
         "count": 1718,
         "url": "https://api.congress.gov/v3/member/R000305/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:01.207321"
+      "dataUpdatedAt": "2026-05-01T12:10:29.229836",
+      "committees": []
     },
     {
       "bioguideId": "P000048",
@@ -15012,7 +15344,8 @@
         "count": 854,
         "url": "https://api.congress.gov/v3/member/P000048/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:01.470967"
+      "dataUpdatedAt": "2026-05-01T12:10:29.584216",
+      "committees": []
     },
     {
       "bioguideId": "M001214",
@@ -15056,7 +15389,8 @@
         "count": 755,
         "url": "https://api.congress.gov/v3/member/M001214/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:01.745601"
+      "dataUpdatedAt": "2026-05-01T12:10:29.935420",
+      "committees": []
     },
     {
       "bioguideId": "M001211",
@@ -15100,7 +15434,8 @@
         "count": 1248,
         "url": "https://api.congress.gov/v3/member/M001211/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:02.017856"
+      "dataUpdatedAt": "2026-05-01T12:10:30.287100",
+      "committees": []
     },
     {
       "bioguideId": "M000871",
@@ -15144,7 +15479,8 @@
         "count": 1142,
         "url": "https://api.congress.gov/v3/member/M000871/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:02.293285"
+      "dataUpdatedAt": "2026-05-01T12:10:30.637548",
+      "committees": []
     },
     {
       "bioguideId": "M000317",
@@ -15188,7 +15524,8 @@
         "count": 1100,
         "url": "https://api.congress.gov/v3/member/M000317/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:02.570846"
+      "dataUpdatedAt": "2026-05-01T12:10:30.993643",
+      "committees": []
     },
     {
       "bioguideId": "M000194",
@@ -15232,7 +15569,8 @@
         "count": 1001,
         "url": "https://api.congress.gov/v3/member/M000194/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:02.851196"
+      "dataUpdatedAt": "2026-05-01T12:10:31.351107",
+      "committees": []
     },
     {
       "bioguideId": "L000273",
@@ -15276,7 +15614,8 @@
         "count": 840,
         "url": "https://api.congress.gov/v3/member/L000273/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:03.123267"
+      "dataUpdatedAt": "2026-05-01T12:10:31.703960",
+      "committees": []
     },
     {
       "bioguideId": "H001086",
@@ -15320,7 +15659,8 @@
         "count": 830,
         "url": "https://api.congress.gov/v3/member/H001086/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:03.407476"
+      "dataUpdatedAt": "2026-05-01T12:10:32.084994",
+      "committees": []
     },
     {
       "bioguideId": "G000597",
@@ -15364,7 +15704,8 @@
         "count": 1034,
         "url": "https://api.congress.gov/v3/member/G000597/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:03.685051"
+      "dataUpdatedAt": "2026-05-01T12:10:32.466078",
+      "committees": []
     },
     {
       "bioguideId": "F000470",
@@ -15408,7 +15749,8 @@
         "count": 512,
         "url": "https://api.congress.gov/v3/member/F000470/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:03.962934"
+      "dataUpdatedAt": "2026-05-01T12:10:32.823259",
+      "committees": []
     },
     {
       "bioguideId": "F000446",
@@ -15452,7 +15794,8 @@
         "count": 789,
         "url": "https://api.congress.gov/v3/member/F000446/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:04.231785"
+      "dataUpdatedAt": "2026-05-01T12:10:33.199848",
+      "committees": []
     },
     {
       "bioguideId": "F000246",
@@ -15496,7 +15839,8 @@
         "count": 668,
         "url": "https://api.congress.gov/v3/member/F000246/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:04.508498"
+      "dataUpdatedAt": "2026-05-01T12:10:33.576632",
+      "committees": []
     },
     {
       "bioguideId": "D000032",
@@ -15540,7 +15884,8 @@
         "count": 1285,
         "url": "https://api.congress.gov/v3/member/D000032/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:04.795963"
+      "dataUpdatedAt": "2026-05-01T12:10:33.934124",
+      "committees": []
     },
     {
       "bioguideId": "C001116",
@@ -15584,7 +15929,8 @@
         "count": 530,
         "url": "https://api.congress.gov/v3/member/C001116/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:05.083832"
+      "dataUpdatedAt": "2026-05-01T12:10:34.285217",
+      "committees": []
     },
     {
       "bioguideId": "C001039",
@@ -15628,7 +15974,8 @@
         "count": 678,
         "url": "https://api.congress.gov/v3/member/C001039/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:05.345464"
+      "dataUpdatedAt": "2026-05-01T12:10:34.636756",
+      "committees": []
     },
     {
       "bioguideId": "B000740",
@@ -15672,7 +16019,8 @@
         "count": 772,
         "url": "https://api.congress.gov/v3/member/B000740/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:05.797293"
+      "dataUpdatedAt": "2026-05-01T12:10:35.016843",
+      "committees": []
     },
     {
       "bioguideId": "B000668",
@@ -15716,7 +16064,8 @@
         "count": 344,
         "url": "https://api.congress.gov/v3/member/B000668/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:06.060242"
+      "dataUpdatedAt": "2026-05-01T12:10:35.369038",
+      "committees": []
     },
     {
       "bioguideId": "A000148",
@@ -15760,7 +16109,8 @@
         "count": 961,
         "url": "https://api.congress.gov/v3/member/A000148/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:06.331997"
+      "dataUpdatedAt": "2026-05-01T12:10:35.721388",
+      "committees": []
     },
     {
       "bioguideId": "T000165",
@@ -15804,7 +16154,8 @@
         "count": 924,
         "url": "https://api.congress.gov/v3/member/T000165/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:06.607972"
+      "dataUpdatedAt": "2026-05-01T12:10:36.098268",
+      "committees": []
     },
     {
       "bioguideId": "M001210",
@@ -15848,7 +16199,8 @@
         "count": 834,
         "url": "https://api.congress.gov/v3/member/M001210/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:06.879406"
+      "dataUpdatedAt": "2026-05-01T12:10:36.449755",
+      "committees": []
     },
     {
       "bioguideId": "G000592",
@@ -15892,7 +16244,8 @@
         "count": 902,
         "url": "https://api.congress.gov/v3/member/G000592/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:07.157680"
+      "dataUpdatedAt": "2026-05-01T12:10:36.973251",
+      "committees": []
     },
     {
       "bioguideId": "S001213",
@@ -15936,7 +16289,8 @@
         "count": 607,
         "url": "https://api.congress.gov/v3/member/S001213/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:07.441078"
+      "dataUpdatedAt": "2026-05-01T12:10:37.322793",
+      "committees": []
     },
     {
       "bioguideId": "S001216",
@@ -15980,7 +16334,8 @@
         "count": 1251,
         "url": "https://api.congress.gov/v3/member/S001216/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:07.715243"
+      "dataUpdatedAt": "2026-05-01T12:10:37.675634",
+      "committees": []
     },
     {
       "bioguideId": "G000587",
@@ -16024,7 +16379,8 @@
         "count": 1758,
         "url": "https://api.congress.gov/v3/member/G000587/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:07.991394"
+      "dataUpdatedAt": "2026-05-01T12:10:38.052579",
+      "committees": []
     },
     {
       "bioguideId": "R000614",
@@ -16068,7 +16424,8 @@
         "count": 666,
         "url": "https://api.congress.gov/v3/member/R000614/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:08.254205"
+      "dataUpdatedAt": "2026-05-01T12:10:38.404434",
+      "committees": []
     },
     {
       "bioguideId": "E000299",
@@ -16112,7 +16469,8 @@
         "count": 1484,
         "url": "https://api.congress.gov/v3/member/E000299/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:08.531946"
+      "dataUpdatedAt": "2026-05-01T12:10:38.785894",
+      "committees": []
     },
     {
       "bioguideId": "F000468",
@@ -16156,7 +16514,8 @@
         "count": 1195,
         "url": "https://api.congress.gov/v3/member/F000468/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:08.805411"
+      "dataUpdatedAt": "2026-05-01T12:10:39.136579",
+      "committees": []
     },
     {
       "bioguideId": "G000589",
@@ -16200,7 +16559,8 @@
         "count": 1062,
         "url": "https://api.congress.gov/v3/member/G000589/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:09.081588"
+      "dataUpdatedAt": "2026-05-01T12:10:39.494020",
+      "committees": []
     },
     {
       "bioguideId": "R000612",
@@ -16244,7 +16604,8 @@
         "count": 742,
         "url": "https://api.congress.gov/v3/member/R000612/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:09.362372"
+      "dataUpdatedAt": "2026-05-01T12:10:39.850996",
+      "committees": []
     },
     {
       "bioguideId": "B001309",
@@ -16288,7 +16649,8 @@
         "count": 778,
         "url": "https://api.congress.gov/v3/member/B001309/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:09.641434"
+      "dataUpdatedAt": "2026-05-01T12:10:40.228211",
+      "committees": []
     },
     {
       "bioguideId": "J000301",
@@ -16331,7 +16693,8 @@
         "count": 721,
         "url": "https://api.congress.gov/v3/member/J000301/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:09.926528"
+      "dataUpdatedAt": "2026-05-01T12:10:40.608027",
+      "committees": []
     },
     {
       "bioguideId": "T000480",
@@ -16375,7 +16738,8 @@
         "count": 908,
         "url": "https://api.congress.gov/v3/member/T000480/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:10.199133"
+      "dataUpdatedAt": "2026-05-01T12:10:40.961211",
+      "committees": []
     },
     {
       "bioguideId": "R000610",
@@ -16419,7 +16783,8 @@
         "count": 1160,
         "url": "https://api.congress.gov/v3/member/R000610/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:10.481893"
+      "dataUpdatedAt": "2026-05-01T12:10:41.323962",
+      "committees": []
     },
     {
       "bioguideId": "J000302",
@@ -16463,7 +16828,8 @@
         "count": 796,
         "url": "https://api.congress.gov/v3/member/J000302/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:10.743434"
+      "dataUpdatedAt": "2026-05-01T12:10:41.678080",
+      "committees": []
     },
     {
       "bioguideId": "M001204",
@@ -16507,7 +16873,8 @@
         "count": 1224,
         "url": "https://api.congress.gov/v3/member/M001204/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:11.040025"
+      "dataUpdatedAt": "2026-05-01T12:10:42.055366",
+      "committees": []
     },
     {
       "bioguideId": "H001085",
@@ -16551,7 +16918,8 @@
         "count": 1534,
         "url": "https://api.congress.gov/v3/member/H001085/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:11.320042"
+      "dataUpdatedAt": "2026-05-01T12:10:42.411275",
+      "committees": []
     },
     {
       "bioguideId": "D000631",
@@ -16595,7 +16963,8 @@
         "count": 2099,
         "url": "https://api.congress.gov/v3/member/D000631/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:11.760096"
+      "dataUpdatedAt": "2026-05-01T12:10:42.768228",
+      "committees": []
     },
     {
       "bioguideId": "V000133",
@@ -16639,7 +17008,8 @@
         "count": 2066,
         "url": "https://api.congress.gov/v3/member/V000133/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:12.040510"
+      "dataUpdatedAt": "2026-05-01T12:10:43.120800",
+      "committees": []
     },
     {
       "bioguideId": "C001119",
@@ -16683,7 +17053,8 @@
         "count": 2156,
         "url": "https://api.congress.gov/v3/member/C001119/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:12.301245"
+      "dataUpdatedAt": "2026-05-01T12:10:43.499322",
+      "committees": []
     },
     {
       "bioguideId": "G000586",
@@ -16727,7 +17098,8 @@
         "count": 2476,
         "url": "https://api.congress.gov/v3/member/G000586/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:12.582149"
+      "dataUpdatedAt": "2026-05-01T12:10:43.857240",
+      "committees": []
     },
     {
       "bioguideId": "S001199",
@@ -16771,7 +17143,8 @@
         "count": 946,
         "url": "https://api.congress.gov/v3/member/S001199/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:12.854216"
+      "dataUpdatedAt": "2026-05-01T12:10:44.234328",
+      "committees": []
     },
     {
       "bioguideId": "E000296",
@@ -16815,7 +17188,8 @@
         "count": 3051,
         "url": "https://api.congress.gov/v3/member/E000296/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:13.132588"
+      "dataUpdatedAt": "2026-05-01T12:10:44.588569",
+      "committees": []
     },
     {
       "bioguideId": "P000605",
@@ -16859,7 +17233,8 @@
         "count": 1607,
         "url": "https://api.congress.gov/v3/member/P000605/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:13.410997"
+      "dataUpdatedAt": "2026-05-01T12:10:44.943152",
+      "committees": []
     },
     {
       "bioguideId": "K000376",
@@ -16903,7 +17278,8 @@
         "count": 2343,
         "url": "https://api.congress.gov/v3/member/K000376/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:13.697901"
+      "dataUpdatedAt": "2026-05-01T12:10:45.295666",
+      "committees": []
     },
     {
       "bioguideId": "T000467",
@@ -16947,7 +17323,8 @@
         "count": 2393,
         "url": "https://api.congress.gov/v3/member/T000467/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:13.960009"
+      "dataUpdatedAt": "2026-05-01T12:10:45.652002",
+      "committees": []
     },
     {
       "bioguideId": "M000687",
@@ -16996,7 +17373,8 @@
         "count": 2833,
         "url": "https://api.congress.gov/v3/member/M000687/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:14.247312"
+      "dataUpdatedAt": "2026-05-01T12:10:46.004671",
+      "committees": []
     },
     {
       "bioguideId": "W000831",
@@ -17040,7 +17418,8 @@
         "count": 276,
         "url": "https://api.congress.gov/v3/member/W000831/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:14.522141"
+      "dataUpdatedAt": "2026-05-01T12:10:46.358135",
+      "committees": []
     },
     {
       "bioguideId": "O000172",
@@ -17084,7 +17463,8 @@
         "count": 1615,
         "url": "https://api.congress.gov/v3/member/O000172/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:14.783978"
+      "dataUpdatedAt": "2026-05-01T12:10:46.929549",
+      "committees": []
     },
     {
       "bioguideId": "L000590",
@@ -17128,7 +17508,8 @@
         "count": 1244,
         "url": "https://api.congress.gov/v3/member/L000590/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:15.057327"
+      "dataUpdatedAt": "2026-05-01T12:10:47.281226",
+      "committees": []
     },
     {
       "bioguideId": "P000614",
@@ -17172,7 +17553,8 @@
         "count": 2071,
         "url": "https://api.congress.gov/v3/member/P000614/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:15.332892"
+      "dataUpdatedAt": "2026-05-01T12:10:47.632961",
+      "committees": []
     },
     {
       "bioguideId": "G000591",
@@ -17216,7 +17598,8 @@
         "count": 1117,
         "url": "https://api.congress.gov/v3/member/G000591/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:15.784048"
+      "dataUpdatedAt": "2026-05-01T12:10:47.985449",
+      "committees": []
     },
     {
       "bioguideId": "S001212",
@@ -17260,7 +17643,8 @@
         "count": 1249,
         "url": "https://api.congress.gov/v3/member/S001212/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:16.227789"
+      "dataUpdatedAt": "2026-05-01T12:10:48.348360",
+      "committees": []
     },
     {
       "bioguideId": "O000173",
@@ -17304,7 +17688,8 @@
         "count": 2186,
         "url": "https://api.congress.gov/v3/member/O000173/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:16.506608"
+      "dataUpdatedAt": "2026-05-01T12:10:48.725166",
+      "committees": []
     },
     {
       "bioguideId": "S001215",
@@ -17348,7 +17733,8 @@
         "count": 1503,
         "url": "https://api.congress.gov/v3/member/S001215/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:16.785890"
+      "dataUpdatedAt": "2026-05-01T12:10:49.083868",
+      "committees": []
     },
     {
       "bioguideId": "P000617",
@@ -17392,7 +17778,8 @@
         "count": 1826,
         "url": "https://api.congress.gov/v3/member/P000617/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:17.046982"
+      "dataUpdatedAt": "2026-05-01T12:10:49.460088",
+      "committees": []
     },
     {
       "bioguideId": "T000482",
@@ -17436,7 +17823,8 @@
         "count": 1578,
         "url": "https://api.congress.gov/v3/member/T000482/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:17.328728"
+      "dataUpdatedAt": "2026-05-01T12:10:49.814927",
+      "committees": []
     },
     {
       "bioguideId": "D000629",
@@ -17480,7 +17868,8 @@
         "count": 1479,
         "url": "https://api.congress.gov/v3/member/D000629/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:17.605435"
+      "dataUpdatedAt": "2026-05-01T12:10:50.166781",
+      "committees": []
     },
     {
       "bioguideId": "B001307",
@@ -17524,7 +17913,8 @@
         "count": 1052,
         "url": "https://api.congress.gov/v3/member/B001307/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:17.885762"
+      "dataUpdatedAt": "2026-05-01T12:10:50.518421",
+      "committees": []
     },
     {
       "bioguideId": "U000040",
@@ -17568,7 +17958,8 @@
         "count": 1073,
         "url": "https://api.congress.gov/v3/member/U000040/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:18.163499"
+      "dataUpdatedAt": "2026-05-01T12:10:50.895521",
+      "committees": []
     },
     {
       "bioguideId": "C001117",
@@ -17612,7 +18003,8 @@
         "count": 1774,
         "url": "https://api.congress.gov/v3/member/C001117/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:18.445136"
+      "dataUpdatedAt": "2026-05-01T12:10:51.261607",
+      "committees": []
     },
     {
       "bioguideId": "F000469",
@@ -17656,7 +18048,8 @@
         "count": 632,
         "url": "https://api.congress.gov/v3/member/F000469/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:18.718452"
+      "dataUpdatedAt": "2026-05-01T12:10:51.613596",
+      "committees": []
     },
     {
       "bioguideId": "S001214",
@@ -17700,7 +18093,8 @@
         "count": 1621,
         "url": "https://api.congress.gov/v3/member/S001214/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:19.004472"
+      "dataUpdatedAt": "2026-05-01T12:10:51.968012",
+      "committees": []
     },
     {
       "bioguideId": "H001081",
@@ -17744,7 +18138,8 @@
         "count": 2819,
         "url": "https://api.congress.gov/v3/member/H001081/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:19.293785"
+      "dataUpdatedAt": "2026-05-01T12:10:52.346180",
+      "committees": []
     },
     {
       "bioguideId": "N000191",
@@ -17799,7 +18194,8 @@
         "count": 2681,
         "url": "https://api.congress.gov/v3/member/N000191/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:19.567621"
+      "dataUpdatedAt": "2026-05-01T12:10:52.707535",
+      "committees": []
     },
     {
       "bioguideId": "L000593",
@@ -17843,7 +18239,8 @@
         "count": 1818,
         "url": "https://api.congress.gov/v3/member/L000593/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:19.845716"
+      "dataUpdatedAt": "2026-05-01T12:10:53.231379",
+      "committees": []
     },
     {
       "bioguideId": "H001082",
@@ -17893,7 +18290,8 @@
         "count": 721,
         "url": "https://api.congress.gov/v3/member/H001082/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:20.107175"
+      "dataUpdatedAt": "2026-05-01T12:10:53.584389",
+      "committees": []
     },
     {
       "bioguideId": "M001206",
@@ -17937,7 +18335,8 @@
         "count": 1827,
         "url": "https://api.congress.gov/v3/member/M001206/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:20.378787"
+      "dataUpdatedAt": "2026-05-01T12:10:54.160605",
+      "committees": []
     },
     {
       "bioguideId": "B001306",
@@ -17981,7 +18380,8 @@
         "count": 1073,
         "url": "https://api.congress.gov/v3/member/B001306/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:20.649071"
+      "dataUpdatedAt": "2026-05-01T12:10:54.538030",
+      "committees": []
     },
     {
       "bioguideId": "C001115",
@@ -18025,7 +18425,8 @@
         "count": 771,
         "url": "https://api.congress.gov/v3/member/C001115/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:20.923967"
+      "dataUpdatedAt": "2026-05-01T12:10:54.918143",
+      "committees": []
     },
     {
       "bioguideId": "G000585",
@@ -18069,7 +18470,8 @@
         "count": 1670,
         "url": "https://api.congress.gov/v3/member/G000585/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:21.360058"
+      "dataUpdatedAt": "2026-05-01T12:10:55.276033",
+      "committees": []
     },
     {
       "bioguideId": "N000190",
@@ -18113,7 +18515,8 @@
         "count": 1999,
         "url": "https://api.congress.gov/v3/member/N000190/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:21.632001"
+      "dataUpdatedAt": "2026-05-01T12:10:55.628712",
+      "committees": []
     },
     {
       "bioguideId": "E000298",
@@ -18157,7 +18560,8 @@
         "count": 729,
         "url": "https://api.congress.gov/v3/member/E000298/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:21.905106"
+      "dataUpdatedAt": "2026-05-01T12:10:55.982504",
+      "committees": []
     },
     {
       "bioguideId": "J000298",
@@ -18201,7 +18605,8 @@
         "count": 3091,
         "url": "https://api.congress.gov/v3/member/J000298/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:22.176435"
+      "dataUpdatedAt": "2026-05-01T12:10:56.348903",
+      "committees": []
     },
     {
       "bioguideId": "A000375",
@@ -18245,7 +18650,8 @@
         "count": 772,
         "url": "https://api.congress.gov/v3/member/A000375/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:22.449295"
+      "dataUpdatedAt": "2026-05-01T12:10:56.734279",
+      "committees": []
     },
     {
       "bioguideId": "K000392",
@@ -18289,7 +18695,8 @@
         "count": 904,
         "url": "https://api.congress.gov/v3/member/K000392/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:22.723165"
+      "dataUpdatedAt": "2026-05-01T12:10:57.087289",
+      "committees": []
     },
     {
       "bioguideId": "F000466",
@@ -18333,7 +18740,8 @@
         "count": 5496,
         "url": "https://api.congress.gov/v3/member/F000466/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:22.995229"
+      "dataUpdatedAt": "2026-05-01T12:10:57.438344",
+      "committees": []
     },
     {
       "bioguideId": "E000297",
@@ -18377,7 +18785,8 @@
         "count": 2879,
         "url": "https://api.congress.gov/v3/member/E000297/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:23.257460"
+      "dataUpdatedAt": "2026-05-01T12:10:57.799740",
+      "committees": []
     },
     {
       "bioguideId": "G000583",
@@ -18421,7 +18830,8 @@
         "count": 3166,
         "url": "https://api.congress.gov/v3/member/G000583/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:23.537454"
+      "dataUpdatedAt": "2026-05-01T12:10:58.177201",
+      "committees": []
     },
     {
       "bioguideId": "B001298",
@@ -18465,7 +18875,8 @@
         "count": 2851,
         "url": "https://api.congress.gov/v3/member/B001298/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:23.817624"
+      "dataUpdatedAt": "2026-05-01T12:10:58.526075",
+      "committees": []
     },
     {
       "bioguideId": "B001301",
@@ -18509,7 +18920,8 @@
         "count": 1047,
         "url": "https://api.congress.gov/v3/member/B001301/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:24.081760"
+      "dataUpdatedAt": "2026-05-01T12:10:58.881061",
+      "committees": []
     },
     {
       "bioguideId": "R000606",
@@ -18553,7 +18965,8 @@
         "count": 3686,
         "url": "https://api.congress.gov/v3/member/R000606/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:24.362028"
+      "dataUpdatedAt": "2026-05-01T12:10:59.235162",
+      "committees": []
     },
     {
       "bioguideId": "J000299",
@@ -18608,7 +19021,8 @@
         "count": 667,
         "url": "https://api.congress.gov/v3/member/J000299/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:24.650260"
+      "dataUpdatedAt": "2026-05-01T12:10:59.770633",
+      "committees": []
     },
     {
       "bioguideId": "H001077",
@@ -18652,7 +19066,8 @@
         "count": 1067,
         "url": "https://api.congress.gov/v3/member/H001077/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:24.931618"
+      "dataUpdatedAt": "2026-05-01T12:11:00.124065",
+      "committees": []
     },
     {
       "bioguideId": "K000391",
@@ -18696,7 +19111,8 @@
         "count": 2528,
         "url": "https://api.congress.gov/v3/member/K000391/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:25.217149"
+      "dataUpdatedAt": "2026-05-01T12:11:00.500281",
+      "committees": []
     },
     {
       "bioguideId": "S001200",
@@ -18740,7 +19156,8 @@
         "count": 3556,
         "url": "https://api.congress.gov/v3/member/S001200/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:25.498386"
+      "dataUpdatedAt": "2026-05-01T12:11:00.876729",
+      "committees": []
     },
     {
       "bioguideId": "C001110",
@@ -18784,7 +19201,8 @@
         "count": 1837,
         "url": "https://api.congress.gov/v3/member/C001110/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:25.786329"
+      "dataUpdatedAt": "2026-05-01T12:11:01.233657",
+      "committees": []
     },
     {
       "bioguideId": "B001300",
@@ -18828,7 +19246,8 @@
         "count": 3096,
         "url": "https://api.congress.gov/v3/member/B001300/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:26.081048"
+      "dataUpdatedAt": "2026-05-01T12:11:01.595436",
+      "committees": []
     },
     {
       "bioguideId": "C001112",
@@ -18872,7 +19291,8 @@
         "count": 2798,
         "url": "https://api.congress.gov/v3/member/C001112/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:26.355170"
+      "dataUpdatedAt": "2026-05-01T12:11:01.956053",
+      "committees": []
     },
     {
       "bioguideId": "H001066",
@@ -18921,7 +19341,8 @@
         "count": 1714,
         "url": "https://api.congress.gov/v3/member/H001066/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:26.636273"
+      "dataUpdatedAt": "2026-05-01T12:11:02.333481",
+      "committees": []
     },
     {
       "bioguideId": "S001190",
@@ -18970,7 +19391,8 @@
         "count": 2061,
         "url": "https://api.congress.gov/v3/member/S001190/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:26.911854"
+      "dataUpdatedAt": "2026-05-01T12:11:02.687669",
+      "committees": []
     },
     {
       "bioguideId": "W000806",
@@ -19014,7 +19436,8 @@
         "count": 1321,
         "url": "https://api.congress.gov/v3/member/W000806/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:27.185969"
+      "dataUpdatedAt": "2026-05-01T12:11:03.045830",
+      "committees": []
     },
     {
       "bioguideId": "C001055",
@@ -19063,7 +19486,8 @@
         "count": 3049,
         "url": "https://api.congress.gov/v3/member/C001055/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:27.448684"
+      "dataUpdatedAt": "2026-05-01T12:11:03.402066",
+      "committees": []
     },
     {
       "bioguideId": "M001241",
@@ -19107,7 +19531,8 @@
         "count": 328,
         "url": "https://api.congress.gov/v3/member/M001241/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:27.720045"
+      "dataUpdatedAt": "2026-05-01T12:11:03.782022",
+      "committees": []
     },
     {
       "bioguideId": "H001100",
@@ -19151,7 +19576,8 @@
         "count": 167,
         "url": "https://api.congress.gov/v3/member/H001100/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:27.984554"
+      "dataUpdatedAt": "2026-05-01T12:11:04.140713",
+      "committees": []
     },
     {
       "bioguideId": "B001302",
@@ -19195,7 +19621,8 @@
         "count": 1460,
         "url": "https://api.congress.gov/v3/member/B001302/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:28.272182"
+      "dataUpdatedAt": "2026-05-01T12:11:04.517910",
+      "committees": []
     },
     {
       "bioguideId": "K000389",
@@ -19239,7 +19666,8 @@
         "count": 3621,
         "url": "https://api.congress.gov/v3/member/K000389/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:28.550633"
+      "dataUpdatedAt": "2026-05-01T12:11:05.063985",
+      "committees": []
     },
     {
       "bioguideId": "C001108",
@@ -19283,7 +19711,8 @@
         "count": 609,
         "url": "https://api.congress.gov/v3/member/C001108/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:28.826254"
+      "dataUpdatedAt": "2026-05-01T12:11:05.416065",
+      "committees": []
     },
     {
       "bioguideId": "D000626",
@@ -19327,7 +19756,8 @@
         "count": 845,
         "url": "https://api.congress.gov/v3/member/D000626/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:29.103113"
+      "dataUpdatedAt": "2026-05-01T12:11:05.767176",
+      "committees": []
     },
     {
       "bioguideId": "K000388",
@@ -19371,7 +19801,8 @@
         "count": 1047,
         "url": "https://api.congress.gov/v3/member/K000388/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:29.369761"
+      "dataUpdatedAt": "2026-05-01T12:11:06.144175",
+      "committees": []
     },
     {
       "bioguideId": "G000576",
@@ -19415,7 +19846,8 @@
         "count": 1979,
         "url": "https://api.congress.gov/v3/member/G000576/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:29.649681"
+      "dataUpdatedAt": "2026-05-01T12:11:06.511533",
+      "committees": []
     },
     {
       "bioguideId": "N000189",
@@ -19459,7 +19891,8 @@
         "count": 1549,
         "url": "https://api.congress.gov/v3/member/N000189/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:29.927812"
+      "dataUpdatedAt": "2026-05-01T12:11:06.863043",
+      "committees": []
     },
     {
       "bioguideId": "P000610",
@@ -19502,7 +19935,8 @@
         "count": 1016,
         "url": "https://api.congress.gov/v3/member/P000610/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:30.207095"
+      "dataUpdatedAt": "2026-05-01T12:11:07.240437",
+      "committees": []
     },
     {
       "bioguideId": "B001292",
@@ -19546,7 +19980,8 @@
         "count": 2501,
         "url": "https://api.congress.gov/v3/member/B001292/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:30.472020"
+      "dataUpdatedAt": "2026-05-01T12:11:07.621884",
+      "committees": []
     },
     {
       "bioguideId": "B001291",
@@ -19590,7 +20025,8 @@
         "count": 2179,
         "url": "https://api.congress.gov/v3/member/B001291/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:30.751370"
+      "dataUpdatedAt": "2026-05-01T12:11:07.999187",
+      "committees": []
     },
     {
       "bioguideId": "S001196",
@@ -19645,7 +20081,8 @@
         "count": 2300,
         "url": "https://api.congress.gov/v3/member/S001196/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:31.034741"
+      "dataUpdatedAt": "2026-05-01T12:11:08.354932",
+      "committees": []
     },
     {
       "bioguideId": "W000822",
@@ -19689,7 +20126,8 @@
         "count": 4015,
         "url": "https://api.congress.gov/v3/member/W000822/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:31.317923"
+      "dataUpdatedAt": "2026-05-01T12:11:08.707884",
+      "committees": []
     },
     {
       "bioguideId": "R000603",
@@ -19733,7 +20171,8 @@
         "count": 1652,
         "url": "https://api.congress.gov/v3/member/R000603/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:31.603549"
+      "dataUpdatedAt": "2026-05-01T12:11:09.069582",
+      "committees": []
     },
     {
       "bioguideId": "E000294",
@@ -19788,7 +20227,8 @@
         "count": 1132,
         "url": "https://api.congress.gov/v3/member/E000294/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:31.883114"
+      "dataUpdatedAt": "2026-05-01T12:11:09.429397",
+      "committees": []
     },
     {
       "bioguideId": "M001196",
@@ -19832,7 +20272,8 @@
         "count": 3077,
         "url": "https://api.congress.gov/v3/member/M001196/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:32.160921"
+      "dataUpdatedAt": "2026-05-01T12:11:09.784022",
+      "committees": []
     },
     {
       "bioguideId": "B001295",
@@ -19876,7 +20317,8 @@
         "count": 1636,
         "url": "https://api.congress.gov/v3/member/B001295/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:32.442596"
+      "dataUpdatedAt": "2026-05-01T12:11:10.132972",
+      "committees": []
     },
     {
       "bioguideId": "A000372",
@@ -19920,7 +20362,8 @@
         "count": 1362,
         "url": "https://api.congress.gov/v3/member/A000372/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:32.717200"
+      "dataUpdatedAt": "2026-05-01T12:11:10.484299",
+      "committees": []
     },
     {
       "bioguideId": "L000583",
@@ -19964,7 +20407,8 @@
         "count": 1046,
         "url": "https://api.congress.gov/v3/member/L000583/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:32.995868"
+      "dataUpdatedAt": "2026-05-01T12:11:10.842244",
+      "committees": []
     },
     {
       "bioguideId": "C001103",
@@ -20008,7 +20452,8 @@
         "count": 1864,
         "url": "https://api.congress.gov/v3/member/C001103/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:33.285151"
+      "dataUpdatedAt": "2026-05-01T12:11:11.224373",
+      "committees": []
     },
     {
       "bioguideId": "T000474",
@@ -20052,7 +20497,8 @@
         "count": 1721,
         "url": "https://api.congress.gov/v3/member/T000474/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:33.549230"
+      "dataUpdatedAt": "2026-05-01T12:11:11.575440",
+      "committees": []
     },
     {
       "bioguideId": "W000821",
@@ -20096,7 +20542,8 @@
         "count": 1150,
         "url": "https://api.congress.gov/v3/member/W000821/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:33.831319"
+      "dataUpdatedAt": "2026-05-01T12:11:11.954294",
+      "committees": []
     },
     {
       "bioguideId": "H001072",
@@ -20140,7 +20587,8 @@
         "count": 1129,
         "url": "https://api.congress.gov/v3/member/H001072/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:34.107233"
+      "dataUpdatedAt": "2026-05-01T12:11:12.308729",
+      "committees": []
     },
     {
       "bioguideId": "R000600",
@@ -20183,7 +20631,8 @@
         "count": 926,
         "url": "https://api.congress.gov/v3/member/R000600/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:34.379113"
+      "dataUpdatedAt": "2026-05-01T12:11:12.662436",
+      "committees": []
     },
     {
       "bioguideId": "P000609",
@@ -20243,7 +20692,8 @@
         "count": 696,
         "url": "https://api.congress.gov/v3/member/P000609/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:34.642773"
+      "dataUpdatedAt": "2026-05-01T12:11:13.262530",
+      "committees": []
     },
     {
       "bioguideId": "N000188",
@@ -20287,7 +20737,8 @@
         "count": 1820,
         "url": "https://api.congress.gov/v3/member/N000188/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:34.932468"
+      "dataUpdatedAt": "2026-05-01T12:11:13.621188",
+      "committees": []
     },
     {
       "bioguideId": "A000370",
@@ -20331,7 +20782,8 @@
         "count": 2365,
         "url": "https://api.congress.gov/v3/member/A000370/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:35.205079"
+      "dataUpdatedAt": "2026-05-01T12:11:13.978112",
+      "committees": []
     },
     {
       "bioguideId": "C001101",
@@ -20391,7 +20843,8 @@
         "count": 1849,
         "url": "https://api.congress.gov/v3/member/C001101/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:35.635168"
+      "dataUpdatedAt": "2026-05-01T12:11:14.358331",
+      "committees": []
     },
     {
       "bioguideId": "S001195",
@@ -20435,7 +20888,8 @@
         "count": 1088,
         "url": "https://api.congress.gov/v3/member/S001195/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:35.914166"
+      "dataUpdatedAt": "2026-05-01T12:11:14.735002",
+      "committees": []
     },
     {
       "bioguideId": "B001282",
@@ -20479,7 +20933,8 @@
         "count": 1718,
         "url": "https://api.congress.gov/v3/member/B001282/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:36.186175"
+      "dataUpdatedAt": "2026-05-01T12:11:15.086498",
+      "committees": []
     },
     {
       "bioguideId": "C001067",
@@ -20523,7 +20978,8 @@
         "count": 5871,
         "url": "https://api.congress.gov/v3/member/C001067/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:36.463787"
+      "dataUpdatedAt": "2026-05-01T12:11:15.461918",
+      "committees": []
     },
     {
       "bioguideId": "T000469",
@@ -20567,7 +21023,8 @@
         "count": 4597,
         "url": "https://api.congress.gov/v3/member/T000469/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:36.726429"
+      "dataUpdatedAt": "2026-05-01T12:11:15.844039",
+      "committees": []
     },
     {
       "bioguideId": "K000385",
@@ -20611,7 +21068,8 @@
         "count": 2732,
         "url": "https://api.congress.gov/v3/member/K000385/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:36.999069"
+      "dataUpdatedAt": "2026-05-01T12:11:16.220420",
+      "committees": []
     },
     {
       "bioguideId": "M001137",
@@ -20655,7 +21113,8 @@
         "count": 5827,
         "url": "https://api.congress.gov/v3/member/M001137/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:37.261591"
+      "dataUpdatedAt": "2026-05-01T12:11:16.573778",
+      "committees": []
     },
     {
       "bioguideId": "V000081",
@@ -20699,7 +21158,8 @@
         "count": 5668,
         "url": "https://api.congress.gov/v3/member/V000081/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:37.540200"
+      "dataUpdatedAt": "2026-05-01T12:11:16.928540",
+      "committees": []
     },
     {
       "bioguideId": "T000463",
@@ -20743,7 +21203,8 @@
         "count": 2141,
         "url": "https://api.congress.gov/v3/member/T000463/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:37.824763"
+      "dataUpdatedAt": "2026-05-01T12:11:17.288891",
+      "committees": []
     },
     {
       "bioguideId": "T000491",
@@ -20787,7 +21248,8 @@
         "count": 281,
         "url": "https://api.congress.gov/v3/member/T000491/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:38.106016"
+      "dataUpdatedAt": "2026-05-01T12:11:17.638520",
+      "committees": []
     },
     {
       "bioguideId": "P000607",
@@ -20831,7 +21293,8 @@
         "count": 4704,
         "url": "https://api.congress.gov/v3/member/P000607/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:38.389759"
+      "dataUpdatedAt": "2026-05-01T12:11:18.159066",
+      "committees": []
     },
     {
       "bioguideId": "V000131",
@@ -20875,7 +21338,8 @@
         "count": 2512,
         "url": "https://api.congress.gov/v3/member/V000131/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:38.669522"
+      "dataUpdatedAt": "2026-05-01T12:11:18.515259",
+      "committees": []
     },
     {
       "bioguideId": "W000816",
@@ -20919,7 +21383,8 @@
         "count": 1375,
         "url": "https://api.congress.gov/v3/member/W000816/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:38.942150"
+      "dataUpdatedAt": "2026-05-01T12:11:19.052287",
+      "committees": []
     },
     {
       "bioguideId": "W000814",
@@ -20963,7 +21428,8 @@
         "count": 3077,
         "url": "https://api.congress.gov/v3/member/W000814/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:39.215774"
+      "dataUpdatedAt": "2026-05-01T12:11:19.403004",
+      "committees": []
     },
     {
       "bioguideId": "J000295",
@@ -21007,7 +21473,8 @@
         "count": 1826,
         "url": "https://api.congress.gov/v3/member/J000295/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:39.493969"
+      "dataUpdatedAt": "2026-05-01T12:11:19.867910",
+      "committees": []
     },
     {
       "bioguideId": "B001281",
@@ -21051,7 +21518,8 @@
         "count": 3167,
         "url": "https://api.congress.gov/v3/member/B001281/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:39.776544"
+      "dataUpdatedAt": "2026-05-01T12:11:20.225526",
+      "committees": []
     },
     {
       "bioguideId": "J000294",
@@ -21116,7 +21584,8 @@
         "count": 1583,
         "url": "https://api.congress.gov/v3/member/J000294/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:40.058556"
+      "dataUpdatedAt": "2026-05-01T12:11:20.607190",
+      "committees": []
     },
     {
       "bioguideId": "M001188",
@@ -21160,7 +21629,8 @@
         "count": 3553,
         "url": "https://api.congress.gov/v3/member/M001188/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:40.330135"
+      "dataUpdatedAt": "2026-05-01T12:11:21.150853",
+      "committees": []
     },
     {
       "bioguideId": "B001285",
@@ -21204,7 +21674,8 @@
         "count": 4015,
         "url": "https://api.congress.gov/v3/member/B001285/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:40.609179"
+      "dataUpdatedAt": "2026-05-01T12:11:21.502867",
+      "committees": []
     },
     {
       "bioguideId": "H001068",
@@ -21248,7 +21719,8 @@
         "count": 3858,
         "url": "https://api.congress.gov/v3/member/H001068/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:40.890576"
+      "dataUpdatedAt": "2026-05-01T12:11:21.881230",
+      "committees": []
     },
     {
       "bioguideId": "D000617",
@@ -21292,7 +21764,8 @@
         "count": 3252,
         "url": "https://api.congress.gov/v3/member/D000617/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:41.153914"
+      "dataUpdatedAt": "2026-05-01T12:11:22.258322",
+      "committees": []
     },
     {
       "bioguideId": "M001184",
@@ -21336,7 +21809,8 @@
         "count": 857,
         "url": "https://api.congress.gov/v3/member/M001184/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:41.439396"
+      "dataUpdatedAt": "2026-05-01T12:11:22.806268",
+      "committees": []
     },
     {
       "bioguideId": "B001278",
@@ -21380,7 +21854,8 @@
         "count": 4048,
         "url": "https://api.congress.gov/v3/member/B001278/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:41.728890"
+      "dataUpdatedAt": "2026-05-01T12:11:23.162381",
+      "committees": []
     },
     {
       "bioguideId": "A000369",
@@ -21424,7 +21899,8 @@
         "count": 1574,
         "url": "https://api.congress.gov/v3/member/A000369/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:42.002709"
+      "dataUpdatedAt": "2026-05-01T12:11:23.513876",
+      "committees": []
     },
     {
       "bioguideId": "W000804",
@@ -21468,7 +21944,8 @@
         "count": 2836,
         "url": "https://api.congress.gov/v3/member/W000804/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:42.282625"
+      "dataUpdatedAt": "2026-05-01T12:11:23.865864",
+      "committees": []
     },
     {
       "bioguideId": "G000568",
@@ -21512,7 +21989,8 @@
         "count": 1229,
         "url": "https://api.congress.gov/v3/member/G000568/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:42.558708"
+      "dataUpdatedAt": "2026-05-01T12:11:24.245633",
+      "committees": []
     },
     {
       "bioguideId": "D000616",
@@ -21556,7 +22034,8 @@
         "count": 1501,
         "url": "https://api.congress.gov/v3/member/D000616/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:42.832208"
+      "dataUpdatedAt": "2026-05-01T12:11:24.599946",
+      "committees": []
     },
     {
       "bioguideId": "F000459",
@@ -21600,7 +22079,8 @@
         "count": 1463,
         "url": "https://api.congress.gov/v3/member/F000459/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:43.110063"
+      "dataUpdatedAt": "2026-05-01T12:11:25.111270",
+      "committees": []
     },
     {
       "bioguideId": "H001052",
@@ -21644,7 +22124,8 @@
         "count": 1891,
         "url": "https://api.congress.gov/v3/member/H001052/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:43.374732"
+      "dataUpdatedAt": "2026-05-01T12:11:25.490106",
+      "committees": []
     },
     {
       "bioguideId": "K000375",
@@ -21688,7 +22169,8 @@
         "count": 2865,
         "url": "https://api.congress.gov/v3/member/K000375/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:43.639031"
+      "dataUpdatedAt": "2026-05-01T12:11:25.845101",
+      "committees": []
     },
     {
       "bioguideId": "S001189",
@@ -21732,7 +22214,8 @@
         "count": 1617,
         "url": "https://api.congress.gov/v3/member/S001189/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:43.918357"
+      "dataUpdatedAt": "2026-05-01T12:11:26.379112",
+      "committees": []
     },
     {
       "bioguideId": "W000808",
@@ -21776,7 +22259,8 @@
         "count": 3814,
         "url": "https://api.congress.gov/v3/member/W000808/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:44.191432"
+      "dataUpdatedAt": "2026-05-01T12:11:26.733876",
+      "committees": []
     },
     {
       "bioguideId": "W000809",
@@ -21820,7 +22304,8 @@
         "count": 1158,
         "url": "https://api.congress.gov/v3/member/W000809/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:44.470213"
+      "dataUpdatedAt": "2026-05-01T12:11:27.090941",
+      "committees": []
     },
     {
       "bioguideId": "S001185",
@@ -21864,7 +22349,8 @@
         "count": 3158,
         "url": "https://api.congress.gov/v3/member/S001185/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:44.753533"
+      "dataUpdatedAt": "2026-05-01T12:11:27.443029",
+      "committees": []
     },
     {
       "bioguideId": "C001068",
@@ -21908,7 +22394,8 @@
         "count": 8415,
         "url": "https://api.congress.gov/v3/member/C001068/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:45.026017"
+      "dataUpdatedAt": "2026-05-01T12:11:27.793794",
+      "committees": []
     },
     {
       "bioguideId": "J000289",
@@ -21952,7 +22439,8 @@
         "count": 1320,
         "url": "https://api.congress.gov/v3/member/J000289/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:45.309322"
+      "dataUpdatedAt": "2026-05-01T12:11:28.349401",
+      "committees": []
     },
     {
       "bioguideId": "B001260",
@@ -21996,7 +22484,8 @@
         "count": 1893,
         "url": "https://api.congress.gov/v3/member/B001260/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:45.590084"
+      "dataUpdatedAt": "2026-05-01T12:11:28.699871",
+      "committees": []
     },
     {
       "bioguideId": "C001066",
@@ -22040,7 +22529,8 @@
         "count": 3641,
         "url": "https://api.congress.gov/v3/member/C001066/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:45.873367"
+      "dataUpdatedAt": "2026-05-01T12:11:29.078864",
+      "committees": []
     },
     {
       "bioguideId": "B001257",
@@ -22084,7 +22574,8 @@
         "count": 3026,
         "url": "https://api.congress.gov/v3/member/B001257/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:46.152505"
+      "dataUpdatedAt": "2026-05-01T12:11:29.434389",
+      "committees": []
     },
     {
       "bioguideId": "Q000023",
@@ -22128,7 +22619,8 @@
         "count": 3721,
         "url": "https://api.congress.gov/v3/member/Q000023/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:46.445827"
+      "dataUpdatedAt": "2026-05-01T12:11:29.785955",
+      "committees": []
     },
     {
       "bioguideId": "T000468",
@@ -22177,7 +22669,8 @@
         "count": 4403,
         "url": "https://api.congress.gov/v3/member/T000468/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:46.718009"
+      "dataUpdatedAt": "2026-05-01T12:11:30.136675",
+      "committees": []
     },
     {
       "bioguideId": "P000597",
@@ -22221,7 +22714,8 @@
         "count": 4769,
         "url": "https://api.congress.gov/v3/member/P000597/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:46.983860"
+      "dataUpdatedAt": "2026-05-01T12:11:30.489201",
+      "committees": []
     },
     {
       "bioguideId": "G000558",
@@ -22265,7 +22759,8 @@
         "count": 1766,
         "url": "https://api.congress.gov/v3/member/G000558/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:47.250389"
+      "dataUpdatedAt": "2026-05-01T12:11:30.870213",
+      "committees": []
     },
     {
       "bioguideId": "H001047",
@@ -22309,7 +22804,8 @@
         "count": 2527,
         "url": "https://api.congress.gov/v3/member/H001047/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:47.523855"
+      "dataUpdatedAt": "2026-05-01T12:11:31.229279",
+      "committees": []
     },
     {
       "bioguideId": "S001176",
@@ -22389,7 +22885,8 @@
         "count": 981,
         "url": "https://api.congress.gov/v3/member/S001176/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:47.805493"
+      "dataUpdatedAt": "2026-05-01T12:11:31.588096",
+      "committees": []
     },
     {
       "bioguideId": "F000454",
@@ -22438,7 +22935,8 @@
         "count": 2586,
         "url": "https://api.congress.gov/v3/member/F000454/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:48.078275"
+      "dataUpdatedAt": "2026-05-01T12:11:32.144682",
+      "committees": []
     },
     {
       "bioguideId": "C001072",
@@ -22482,7 +22980,8 @@
         "count": 6204,
         "url": "https://api.congress.gov/v3/member/C001072/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:48.359260"
+      "dataUpdatedAt": "2026-05-01T12:11:32.520194",
+      "committees": []
     },
     {
       "bioguideId": "M000312",
@@ -22526,7 +23025,8 @@
         "count": 11816,
         "url": "https://api.congress.gov/v3/member/M000312/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:48.638413"
+      "dataUpdatedAt": "2026-05-01T12:11:32.906400",
+      "committees": []
     },
     {
       "bioguideId": "N000015",
@@ -22570,7 +23070,8 @@
         "count": 4673,
         "url": "https://api.congress.gov/v3/member/N000015/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:48.909390"
+      "dataUpdatedAt": "2026-05-01T12:11:33.284629",
+      "committees": []
     },
     {
       "bioguideId": "M001160",
@@ -22614,7 +23115,8 @@
         "count": 6154,
         "url": "https://api.congress.gov/v3/member/M001160/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:49.191851"
+      "dataUpdatedAt": "2026-05-01T12:11:33.644238",
+      "committees": []
     },
     {
       "bioguideId": "S001156",
@@ -22658,7 +23160,8 @@
         "count": 4834,
         "url": "https://api.congress.gov/v3/member/S001156/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:49.471210"
+      "dataUpdatedAt": "2026-05-01T12:11:33.995595",
+      "committees": []
     },
     {
       "bioguideId": "L000562",
@@ -22702,7 +23205,8 @@
         "count": 4433,
         "url": "https://api.congress.gov/v3/member/L000562/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:49.743567"
+      "dataUpdatedAt": "2026-05-01T12:11:34.352316",
+      "committees": []
     },
     {
       "bioguideId": "S001231",
@@ -22746,7 +23250,8 @@
         "count": 511,
         "url": "https://api.congress.gov/v3/member/S001231/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:50.015515"
+      "dataUpdatedAt": "2026-05-01T12:11:34.730696",
+      "committees": []
     },
     {
       "bioguideId": "R000621",
@@ -22790,7 +23295,8 @@
         "count": 314,
         "url": "https://api.congress.gov/v3/member/R000621/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:50.282163"
+      "dataUpdatedAt": "2026-05-01T12:11:35.086898",
+      "committees": []
     },
     {
       "bioguideId": "R000620",
@@ -22834,7 +23340,8 @@
         "count": 171,
         "url": "https://api.congress.gov/v3/member/R000620/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:50.556567"
+      "dataUpdatedAt": "2026-05-01T12:11:35.439585",
+      "committees": []
     },
     {
       "bioguideId": "L000607",
@@ -22878,7 +23385,8 @@
         "count": 149,
         "url": "https://api.congress.gov/v3/member/L000607/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:50.819446"
+      "dataUpdatedAt": "2026-05-01T12:11:35.796749",
+      "committees": []
     },
     {
       "bioguideId": "H001098",
@@ -22922,7 +23430,8 @@
         "count": 220,
         "url": "https://api.congress.gov/v3/member/H001098/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:51.093199"
+      "dataUpdatedAt": "2026-05-01T12:11:36.154730",
+      "committees": []
     },
     {
       "bioguideId": "G000605",
@@ -22966,7 +23475,8 @@
         "count": 136,
         "url": "https://api.congress.gov/v3/member/G000605/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:51.372134"
+      "dataUpdatedAt": "2026-05-01T12:11:36.506994",
+      "committees": []
     },
     {
       "bioguideId": "B001323",
@@ -23009,7 +23519,8 @@
         "count": 174,
         "url": "https://api.congress.gov/v3/member/B001323/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:51.652380"
+      "dataUpdatedAt": "2026-05-01T12:11:36.858708",
+      "committees": []
     },
     {
       "bioguideId": "A000381",
@@ -23053,7 +23564,8 @@
         "count": 446,
         "url": "https://api.congress.gov/v3/member/A000381/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:51.936162"
+      "dataUpdatedAt": "2026-05-01T12:11:37.236847",
+      "committees": []
     },
     {
       "bioguideId": "S001172",
@@ -23097,7 +23609,8 @@
         "count": 1776,
         "url": "https://api.congress.gov/v3/member/S001172/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:52.216233"
+      "dataUpdatedAt": "2026-05-01T12:11:37.587602",
+      "committees": []
     },
     {
       "bioguideId": "J000288",
@@ -23141,7 +23654,8 @@
         "count": 5951,
         "url": "https://api.congress.gov/v3/member/J000288/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:52.496612"
+      "dataUpdatedAt": "2026-05-01T12:11:37.936628",
+      "committees": []
     },
     {
       "bioguideId": "C001069",
@@ -23185,7 +23699,8 @@
         "count": 3656,
         "url": "https://api.congress.gov/v3/member/C001069/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:52.776740"
+      "dataUpdatedAt": "2026-05-01T12:11:38.314373",
+      "committees": []
     },
     {
       "bioguideId": "P000034",
@@ -23229,7 +23744,8 @@
         "count": 6688,
         "url": "https://api.congress.gov/v3/member/P000034/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:53.065735"
+      "dataUpdatedAt": "2026-05-01T12:11:38.874507",
+      "committees": []
     },
     {
       "bioguideId": "S001148",
@@ -23273,7 +23789,8 @@
         "count": 2222,
         "url": "https://api.congress.gov/v3/member/S001148/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:53.327909"
+      "dataUpdatedAt": "2026-05-01T12:11:39.225052",
+      "committees": []
     },
     {
       "bioguideId": "S001145",
@@ -23317,7 +23834,8 @@
         "count": 10256,
         "url": "https://api.congress.gov/v3/member/S001145/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:53.618900"
+      "dataUpdatedAt": "2026-05-01T12:11:39.585154",
+      "committees": []
     },
     {
       "bioguideId": "L000557",
@@ -23367,7 +23885,8 @@
         "count": 4293,
         "url": "https://api.congress.gov/v3/member/L000557/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:53.902831"
+      "dataUpdatedAt": "2026-05-01T12:11:39.937966",
+      "committees": []
     },
     {
       "bioguideId": "S000510",
@@ -23411,7 +23930,8 @@
         "count": 4983,
         "url": "https://api.congress.gov/v3/member/S000510/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:54.175906"
+      "dataUpdatedAt": "2026-05-01T12:11:40.294362",
+      "committees": []
     },
     {
       "bioguideId": "D000197",
@@ -23455,7 +23975,8 @@
         "count": 4438,
         "url": "https://api.congress.gov/v3/member/D000197/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:54.449855"
+      "dataUpdatedAt": "2026-05-01T12:11:40.893361",
+      "committees": []
     },
     {
       "bioguideId": "D000096",
@@ -23499,7 +24020,8 @@
         "count": 7615,
         "url": "https://api.congress.gov/v3/member/D000096/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:54.721850"
+      "dataUpdatedAt": "2026-05-01T12:11:41.271537",
+      "committees": []
     },
     {
       "bioguideId": "A000055",
@@ -23543,7 +24065,8 @@
         "count": 2291,
         "url": "https://api.congress.gov/v3/member/A000055/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:55.005231"
+      "dataUpdatedAt": "2026-05-01T12:11:41.810562",
+      "committees": []
     },
     {
       "bioguideId": "T000193",
@@ -23587,7 +24110,8 @@
         "count": 5522,
         "url": "https://api.congress.gov/v3/member/T000193/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:55.286213"
+      "dataUpdatedAt": "2026-05-01T12:11:42.356542",
+      "committees": []
     },
     {
       "bioguideId": "S000522",
@@ -23631,7 +24155,8 @@
         "count": 7628,
         "url": "https://api.congress.gov/v3/member/S000522/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:55.757288"
+      "dataUpdatedAt": "2026-05-01T12:11:42.737722",
+      "committees": []
     },
     {
       "bioguideId": "S000185",
@@ -23675,7 +24200,8 @@
         "count": 4493,
         "url": "https://api.congress.gov/v3/member/S000185/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:56.033585"
+      "dataUpdatedAt": "2026-05-01T12:11:43.272825",
+      "committees": []
     },
     {
       "bioguideId": "R000395",
@@ -23719,7 +24245,8 @@
         "count": 2895,
         "url": "https://api.congress.gov/v3/member/R000395/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:56.314451"
+      "dataUpdatedAt": "2026-05-01T12:11:43.813207",
+      "committees": []
     },
     {
       "bioguideId": "B000490",
@@ -23763,7 +24290,8 @@
         "count": 6312,
         "url": "https://api.congress.gov/v3/member/B000490/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:56.587626"
+      "dataUpdatedAt": "2026-05-01T12:11:44.377313",
+      "committees": []
     },
     {
       "bioguideId": "L000491",
@@ -23807,7 +24335,8 @@
         "count": 2127,
         "url": "https://api.congress.gov/v3/member/L000491/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:57.053887"
+      "dataUpdatedAt": "2026-05-01T12:11:44.753354",
+      "committees": []
     },
     {
       "bioguideId": "C001063",
@@ -23851,7 +24380,8 @@
         "count": 2476,
         "url": "https://api.congress.gov/v3/member/C001063/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:57.340124"
+      "dataUpdatedAt": "2026-05-01T12:11:45.132068",
+      "committees": []
     },
     {
       "bioguideId": "M001157",
@@ -23895,7 +24425,8 @@
         "count": 3209,
         "url": "https://api.congress.gov/v3/member/M001157/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:57.611574"
+      "dataUpdatedAt": "2026-05-01T12:11:45.484645",
+      "committees": []
     },
     {
       "bioguideId": "F000450",
@@ -23939,7 +24470,8 @@
         "count": 1746,
         "url": "https://api.congress.gov/v3/member/F000450/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:57.889057"
+      "dataUpdatedAt": "2026-05-01T12:11:45.835831",
+      "committees": []
     },
     {
       "bioguideId": "C001061",
@@ -23983,7 +24515,8 @@
         "count": 4260,
         "url": "https://api.congress.gov/v3/member/C001061/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:58.159196"
+      "dataUpdatedAt": "2026-05-01T12:11:46.191191",
+      "committees": []
     },
     {
       "bioguideId": "C001051",
@@ -24027,7 +24560,8 @@
         "count": 2292,
         "url": "https://api.congress.gov/v3/member/C001051/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:58.435063"
+      "dataUpdatedAt": "2026-05-01T12:11:46.558845",
+      "committees": []
     },
     {
       "bioguideId": "C001053",
@@ -24071,7 +24605,8 @@
         "count": 3256,
         "url": "https://api.congress.gov/v3/member/C001053/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:58.708374"
+      "dataUpdatedAt": "2026-05-01T12:11:46.936900",
+      "committees": []
     },
     {
       "bioguideId": "R000575",
@@ -24115,7 +24650,8 @@
         "count": 1984,
         "url": "https://api.congress.gov/v3/member/R000575/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:58.980698"
+      "dataUpdatedAt": "2026-05-01T12:11:47.289575",
+      "committees": []
     },
     {
       "bioguideId": "W000795",
@@ -24159,7 +24695,8 @@
         "count": 4703,
         "url": "https://api.congress.gov/v3/member/W000795/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:59.267942"
+      "dataUpdatedAt": "2026-05-01T12:11:47.644084",
+      "committees": []
     },
     {
       "bioguideId": "L000560",
@@ -24203,7 +24740,8 @@
         "count": 3630,
         "url": "https://api.congress.gov/v3/member/L000560/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:59.546963"
+      "dataUpdatedAt": "2026-05-01T12:11:48.183101",
+      "committees": []
     },
     {
       "bioguideId": "G000546",
@@ -24247,7 +24785,8 @@
         "count": 2056,
         "url": "https://api.congress.gov/v3/member/G000546/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:21:59.837209"
+      "dataUpdatedAt": "2026-05-01T12:11:48.540056",
+      "committees": []
     },
     {
       "bioguideId": "M001143",
@@ -24291,7 +24830,8 @@
         "count": 6894,
         "url": "https://api.congress.gov/v3/member/M001143/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:22:00.109345"
+      "dataUpdatedAt": "2026-05-01T12:11:49.123775",
+      "committees": []
     },
     {
       "bioguideId": "C000537",
@@ -24366,7 +24906,8 @@
         "count": 2775,
         "url": "https://api.congress.gov/v3/member/C000537/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:22:00.376544"
+      "dataUpdatedAt": "2026-05-01T12:11:49.647752",
+      "committees": []
     },
     {
       "bioguideId": "K000009",
@@ -24410,7 +24951,8 @@
         "count": 10201,
         "url": "https://api.congress.gov/v3/member/K000009/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:22:00.648982"
+      "dataUpdatedAt": "2026-05-01T12:11:50.222391",
+      "committees": []
     },
     {
       "bioguideId": "H000874",
@@ -24485,7 +25027,8 @@
         "count": 4073,
         "url": "https://api.congress.gov/v3/member/H000874/cosponsored-legislation"
       },
-      "dataUpdatedAt": "2026-05-01T11:22:00.933814"
+      "dataUpdatedAt": "2026-05-01T12:11:50.579857",
+      "committees": []
     }
   ]
 }
