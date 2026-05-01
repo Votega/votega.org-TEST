@@ -23,25 +23,19 @@ def fetch_url(url):
             separator = '&' if '?' in url else '?'
             url = f"{url}{separator}api_key={API_KEY}"
         
-        print(f"  Fetching: {url[:100]}...")
+        print(f"Fetching: {url[:100]}...")
         
         req = urllib.request.Request(url)
-        # Remove the header approach - use only query parameter
-        # req.add_header('X-API-Key', API_KEY)  # Commented out
+        # No header needed - API key works via query parameter
         
         with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
-        print(f"  HTTP Error {e.code}: {e.reason}")
-        print(f"  URL: {url[:100]}")
-        return None
-    except urllib.error.URLError as e:
-        print(f"  URL Error: {e.reason}")
+        print(f"HTTP Error {e.code}: {e.reason}")
         return None
     except Exception as e:
-        print(f"  Error fetching {url[:100]}: {e}")
+        print(f"Error fetching {url[:100]}: {e}")
         return None
-
 
 def get_member_details(bioguideId):
     """Fetch detailed member data"""
@@ -66,6 +60,7 @@ def extract_leadership(member_data):
     current_leadership = []
     for position in leadership:
         if isinstance(position, dict):
+            # Include if marked as current OR if no 'current' field (assume current)
             if position.get('current') == True or 'current' not in position:
                 current_leadership.append({
                     'title': position.get('type', position.get('title', 'Unknown')),
@@ -80,6 +75,7 @@ def enrich_member_data(bioguideId, basic_member):
     member_details = get_member_details(bioguideId)
     
     if not member_details:
+        print(f"Warning: Could not fetch details for {bioguideId}, using basic data")
         basic_member['leadership'] = []
         basic_member['contactInfo'] = {}
         basic_member['officialWebsiteUrl'] = ''
@@ -163,15 +159,26 @@ def main():
         'members': enriched_members
     }
     
-    # Ensure output directory exists
-    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+    # Ensure output directory exists (simple approach)
+    try:
+        os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+        print(f"Directory check passed for {OUTPUT_FILE}")
+    except Exception as e:
+        print(f"Directory creation error: {e}")
+        sys.exit(1)
     
     # Write to file
-    with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
-    
-    print(f"Successfully wrote {len(enriched_members)} members to {OUTPUT_FILE}")
+    try:
+        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, indent=2, ensure_ascii=False)
+        print(f"Successfully wrote {len(enriched_members)} members to {OUTPUT_FILE}")
+    except Exception as e:
+        print(f"Error writing file: {e}")
+        sys.exit(1)
     
     # Print summary
     leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
     print(f"Members with leadership positions: {leadership_count}")
+
+if __name__ == '__main__':
+    main()
