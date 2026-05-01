@@ -31,7 +31,7 @@ jobs:
           pip install requests
 
       - name: Generate current member data (includes leadership positions)
-        run: python scripts/generate_current_members_data.py assets/data/current-members.json
+        run: python assets/scripts/generate_current_members_data.py assets/data/current-members.json
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
 
@@ -42,7 +42,7 @@ jobs:
             exit 1
           fi
           # Check that file is valid JSON
-          python -c "import json; json.load(open('assets/data/current-members.json'))"
+          python -c "import json; json.load(open('assets/data/current-members.json'))" 
 
       - name: Commit and push generated data
         run: |
