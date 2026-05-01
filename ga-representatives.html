@@ -1,13 +1,14 @@
 <h1><center>Georgia General Assembly</center></h1>
 <h3><center>Find Your GA State Legislator</center></h3>
 
-Select your Chamber (Senate or House) and then your District. The member representing that district will appear in the list.<br>
+Select your County and Chamber (Senate or House). The districts serving your county will appear in the list.<br>
 
 <br>Select a member to view details about their time in office.
 
 <!--
 Lookup Form
- User chooses a chamber (Senate or House). Districts populate from prebuilt ga-members.json.
+ User chooses a county and chamber. For House, districts are filtered by county.
+ For Senate, all 56 districts are shown (county-to-senate mapping pending).
  Each district maps to exactly one member. Selecting a district redirects to ga-member.html.
 -->
 <!DOCTYPE html>
@@ -28,8 +29,15 @@ Lookup Form
 <!--Start Form-->
 <form id="lookupForm">
   <label>
+    County
+    <select id="countySelect" required>
+      <option value="">— choose —</option>
+    </select>
+  </label>
+
+  <label>
     Chamber
-    <select id="chamberSelect" required>
+    <select id="chamberSelect" required disabled>
       <option value="">— choose —</option>
       <option value="senate">Senate</option>
       <option value="house">House of Representatives</option>
