@@ -48,7 +48,7 @@ def get_all_members():
             ('page',         page),
             ('per_page',     per_page),
             ('include',      'links'),
-            ('include',      'contact_details'),
+            ('include',      'offices'),
         ])
         url = f"{BASE_URL}/people?{params}"
         data = fetch_url(url)
@@ -82,10 +82,10 @@ def normalize_member(raw):
     else:
         chamber = org
 
-    contacts = raw.get('contact_details', [])
-    phone   = next((c['value'] for c in contacts if c.get('type') == 'voice'),   '')
-    address = next((c['value'] for c in contacts if c.get('type') == 'address'), '')
-    email   = next((c['value'] for c in contacts if c.get('type') == 'email'),   '')
+    offices = raw.get('offices', [])
+    phone   = next((o.get('voice', '')   for o in offices if o.get('voice')),   '')
+    address = next((o.get('address', '') for o in offices if o.get('address')), '')
+    email   = next((o.get('email', '')   for o in offices if o.get('email')),   '')
 
     links   = raw.get('links', [])
     website = links[0]['url'] if links else ''
