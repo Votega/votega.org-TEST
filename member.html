@@ -101,7 +101,7 @@ permalink: /member.html
     let contactHtml = '';
     if (contactInfo.phoneNumber || contactInfo.officeAddress) {
       const phone = contactInfo.phoneNumber ? `<br>📞 ${contactInfo.phoneNumber}` : '';
-      const address = contactInfo.officeAddress ? `<br>📍 ${contactInfo.officeAddress}, ${contactInfo.city}, ${contactInfo.state} ${contactInfo.zipCode}` : '';
+      const address = contactInfo.officeAddress ? `<br>📍 ${contactInfo.officeAddress}` : '';
       contactHtml = `<p><strong>Office Contact:</strong>${address}${phone}</p>`;
     }
 
