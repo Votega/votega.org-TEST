@@ -113,10 +113,6 @@ async function loadMembers () {
         console.log(`Filtered out "${m.name}": chambers=${terms.map(t => t.chamber).join('/')} (want "${expectedChamber}")`);
         return false;
       }
-      if (m.currentMember === false) {
-        console.log(`Filtered out "${m.name}": currentMember=false`);
-        return false;
-      }
       return true;
     });
     
@@ -126,24 +122,39 @@ async function loadMembers () {
       throw new Error(`No members returned for ${stateName} ${expectedChamber} – check API data.`);
     }
 
-    results.sort((a,b) => {
-      if (expectedChamber === 'House of Representatives') {
-        const districtA = typeof a.district === 'number' ? a.district : Number.MAX_SAFE_INTEGER;
-        const districtB = typeof b.district === 'number' ? b.district : Number.MAX_SAFE_INTEGER;
-        if (districtA !== districtB) return districtA - districtB;
-      }
-      return a.name.localeCompare(b.name);
-    });
+    let optionsHtml;
+    if (expectedChamber === 'House of Representatives') {
+      // Group by district to detect vacancies
+      const districtMap = new Map();
+      results.forEach(m => {
+        const dist = m.district ?? 'At-Large';
+        if (!districtMap.has(dist)) districtMap.set(dist, []);
+        districtMap.get(dist).push(m);
+      });
 
-    memberSel.innerHTML = '<option value="">— choose —</option>' +
-      results.map(m => {
-        const displayName = formatMemberName(m);
-        let label = displayName;
-        if (expectedChamber === 'House of Representatives' && m.district) {
-          label = `District ${m.district} - ${displayName}`;
-        }
-        return `<option value="${m.bioguideId}">${label} (${m.partyName})</option>`;
-      }).join('');
+      optionsHtml = [...districtMap.entries()]
+        .sort(([a], [b]) => {
+          if (a === 'At-Large') return 1;
+          if (b === 'At-Large') return -1;
+          return Number(a) - Number(b);
+        })
+        .map(([district, members]) => {
+          const current = members.find(m => m.currentMember !== false);
+          if (current) {
+            return `<option value="${current.bioguideId}">District ${district} - ${formatMemberName(current)} (${current.partyName})</option>`;
+          }
+          return `<option value="" disabled>District ${district} - Vacant</option>`;
+        }).join('');
+    } else {
+      // Senate: only show current members, sorted alphabetically
+      optionsHtml = results
+        .filter(m => m.currentMember !== false)
+        .sort((a, b) => a.name.localeCompare(b.name))
+        .map(m => `<option value="${m.bioguideId}">${formatMemberName(m)} (${m.partyName})</option>`)
+        .join('');
+    }
+
+    memberSel.innerHTML = '<option value="">— choose —</option>' + optionsHtml;
     memberSel.disabled = false;
     statusLine.textContent = '';
 
