@@ -18,16 +18,30 @@ OUTPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "assets/data/current-members
 def fetch_url(url):
     """Fetch data from Congress.gov API with error handling"""
     try:
+        # Add API key as query parameter (required by Congress.gov API)
+        if 'api_key=' not in url:
+            separator = '&' if '?' in url else '?'
+            url = f"{url}{separator}api_key={API_KEY}"
+        
+        print(f"  Fetching: {url[:100]}...")
+        
         req = urllib.request.Request(url)
-        req.add_header('X-API-Key', API_KEY)
+        # Remove the header approach - use only query parameter
+        # req.add_header('X-API-Key', API_KEY)  # Commented out
+        
         with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
     except urllib.error.HTTPError as e:
-        print(f"HTTP Error {e.code}: {e.reason}")
+        print(f"  HTTP Error {e.code}: {e.reason}")
+        print(f"  URL: {url[:100]}")
+        return None
+    except urllib.error.URLError as e:
+        print(f"  URL Error: {e.reason}")
         return None
     except Exception as e:
-        print(f"Error fetching {url}: {e}")
+        print(f"  Error fetching {url[:100]}: {e}")
         return None
+
 
 def get_member_details(bioguideId):
     """Fetch detailed member data"""
@@ -88,7 +102,7 @@ def enrich_member_data(bioguideId, basic_member):
     return basic_member
 
 def get_current_members():
-    """Fetch all current members"""
+    """Fetch all current members of Congress"""
     url = f"{BASE_URL}/member?limit=550&format=json"
     data = fetch_url(url)
     
@@ -97,9 +111,9 @@ def get_current_members():
         return []
     
     members = data['members'].get('member', [])
-    print(f"Found {len(members)} members")
+    print(f"Found {len(members)} members in initial fetch")
     
-    # Filter to current members only
+    # Filter to only current members
     current_members = []
     for member in members:
         terms = member.get('terms', {}).get('item', [])
@@ -161,6 +175,3 @@ def main():
     # Print summary
     leadership_count = sum(1 for m in enriched_members if m.get('leadership'))
     print(f"Members with leadership positions: {leadership_count}")
-
-if __name__ == '__main__':
-    main()
