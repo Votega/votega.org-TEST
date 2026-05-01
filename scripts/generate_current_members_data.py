@@ -36,7 +36,8 @@ def fetch_url(url):
         
         req = urllib.request.Request(url)
         # Also add as header (some endpoints accept both)
-        req.add_header('X-API-Key', API_KEY)
+        if API_KEY is not None:
+            req.add_header('X-API-Key', API_KEY)
         
         with urllib.request.urlopen(req, timeout=30) as response:
             return json.loads(response.read().decode('utf-8'))
