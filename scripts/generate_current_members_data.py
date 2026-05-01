@@ -168,7 +168,7 @@ def main():
         print(f"  Processing {i+1}/{len(members)}: {member.get('name', 'Unknown')} ({bioguideId})")
         enriched_member = enrich_member_data(bioguideId, member)
         enriched_members.append(enriched_member)
-        
+
         if (i + 1) % 5 == 0:
             print(f"  Progress: {i+1}/{len(members)} members processed")
     
