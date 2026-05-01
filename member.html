@@ -130,6 +130,7 @@ permalink: /member.html
       ${imageHtml}
       <h2>${fullName}</h2>
       ${member.birthYear ? `<p><strong>Birth Year:</strong> ${member.birthYear}</p>` : ''}
+      ${member.birthYear ? `<p><strong>Age:</strong> ${currentYear - member.birthYear}</p>` : ''}
       <p><strong>Party:</strong> ${party}</p>
       <p><strong>State:</strong> ${state}</p>
       <p><strong>District:</strong> ${district}</p>
