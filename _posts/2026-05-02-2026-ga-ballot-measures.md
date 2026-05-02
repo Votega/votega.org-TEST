@@ -4,7 +4,7 @@ title: 2026 Georgia Ballot Measures
 subtitle: Georgia Amendments on the Ballot
 ---
 
-As of May 1, 2026, three statewide ballot measures were certified for the ballot in Georgia on November 3, 2026.
+As of May 1, 2026, three statewide ballot measures were certified for the ballot in Georgia for the November 3, 2026 General Election.
 
 <table style="width:100%;table-layout:fixed;">
   <colgroup>
@@ -39,7 +39,7 @@ As of May 1, 2026, three statewide ballot measures were certified for the ballot
 </table>
 
 <h2>Potential Ballot Measures</h2>
-The Georgia Homestead Exemption for Surviving Spouses and Children of Disabled Veterans (GA House Bill 52) may be on the ballot in Georgia as a legislatively referred state statute on November 3, 2026. The bill passed the House in March 2025, and passed the Senate in April 2026. The Governor is required to sign the bill in order for it to be referred to the ballot.
+The Georgia Homestead Exemption for Surviving Spouses and Children of Disabled Veterans (GA House Bill 52) may be on the ballot in Georgia for the November 3, 2026 General Election. The bill passed the House in March 2025, and passed the Senate in April 2026. The Governor is required to sign the bill in order for it to be referred to the ballot.
 
 <table style="width:100%;table-layout:fixed;">
   <colgroup>
