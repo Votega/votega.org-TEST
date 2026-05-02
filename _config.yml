@@ -24,13 +24,13 @@ navbar-links:
   Flock Safety:
     - About Flock: "https://www.votega.org/flock-safety/"
     - Atlanta: "https://deflockatlanta.org/"
-    - Covington: "https://votega.github.io/votega.org-TEST/flock-covington/"
+    - Covington: "flock-covington"
   2026 Election Cycle:
-    - May 2026 - Primary Election: "https://votega.github.io/votega.org-TEST/2026-04-27-2026-primary-election/"
-    - Georgia Ballot Measures: "https://votega.github.io/votega.org-TEST/2026-05-02-2026-ga-ballot-measures/"
+    - May 2026 - Primary Election: "2026-04-27-2026-primary-election"
+    - Georgia Ballot Measures: "2026-05-02-2026-ga-ballot-measures"
   My Representatives:
-    - Find my Congressional Representative: "https://votega.github.io/votega.org-TEST/my-representatives.html"
-    - Find my Georgia Legislative Representative: "https://votega.github.io/votega.org-TEST/ga-representatives.html"
+    - Find my Congressional Representative: "my-representatives"
+    - Find my Georgia Legislative Representative: "ga-representatives"
 
 ################
 # --- Logo --- #
