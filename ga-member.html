@@ -203,6 +203,18 @@ permalink: /ga-member.html
     }
   }
 
+  function getPartyIconHtml(party) {
+    if (!party) return '';
+    const p = party.toLowerCase();
+    if (p.includes('democrat')) {
+      return `<a title="Democratic Party (United States), Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Democratic_Disc.svg" target="_blank"><img width="22" alt="Donkey logo of the Democratic party." src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Democratic_Disc.svg/44px-Democratic_Disc.svg.png" style="vertical-align:middle;"></a>`;
+    }
+    if (p.includes('republican')) {
+      return `<a title="Republican Party, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Republican_Disc.svg" target="_blank"><img width="22" alt="Elephant logo of the Republican Party." src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Republican_Disc.svg/44px-Republican_Disc.svg.png" style="vertical-align:middle;"></a>`;
+    }
+    return '';
+  }
+
   function displayMemberDetails(member) {
     const currentYear = new Date().getFullYear();
     const detailsDiv  = document.getElementById('memberDetails');
@@ -229,7 +241,7 @@ permalink: /ga-member.html
            </p>`
         : ''}
       <p><strong>Title:</strong> ${member.title || 'N/A'}</p>
-      <p><strong>Party:</strong> ${member.party || 'N/A'}</p>
+      <p><strong>Party:</strong> ${member.party || 'N/A'} ${getPartyIconHtml(member.party)}</p>
       <p><strong>Chamber:</strong> ${member.chamber || 'N/A'}</p>
       <p><strong>District:</strong> ${member.district ?? 'N/A'}</p>
       ${phoneHtml}
