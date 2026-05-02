@@ -3,7 +3,12 @@ layout: post
 title: 2026 Georgia Ballot Measures
 subtitle: Georgia Amendments on the Ballot
 ---
-<table>
+<table style="width:100%;table-layout:fixed;">
+  <colgroup>
+    <col style="width:35%">
+    <col style="width:20%">
+    <col style="width:45%">
+  </colgroup>
   <thead>
     <tr>
       <th>Title</th>
@@ -32,7 +37,12 @@ subtitle: Georgia Amendments on the Ballot
 
 <h2>Potential Ballot Measures</h2>
 
-<table>
+<table style="width:100%;table-layout:fixed;">
+  <colgroup>
+    <col style="width:35%">
+    <col style="width:20%">
+    <col style="width:45%">
+  </colgroup>
   <thead>
     <tr>
       <th>Title</th>
