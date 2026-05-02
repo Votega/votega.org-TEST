@@ -193,11 +193,12 @@ permalink: /member.html
   function getPartyIconHtml(party) {
     if (!party) return '';
     const p = party.toLowerCase();
+    const base = getBasePath();
     if (p.includes('democrat')) {
-      return `<img width="22" alt="Donkey logo of the Democratic party." src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Democratic_Disc.svg/44px-Democratic_Disc.svg.png" style="vertical-align:middle;">`;
+      return `<img width="22" alt="Donkey logo of the Democratic party." src="${base}assets/img/democratic-disc.svg" style="vertical-align:middle;">`;
     }
     if (p.includes('republican')) {
-      return `<img width="22" alt="Elephant logo of the Republican Party." src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Republican_Disc.svg/44px-Republican_Disc.svg.png" style="vertical-align:middle;">`;
+      return `<img width="22" alt="Elephant logo of the Republican Party." src="${base}assets/img/republican-disc.svg" style="vertical-align:middle;">`;
     }
     return '';
   }
