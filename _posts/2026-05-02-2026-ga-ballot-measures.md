@@ -27,6 +27,8 @@ subtitle: Georgia Amendments on the Ballot
       <td>Judiciary</td>
       <td>Require that probate judges be elected on a nonpartisan basis</td>
     </tr>
+  </tbody>
+</table>
 
 <h2>Potential Ballot Measures</h2>
 
@@ -44,3 +46,5 @@ subtitle: Georgia Amendments on the Ballot
       <td>Homestead tax; Veterans</td>
       <td>Extend the homestead property tax exemption to the surviving spouses and minor children of disabled veterans</td>
     </tr>
+  </tbody>
+</table>
